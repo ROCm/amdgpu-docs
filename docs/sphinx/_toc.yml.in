@@ -1,0 +1,6 @@
+root: index.md
+subtrees:
+  - caption: Documentation
+    entries:
+    - url: https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/
+      title: GPU Operator
