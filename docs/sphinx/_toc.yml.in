@@ -1,6 +1,12 @@
 root: index.md
 subtrees:
-  - caption: Documentation
+  - caption: Tutorials
     entries:
-    - url: https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/
-      title: GPU Operator
+      - file: tutorial/gpu-partition.md
+  - caption: Conceptual
+    entries:
+      - file: conceptual/gpu-partition.md
+  - caption: Reference
+    entries:
+      - file: reference/gpu-partition.md
+    
