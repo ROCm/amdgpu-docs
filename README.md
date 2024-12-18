@@ -1,2 +1,3 @@
-# amdgpu-docs
-Documentation on our GPU driver and hardware features enabled
+# AMD Instinct GPU Driver
+
+Documentation on the AMD Instinc GPU driver and hardware capabilities available
