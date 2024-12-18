@@ -90,7 +90,7 @@ requests==2.32.3
     # via
     #   pygithub
     #   sphinx
-rocm-docs-core @ git+https://github.com/saadrahim/rocm-docs-core@naming
+rocm-docs-core==1.12.0
     # via -r requirements.in
 smmap==5.0.1
     # via gitdb
