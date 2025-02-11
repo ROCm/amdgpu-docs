@@ -18,11 +18,6 @@ html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "instinct",
     "link_main_doc": True,
-    "nav_secondary_items": {
-        "Community": "https://github.com/ROCm/ROCm/discussions",
-        "Blogs": "https://rocm.blogs.amd.com/",
-        "ROCm&#8482 docs": "https://rocm.docs.amd.com"
-    },
     # Add any additional theme options here
 }
 extensions = ["rocm_docs"]
