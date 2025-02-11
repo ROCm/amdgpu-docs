@@ -15,12 +15,6 @@ The AMD Instinct documentation is organized into the following categories:
 :gutter: 3
 :class-container: rocm-doc-grid
 
-:::{grid-item-card} GPU documentation
-:class-body: rocm-card-banner rocm-hue-2
-
-* [GPU operator](https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/)
-:::
-
 :::{grid-item-card} How to
 :class-body: rocm-card-banner rocm-hue-12
 
