@@ -5,7 +5,7 @@ html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "dcgpu.docs.amd.com")
 html_context = {}
 if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
-project = "Instinct Datacenter GPU driver"
+project = "Data Center GPU driver"
 
 version = "1.0.0"
 release = version
