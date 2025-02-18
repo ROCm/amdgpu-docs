@@ -1,9 +1,5 @@
 root: index.md
 subtrees:
-  - caption: GPU documentation
-    entries:
-    - url: https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/
-      title: GPU operator
   - caption: How to
     entries:
     - file: system-optimization/index.rst
