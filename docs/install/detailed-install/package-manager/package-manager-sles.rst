@@ -16,21 +16,23 @@ SUSE Linux Enterprise native installation
 Additional package repositories
 ===============================================
 
-.. tab-set::
+.. datatemplate:nodata::
 
-    {% for os_version in config.html_context['sles_version_numbers'] %}
-    {% set os_release, os_sp  = os_version.split('.') %}
+    .. tab-set::
 
-    .. tab-item:: SLES {{ os_version }}
+        {% for os_version in config.html_context['sles_version_numbers'] %}
+        {% set os_release, os_sp  = os_version.split('.') %}
 
-        .. code-block:: shell
+        .. tab-item:: SLES {{ os_version }}
 
-            sudo SUSEConnect -p sle-module-desktop-applications/{{ os_version }}/x86_64
-            sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
-            sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
-            sudo zypper install zypper
+            .. code-block:: shell
 
-    {% endfor %}
+                sudo SUSEConnect -p sle-module-desktop-applications/{{ os_version }}/x86_64
+                sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
+                sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
+                sudo zypper install zypper
+        
+        {% endfor %}
 
 .. _sles-register-rocm:
 

@@ -19,6 +19,8 @@ Register repositories
 Register kernel-mode driver
 ----------------------------------------------------------------------------------------------------------
 
+.. datatemplate:nodata::
+
 .. tab-set::
     {% for os_version in config.html_context['ol_version_numbers'] %}
     {% set os_major, _  = os_version.split('.') %}

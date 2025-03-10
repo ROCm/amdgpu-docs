@@ -46,6 +46,8 @@ Register kernel-mode driver
 
 Add the AMDGPU repository for the driver.
 
+.. datatemplate:nodata::
+
 .. tab-set::
     {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
     .. tab-item:: Debian {{ os_version }}

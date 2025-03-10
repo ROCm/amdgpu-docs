@@ -24,16 +24,18 @@ Installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
-.. tab-set::
-    {% for os_version in config.html_context['ol_version_numbers'] %}
-    {% set os_major, _  = os_version.split('.') %}
-    .. tab-item:: OL {{ os_version }}
+.. datatemplate:nodata::
 
-        .. code-block:: bash
-            :substitutions:
+  .. tab-set::
+      {% for os_version in config.html_context['ol_version_numbers'] %}
+      {% set os_major, _  = os_version.split('.') %}
+      .. tab-item:: OL {{ os_version }}
 
-            sudo dnf install https://repo.radeon.com/amdgpu-install/|amdgpu_version|/el/{{ os_version }}/amdgpu-install-|amdgpu_install_version|.el{{ os_major }}.noarch.rpm
-    {% endfor %}
+          .. code-block:: bash
+              :substitutions:
+
+              sudo dnf install https://repo.radeon.com/amdgpu-install/|amdgpu_version|/el/{{ os_version }}/amdgpu-install-|amdgpu_install_version|.el{{ os_major }}.noarch.rpm
+      {% endfor %}
 
 .. include:: ./amdgpu-installer-common.rst
 

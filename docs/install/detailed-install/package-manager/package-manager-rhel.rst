@@ -19,26 +19,28 @@ Registering ROCm repositories
 Register kernel-mode driver
 ----------------------------------------------------------------------------------------------------------
 
-.. tab-set::
-    {% for os_version in config.html_context['rhel_version_numbers'] %}
-    {% set os_major, _  = os_version.split('.') %}
-    .. tab-item:: RHEL {{ os_version }}
-        :sync: rhel-{{ os_version }} rhel-{{ os_major }}
+.. datatemplate:nodata::
 
-        .. code-block:: bash
-            :substitutions:
+    .. tab-set::
+        {% for os_version in config.html_context['rhel_version_numbers'] %}
+        {% set os_major, _  = os_version.split('.') %}
+        .. tab-item:: RHEL {{ os_version }}
+            :sync: rhel-{{ os_version }} rhel-{{ os_major }}
 
-            sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
-            [amdgpu]
-            name=amdgpu
-            baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_version }}/main/x86_64/
-            enabled=1
-            priority=50
-            gpgcheck=1
-            gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
-            EOF
-            sudo dnf clean all
-    {% endfor %}
+            .. code-block:: bash
+                :substitutions:
+
+                sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
+                [amdgpu]
+                name=amdgpu
+                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_version }}/main/x86_64/
+                enabled=1
+                priority=50
+                gpgcheck=1
+                gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
+                EOF
+                sudo dnf clean all
+        {% endfor %}
 
 .. _rhel-install:
 

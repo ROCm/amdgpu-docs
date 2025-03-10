@@ -42,7 +42,10 @@ html_theme_options = {
     "link_main_doc": True,
     # Add any additional theme options here
 }
-extensions = ["rocm_docs"]
+extensions = [
+    "rocm_docs",
+    "sphinxcontrib.datatemplates",
+]
 
 # Table of contents
 external_toc_path = "./sphinx/_toc.yml"
