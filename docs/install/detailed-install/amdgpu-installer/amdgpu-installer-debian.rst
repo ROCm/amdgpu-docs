@@ -24,20 +24,18 @@ Installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
-.. datatemplate:nodata::
+.. tab-set::
+    {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
+    .. tab-item:: Debian {{ os_version }}
 
-  .. tab-set::
-      {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
-      .. tab-item:: Debian {{ os_version }}
+        .. code-block:: bash
+            :substitutions:
 
-          .. code-block:: bash
-              :substitutions:
-
-              sudo apt update
-              wget https://repo.radeon.com/amdgpu-install/|amdgpu_version|/ubuntu/{{ os_release }}/amdgpu-install_|amdgpu_install_version|_all.deb
-              sudo apt install ./amdgpu-install_|amdgpu_install_version|_all.deb
-              sudo apt update
-      {% endfor %}
+            sudo apt update
+            wget https://repo.radeon.com/amdgpu-install/|amdgpu_version|/ubuntu/{{ os_release }}/amdgpu-install_|amdgpu_install_version|_all.deb
+            sudo apt install ./amdgpu-install_|amdgpu_install_version|_all.deb
+            sudo apt update
+    {% endfor %}
 
 .. include:: ./amdgpu-installer-common.rst
 

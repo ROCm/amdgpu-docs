@@ -46,20 +46,18 @@ Register kernel-mode driver
 
 Add the AMDGPU repository for the driver.
 
-.. datatemplate:nodata::
+.. tab-set::
+    {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
+    .. tab-item:: Debian {{ os_version }}
+        :sync: debian-{{ os_version}}
 
-    .. tab-set::
-        {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
-        .. tab-item:: Debian {{ os_version }}
-            :sync: debian-{{ os_version}}
+        .. code-block:: bash
+            :substitutions:
 
-            .. code-block:: bash
-                :substitutions:
-
-                echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|rocm_version|/ubuntu {{ os_release }} main" \
-                    | sudo tee /etc/apt/sources.list.d/amdgpu.list
-                sudo apt update
-        {% endfor %}
+            echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|rocm_version|/ubuntu {{ os_release }} main" \
+                | sudo tee /etc/apt/sources.list.d/amdgpu.list
+            sudo apt update
+    {% endfor %}
 
 .. _debian-install:
 

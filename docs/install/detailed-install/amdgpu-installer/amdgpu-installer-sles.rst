@@ -47,17 +47,15 @@ Installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
-.. datatemplate:nodata::
+.. tab-set::
+    {% for os_version in config.html_context['sles_version_numbers'] %}
+    .. tab-item:: SLES {{ os_version }}
 
-  .. tab-set::
-      {% for os_version in config.html_context['sles_version_numbers'] %}
-      .. tab-item:: SLES {{ os_version }}
+        .. code-block:: bash
+            :substitutions:
 
-          .. code-block:: bash
-              :substitutions:
-
-              sudo zypper --no-gpg-checks install https://repo.radeon.com/amdgpu-install/|amdgpu_version|/sle/{{ os_version }}/amdgpu-install-|amdgpu_install_version|.noarch.rpm
-      {% endfor %}
+            sudo zypper --no-gpg-checks install https://repo.radeon.com/amdgpu-install/|amdgpu_version|/sle/{{ os_version }}/amdgpu-install-|amdgpu_install_version|.noarch.rpm
+    {% endfor %}
 
 .. include:: ./amdgpu-installer-common.rst
 
