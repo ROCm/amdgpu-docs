@@ -45,6 +45,7 @@ html_theme_options = {
 extensions = [
     "rocm_docs",
     "sphinxcontrib.datatemplates",
+    "sphinx_substitution_extensions",
 ]
 
 # Table of contents
