@@ -15,15 +15,6 @@ SUSE Enterprise Linux AMDGPU installer installation
   enumerate the IGP, the ROCm runtime might crash the system, even if told to omit
   it via `HIP_VISIBLE_DEVICES <https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html#hip-visible-devices>`_.
 
-.. _sles-amdgpu-install-installation:
-
-Installation
-=================================================
-
-.. caution::
-
-    Ensure that the :doc:`../prerequisites` are met before installing.
-
 .. _sles-addtional-package:
 
 Additional package repositories
@@ -44,6 +35,17 @@ Additional package repositories
                 sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
                 sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
                 sudo zypper install zypper
+
+        {% endfor %}
+
+.. _sles-amdgpu-install-installation:
+
+Installation
+=================================================
+
+.. caution::
+
+    Ensure that the :doc:`../prerequisites` are met before installing.
 
 .. datatemplate:nodata::
 
