@@ -8,6 +8,7 @@ if os.environ.get("READTHEDOCS", "") == "True":
 project = "Data Center GPU driver"
 
 version = "1.0.0"
+rocm_version = '6.3.3'
 release = version
 html_title = project
 author = "Advanced Micro Devices, Inc."
