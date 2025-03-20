@@ -7,7 +7,7 @@ Post-installation instructions
 *************************************************************************
 
 Verify the kernel-mode driver installation
-=================================================
+=========================================================================
 
 .. tab-set::
 
@@ -48,6 +48,7 @@ Verify the kernel-mode driver installation
             modinfo amdgpu | grep -w "version:"
 
 Sample output:
+-------------------------------------------------------------------------
 
 .. code-block:: bash
 
@@ -58,4 +59,6 @@ Sample output:
 - ``2133686``: amdgpu build number
 - ``22.04``: distro version
 - ``6.8.0-52-generic``: kernel version of dkms build
-- ``installed``: dkms status; "installed" = successful installation of amdgpu driver
+- ``installed``: dkms status; "installed" indicates successful installation of amdgpu driver
+
+
