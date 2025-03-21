@@ -51,8 +51,7 @@ Use the following command to check the installation of AMDGPU driver:
 
             modinfo amdgpu | grep -w "version:"
 
-Sample output:
--------------------------------------------------------------------------
+**Sample output:**
 
 .. code-block:: bash
 
