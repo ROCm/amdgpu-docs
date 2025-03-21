@@ -1,6 +1,6 @@
 root: index.md
 subtrees:
-  - caption: Install driver
+  - caption: Install AMDGPU driver
     entries:
       - file: install/detailed-install/prerequisites
         title: Prerequisites
