@@ -62,7 +62,7 @@ Use the following command to check the installation of AMDGPU driver:
 - ``2133686``: amdgpu driver build number
 - ``22.04``: distro version
 - ``6.8.0-52-generic``: kernel version of dkms build
-- ``installed``: dkms status; "installed" indicates successful installation of amdgpu driver
+- ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
 .. _other_resources:
 
