@@ -11,7 +11,7 @@ Post-installation instructions
 Verify kernel-mode driver installation
 =========================================================================
 
-Use the following commend to check the installation of AMDGPU driver:
+Use the following command to check the installation of AMDGPU driver:
 
 .. tab-set::
 
