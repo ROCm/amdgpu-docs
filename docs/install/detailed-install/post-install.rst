@@ -6,7 +6,9 @@
 Post-installation instructions
 *************************************************************************
 
-Verify the kernel-mode driver installation
+.. _verfify_amdgpu:
+
+Verify kernel-mode driver installation
 =========================================================================
 
 .. tab-set::
@@ -61,4 +63,14 @@ Sample output:
 - ``6.8.0-52-generic``: kernel version of dkms build
 - ``installed``: dkms status; "installed" indicates successful installation of amdgpu driver
 
+.. _other_resources:
 
+Additional software for userspace
+=========================================================================
+
+The following resources provide information about userspace software:
+
+- `ROCm components <https://rocm.docs.amd.com/en/latest/what-is-rocm.html>`_
+- `ROCm installation guide (Linux) <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/>`_
+- `ROCm installation guide (Windows) <https://rocm.docs.amd.com/projects/install-on-windows/en/latest/>`_
+- `HIP documentation <https://rocm.docs.amd.com/projects/HIP/en/latest/index.html>`_
