@@ -31,4 +31,4 @@ See also: `System requirements <https://rocm.docs.amd.com/projects/install-on-li
 
 .. note::
 
-    Azure Linux currently does not support AMDGPU installer method, refer to :doc:`package manager method <./package-manager/package-manager-azl>` for driver installation.
+    Azure Linux currently does not support AMDGPU installer method, refer to :doc:`package manager method <./detailed-install/package-manager/package-manager-azl>` for driver installation.
