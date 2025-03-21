@@ -1,7 +1,6 @@
 .. meta::
   :description: Installation via native package manager
-  :keywords: ROCm install, installation instructions, package manager, native package manager, AMD,
-    ROCm
+  :keywords: AMDGPU driver install, installation instructions, package manager, native package manager, AMD, driver
 
 ******************************************************************************
 Installation via native package manager

@@ -1,7 +1,6 @@
 .. meta::
   :description: Oracle Linux native installation
-  :keywords: ROCm install, installation instructions, OL, Oracle Linux native installation,
-    AMD, ROCm
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Oracle Linux, Oracle Linux native installation, AMD
 
 **********************************************************************************************
 Oracle Linux native installation

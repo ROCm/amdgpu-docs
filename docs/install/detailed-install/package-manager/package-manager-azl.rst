@@ -1,7 +1,6 @@
 .. meta::
   :description: Azure Linux native installation
-  :keywords: ROCm install, installation instructions, AZL, Azure Linux native installation,
-    AMD, ROCm
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Azure Linux, Azure Linux native installation, AMD
 
 **********************************************************************************************
 Azure Linux native installation

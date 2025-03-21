@@ -1,7 +1,6 @@
 .. meta::
   :description: Installation via AMDGPU installer
-  :keywords: ROCm install, installation instructions, AMDGPU installer, AMD,
-    ROCm
+  :keywords: AMDGPU driver install, installation instructions, AMDGPU installer, AMD, driver
 
 ******************************************************************************
 Installation via AMDGPU installer

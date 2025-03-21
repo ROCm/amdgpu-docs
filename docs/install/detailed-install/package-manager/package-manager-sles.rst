@@ -1,7 +1,6 @@
 .. meta::
   :description: SUSE Enterprise Linux native installation
-  :keywords: ROCm install, installation instructions, SUSE, SUSE Linux Enterprise native installation,
-    AMD, ROCm
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, SUSE Enterprise Linux, SLES, SLES native installation, AMD
 
 *********************************************************************************************
 SUSE Linux Enterprise native installation

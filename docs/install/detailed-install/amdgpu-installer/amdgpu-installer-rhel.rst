@@ -1,19 +1,12 @@
 .. meta::
   :description: Red Hat Enterprise Linux AMDGPU installer installation
-  :keywords: installation instructions, AMDGPU, AMDGPU installer, AMD, ROCm, Red Hat Enterprise Linux, Red Hat Enterprise Linux AMDGPU installer installation
+  :keywords: installation instructions, AMDGPU, AMDGPU installer, AMD, Red Hat Enterprise Linux, Red Hat Enterprise Linux AMDGPU installer installation
 
 *************************************************************************************
 Red Hat Enterprise Linux AMDGPU installer installation
 *************************************************************************************
 
 ``amdgpu-install`` is a tool that helps you install and update AMDGPU, ROCm, and ROCm components.
-
-.. note::
-
-  ROCm doesn't support integrated graphics. If your system has an
-  AMD IGP installed, disable it in the BIOS prior to using ROCm. If the driver can
-  enumerate the IGP, the ROCm runtime might crash the system, even if told to omit
-  it via `HIP_VISIBLE_DEVICES <https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html#hip-visible-devices>`_.
 
 .. _rhel-amdgpu-install-installation:
 

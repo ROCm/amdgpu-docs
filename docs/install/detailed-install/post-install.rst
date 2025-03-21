@@ -1,6 +1,6 @@
 .. meta::
   :description: Post-installation instructions
-  :keywords: AMDGPU driver install, installation instructions, AMD, AMDGPU, driver
+  :keywords: AMDGPU driver post install, installation instructions, AMD, AMDGPU, driver
 
 *************************************************************************
 Post-installation instructions
@@ -60,7 +60,7 @@ Sample output:
 
 - ``amdgpu``: dkms module name \
 - ``6.12.12``: amdgpu driver version
-- ``2133686``: amdgpu build number
+- ``2133686``: amdgpu driver build number
 - ``22.04``: distro version
 - ``6.8.0-52-generic``: kernel version of dkms build
 - ``installed``: dkms status; "installed" indicates successful installation of amdgpu driver

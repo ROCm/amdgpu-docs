@@ -1,6 +1,6 @@
 .. meta::
   :description: Debian native installation
-  :keywords: ROCm install, installation instructions, Debian, Debian native installation, AMD, ROCm
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Debian, Debian native installation, AMD
 
 ****************************************************************************
 Debian native installation

@@ -1,6 +1,6 @@
 .. meta::
   :description: Ubuntu native installation
-  :keywords: ROCm install, installation instructions, Ubuntu, Ubuntu native installation, AMD, ROCm
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Ubuntu, Ubuntu native installation, AMD
 
 ****************************************************************************
 Ubuntu native installation

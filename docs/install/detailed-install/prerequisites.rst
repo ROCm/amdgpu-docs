@@ -1,6 +1,6 @@
 .. meta::
   :description: Installation prerequisites
-  :keywords: installation prerequisites, AMD, ROCm
+  :keywords: installation prerequisites, AMD, AMDGPU, driver
 
 *********************************************************************
 Installation prerequisites

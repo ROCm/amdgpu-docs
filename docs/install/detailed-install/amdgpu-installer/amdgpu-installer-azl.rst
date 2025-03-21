@@ -1,6 +1,6 @@
 .. meta::
   :description: Azure Linux AMDGPU installer installation
-  :keywords: installation instructions, AMDGPU, AMDGPU installer, AMD, ROCm, Azure Linux, Azure Linux AMDGPU installer installation
+  :keywords: installation instructions, AMDGPU, AMDGPU installer, AMD, Azure Linux, Azure Linux AMDGPU installer installation
 
 *************************************************************************************
 Azure Linux AMDGPU installer installation
