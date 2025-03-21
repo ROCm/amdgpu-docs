@@ -68,7 +68,7 @@ Sample output:
 Additional software for userspace
 =========================================================================
 
-The following resources provide information about userspace software:
+The following resources provide information about user space software:
 
 - `ROCm components <https://rocm.docs.amd.com/en/latest/what-is-rocm.html>`_
 - `ROCm installation guide (Linux) <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/>`_
