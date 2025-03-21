@@ -18,7 +18,6 @@ Select the install instructions for your operating system
         * :doc:`Red Hat Enterprise Linux <./detailed-install/amdgpu-installer/amdgpu-installer-rhel>`
         * :doc:`Oracle Linux <./detailed-install/amdgpu-installer/amdgpu-installer-ol>`
         * :doc:`SUSE Linux Enterprise Server <./detailed-install/amdgpu-installer/amdgpu-installer-sles>`
-        * :doc:`Azure Linux <./detailed-install/amdgpu-installer/amdgpu-installer-azl>`
 
     .. grid-item-card:: Uninstall
 
@@ -27,9 +26,9 @@ Select the install instructions for your operating system
         * :ref:`Red Hat Enterprise Linux <rhel-amdgpu-install-uninstall-driver>`
         * :ref:`Oracle Linux <ol-amdgpu-install-uninstall-driver>`
         * :ref:`SUSE Linux Enterprise Server <sles-amdgpu-install-uninstall-driver>`
-        * :ref:`Azure Linux <azl-amdgpu-install-uninstall-driver>`
         
-
-    
-
 See also: `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_. 
+
+.. note::
+
+    Azure Linux currently does not support AMDGPU installer method, refer to :doc:`package manager method <../package-manager/package-manager-azl>` for driver installation.
