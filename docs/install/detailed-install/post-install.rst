@@ -69,7 +69,7 @@ Use the following command to check the installation of AMDGPU driver:
 Additional software for user space
 =========================================================================
 
-The following resources provide information about user space software:
+The AMD ROCm platform provides a comprehensive set of user space software components for GPU-accelerated computing. See the following resources:
 
 - `ROCm components <https://rocm.docs.amd.com/en/latest/what-is-rocm.html>`_
 - `ROCm installation guide (Linux) <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/>`_
