@@ -27,7 +27,7 @@ Select the install instructions for your operating system
         * :ref:`Oracle Linux <ol-amdgpu-install-uninstall-driver>`
         * :ref:`SUSE Linux Enterprise Server <sles-amdgpu-install-uninstall-driver>`
         
-See also: `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_. 
+See `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_ for a full list of supported operating systems.
 
 .. note::
 
