@@ -32,4 +32,4 @@ Select the install instructions for your operating system
 
     
 
-See also: `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_.
+See `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_ for a full list of supported operating systems.
