@@ -65,7 +65,7 @@ Sample output:
 
 .. _other_resources:
 
-Additional software for userspace
+Additional software for user space
 =========================================================================
 
 The following resources provide information about user space software:
