@@ -73,5 +73,4 @@ The AMD ROCm platform provides a comprehensive set of user space software compon
 
 - `ROCm components <https://rocm.docs.amd.com/en/latest/what-is-rocm.html>`_
 - `ROCm installation guide (Linux) <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/>`_
-- `ROCm installation guide (Windows) <https://rocm.docs.amd.com/projects/install-on-windows/en/latest/>`_
 - `HIP documentation <https://rocm.docs.amd.com/projects/HIP/en/latest/index.html>`_
