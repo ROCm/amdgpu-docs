@@ -23,7 +23,7 @@ Install kernel driver
     sudo tdnf install azurelinux-repos-amd
     sudo tdnf repolist --refresh
     sudo tdnf install amdgpu
-    sudo modprobe amdgpu
+    sudo reboot
 
 .. _azl-package-manager-uninstall-driver:
 
