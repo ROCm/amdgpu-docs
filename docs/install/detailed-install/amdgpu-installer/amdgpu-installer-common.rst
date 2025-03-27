@@ -6,7 +6,7 @@ access, use the ``dkms`` use case:
 
 .. code-block:: bash
 
-   amdgpu-install --usecase=dkms
+   sudo amdgpu-install --usecase=dkms
 
 To verify the kernel installation, use this command:
 
