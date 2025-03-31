@@ -2,7 +2,7 @@
 myst:
   html_meta:
     "description": "Learn about the features, capabilities, and ways to optimize the AMD GPU drivers"
-    "keywords": "Instinct, GPU, how to, conceptual, PCIe, IOMMU"
+    "keywords": "Instinct, GPU, how to, conceptual, PCIe, IOMMU, install"
 ---
 
 # AMD Instinct Data Center GPU Driver
@@ -19,7 +19,7 @@ The AMD Instinct documentation is organized into the following categories:
 :class-body: rocm-card-banner rocm-hue-16
 
 * [Prerequisites](./install/detailed-install/prerequisites.rst)
-* [Installation methods](./install/install-overview.html)
+* [Installation methods](./install/install-overview.rst)
 * [Post-install instructions](./install/detailed-install/post-install.rst)
 :::
 
