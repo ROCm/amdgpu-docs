@@ -15,6 +15,14 @@ The AMD Instinct documentation is organized into the following categories:
 :gutter: 3
 :class-container: rocm-doc-grid
 
+:::{grid-item-card} Install AMDGPU driver
+:class-body: rocm-card-banner rocm-hue-16
+
+* [Prerequisites](./install/detailed-install/prerequisites.rst)
+* [Installation methods](./install/install-overview.html)
+* [Post-install instructions](./install/detailed-install/post-install.rst)
+:::
+
 :::{grid-item-card} How to
 :class-body: rocm-card-banner rocm-hue-12
 
