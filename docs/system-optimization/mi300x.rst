@@ -735,6 +735,8 @@ Bidirectional bandwidth
 Change GPU partition modes
 ==========================
 
+.. <!-- spellcheck-disable -->
+
 The term compute partitioning modes, or Modular Chiplet Platform (MCP), refers to the
 logical partitioning of XCDs into devices in the ROCm stack. The names are
 derived from the number of logical partitions that are created out of the eight
@@ -744,6 +746,8 @@ utility will show a single MI300X device. In CPX (Core Partitioned X-celerator)
 mode, each XCD appears as a separate logical GPU, for example, as eight separate
 GPUs in :doc:`amd-smi <amdsmi:index>` per MI300X. CPX mode can be viewed as
 having explicit scheduling privileges for each individual compute element (XCD).
+
+.. <!-- spellcheck-enable -->
 
 While compute partitioning modes change the space on which you can assign work
 to compute units, the memory partitioning modes (known as Non-Uniform Memory

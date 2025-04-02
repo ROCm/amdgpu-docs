@@ -5,6 +5,7 @@ ACEs
 ACS
 AccVGPR
 AccVGPRs
+allreduce
 ALU
 AMD
 AMDGPU
@@ -51,6 +52,7 @@ CPF
 CPP
 CPU
 CPUs
+CPX
 Cron
 CSC
 CSE
@@ -213,6 +215,7 @@ LSAN
 LSan
 LTS
 LoRA
+MCP
 MEM
 MERCHANTABILITY
 MFMA
@@ -784,6 +787,7 @@ sm
 smi
 softmax
 spack
+SPX
 src
 stochastically
 strided
