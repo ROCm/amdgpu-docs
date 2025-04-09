@@ -65,6 +65,7 @@ AMD Instinct MI300X GPUs support compute and memory partitioning to expose inter
 ## 2. Hardware Compatibility List
 
 ### a. Firmware Requirements
+
 - 
 
 ### b. Operating System Requirements
@@ -88,6 +89,7 @@ amd-smi set --memory-partition {NPS1, NPS4}
 ```
 
 **Example:**
+
 ```bash
 amd-smi set --gpu all --compute-partition CPX
 amd-smi set --gpu all --memory-partition 
@@ -103,6 +105,7 @@ This configuration:
 <!-- ...existing code... -->
 
 ### b. Verifying Partition Creation
+
 Partition verification can be performed using the `amd-smi` utility that checks the active partition modes and device configurations:
 
 ```bash
@@ -110,7 +113,8 @@ amd-smi --showmeminfo vram
 amd-smi --showtopo
 ```
 
-c. Running Basic Tests
+### c. Running Basic Tests
+
 Use ROCm sample apps or HIP-based tests to verify each logical device.
 
 **Example:**
