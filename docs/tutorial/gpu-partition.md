@@ -66,8 +66,6 @@ AMD Instinct MI300X GPUs support compute and memory partitioning to expose inter
 
 ### a. Firmware Requirements
 
-- 
-
 ### b. Operating System Requirements
 
 - Ubuntu 22.04+, 24.04+.
