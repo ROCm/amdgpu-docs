@@ -14,6 +14,12 @@ subtrees:
           title: AMD Instinct MI200
         - file: system-optimization/mi100.md
           title: AMD Instinct MI100
+    - file: tutorial/index.md
+      title: Tutorials
+      subtrees:
+      - entries:
+        - file: tutorial/gpu-partition.md
+          title: AMD Instinct MI300X GPU Partition Guide
   - caption: Conceptual
     entries:
     - file: conceptual/iommu.rst
