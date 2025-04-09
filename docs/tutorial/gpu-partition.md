@@ -3,14 +3,18 @@
 ## 1. GPU Partitioning Overview
 
 ### a. Core Concepts
+
 AMD Instinct MI300X GPUs support compute and memory partitioning to expose internal hardware resources as logical devices, enhancing flexibility and performance tuning for HPC workloads.
+
 - The architecture consists of XCD (Accelerator Complex Die) and IOD (I/O Die).
 - Contains 8 XCDs and 4 IODs, with each pair of XCDs 3D-stacked on an IOD.
 - Features an inter-die interconnect for communication.
 - Implements High-Bandwidth Memory (HBM) with 8 stacks (2 per IOD).
 
 ### b. Partition Types
+
 **Compute Partitioning:**
+
 - **Compute Partitioning (CPX, SPX):**
   - **SPX (Single Partition X-celerator):** All 8 XCDs are viewed as a single device.
   - **CPX (Core Partitioned X-celerator):** Each XCD is exposed as a separate logical GPU, offering finer scheduling control.
@@ -20,12 +24,12 @@ AMD Instinct MI300X GPUs support compute and memory partitioning to expose inter
 | **SPX**     | Unified compute view (all XCDs)              | 1 device        |
 | **CPX**     | Disaggregated compute (per XCD)              | 8 devices       |
 
-
 | [![MI300X SPX](../images/SPX.png)](../images/SPX.png) | [![MI300X CPX](../images/CPX.png)](../images/CPX.png)  |
 | ----------------------------------------------- | ------------------------------------------------ |
 | **SPX:** All XCDs appear as one logical device. | **CPX:** Each XCD appears as one logical device. |
 
 **Memory Partitioning:**
+
 - **Memory Partitioning (Non Uniform Memory Access Per Socket - NPS):**
   - **NPS1:** All HBM memory is exposed as a unified pool (compatible with SPX & CPX).
   - **NPS4:** Pairs of HBM stacks form separate partitions (compatible only with CPX), enabling improved memory locality.
@@ -42,11 +46,13 @@ AMD Instinct MI300X GPUs support compute and memory partitioning to expose inter
 [//]: # "> **Note:** These compute and memory partitioning modes leverage SR-IOV (Single Root I/O Virtualization) for isolation and hardware-level protection between partitions."
 
 ### c. Prerequisites
+
 - Compatible firmware and kernel-level support.
 - AMD ROCm toolchain and `amd-smi` utility.
 - Bare-metal deployment without hypervisors.
 
 ### d. System Requirements
+
 - MI300X GPU
 - ROCm >= 6.4
 - Linux Kernel >= 5.15
@@ -62,15 +68,18 @@ AMD Instinct MI300X GPUs support compute and memory partitioning to expose inter
 - 
 
 ### b. Operating System Requirements
+
 - Ubuntu 22.04+, 24.04+.
 
 ### c. Driver Requirements
+
 - ROCm Driver >= 6.4
 - `amd-smi` tool required for mode switching and diagnostics.
 
 ## 3. First Partition / Quick Start
 
 ### a. Creating CPX/NPS4 Partition
+
 ```bash
 amd-smi set --compute-partition {CPX, SPX, TPX}
 # Set one of the following the compute partition modes: CPX, SPX, TPX
