@@ -16,12 +16,15 @@ CRIU dumps can be quite large. CRIU does not support graphical applications or d
 
 To use CRIU, first the process you want to checkpoint must be running. Start a new shell and nevigate to an empty directory. Find the process ID of the process
 you want to checkpoint with ps or a similar utility. In the new shell, run:
+
 ```shell
 $ sudo criu dump -vvv --shell-job --link-remap --ext-unix-sk -o dump.log -t <pid>
 ```
+
 When CRIU is finished, the target process will be dead and there will be a large number of files in the directory.
 
 To restore a prcoess, navigate to the directory containing all the files that resulted from checkpoint and run:
+
 ```shell
 $ sudo criu restore -vvv --shell-job --link-remap --ext-unix-sk -o restore.log
 ```
@@ -33,32 +36,45 @@ Theses are common command-line options used with CRIU:
 ```shell
 -vvv -o <logfile>
 ```
+
 Create a logfile for this CRIU operation with maximum verboseness. The files can be named anything you wish.
+
 ```shell
 --shell-job (or -j)
 ```
+
 This option is required when checkpointing a process that was started from the shell
+
 ```shell
 --ext-unix-sk
 ```
+
 This option is required when checkpointing any process that opens a socket
+
 ```shell
 --link-remap
 ```
+
 This option is required when checkpointing any process that opens files
+
 ```shell
 --file-locks
 ```
+
 This option is required when checkpointing any process that holds file locks
 
 If one of the above four options is missing and needed, the dump and restore log will contain a helpful message telling you so
+
 ```shell
 --ext-mount-map
 ```
+
 This option is required to handle docker's unusual way of mounting the /etc/* files
+
 ```shell
 --ghost-limit <size>
 ```
+
 Sets the maximum size of [invisible files](https://criu.org/Invisible_files) that CRIU will save.
 
 ## Common CRIU Errors
