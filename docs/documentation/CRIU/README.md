@@ -89,7 +89,7 @@ available storage on the file system, CRIU will fail, possibly with an error in 
 
 >Error (criu/bfd.c:131): bfd: Error flushing image: No space left on device \
 >(You can use command "top" to see a running program's memory usage, and command "df" to see the available space in currently mounted drives) \
->There is no solution for this. In particular, this means that, on some systems, checkpointing the kfdtest ```LargestSysBufferTest``` may be impossible
+>There is no solution for this. In particular, this means that, on some systems, checkpointing the kfdtest `LargestSysBufferTest` may be impossible
 
 Something like this:
 >(00.150425) Error (criu/mount.c:753): mnt: 730:./etc/hosts doesn't have a proper root mount \
