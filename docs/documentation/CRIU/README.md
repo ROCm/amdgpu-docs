@@ -6,7 +6,7 @@ The data saved can later be used to restart the program as it was at the moment 
 CRIU is a fully open source project. CRIU can be intalled with your package manager of choice or built from source from: https://github.com/checkpoint-restore/criu.git.
 CRIU documentation can be found on the [CRIU wiki](http://criu.org/).
 
-## CRIU Support with AMD
+## CRIU Support with AMDs
 
 CRIU has a plugin to support checkpoint and restore of processes that have AMDGPU resources such as buffer objects and queues.
 This plugin is open-source and part of upstream CRIU, and is enabled by default. The plugin supports processes that use amdkfd kernel interfaces, but not amdgpu ones
@@ -102,5 +102,8 @@ Something like this:
 
 If the dump log contains a line like:
 
-> (00.104296) Error (criu/files-reg.c:1031): Can't dump ghost file /dev/shm/nccl-tsD6S7 of 1052672 size, increase limit \
-> then you need to increase the --ghost-limit option
+```shell
+(00.104296) Error (criu/files-reg.c:1031): Can't dump ghost file /dev/shm/nccl-tsD6S7 of 1052672 size, increase limit 
+```
+
+ then you need to increase the --ghost-limit option
