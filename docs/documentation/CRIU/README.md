@@ -14,7 +14,7 @@ This plugin is open-source and part of upstream CRIU, and is enabled by default.
 CRIU works only on Linux. CRIU requires superuser permissions. Because a CRIU dump contains copies of all memory held by the target process (both RAM and VRAM),
 CRIU dumps can be quite large. CRIU does not support graphical applications or distributed applications.
 
-To use CRIU, first the process you want to checkpoint must be running. Start a new shell and nevigate to an empty directory. Find the process ID of the process
+To use CRIU, first the process you want to checkpoint must be running. Start a new shell and navigate to an empty directory. Find the process ID of the process
 you want to checkpoint with ps or a similar utility. In the new shell, run:
 
 ```shell
@@ -89,7 +89,7 @@ available storage on the file system, CRIU will fail, possibly with an error in 
 
 >Error (criu/bfd.c:131): bfd: Error flushing image: No space left on device \
 >(You can use command "top" to see a running program's memory usage, and command "df" to see the available space in currently mounted drives) \
->There is no solution for this. In particular, this means that, on some systems, checkpointing the kfdtest LargestSysBufferTest may be impossible
+>There is no solution for this. In particular, this means that, on some systems, checkpointing the kfdtest ```LargestSysBufferTest``` may be impossible
 
 Something like this:
 >(00.150425) Error (criu/mount.c:753): mnt: 730:./etc/hosts doesn't have a proper root mount \
