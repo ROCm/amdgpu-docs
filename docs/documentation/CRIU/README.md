@@ -3,7 +3,7 @@
 Checkpoint and Restore in Userspace (CRIU) is a utility that allows the state of another running program (or an entire container) to be saved to disk.
 The data saved can later be used to restart the program as it was at the moment it was captured on the same computer or a different one.
 
-CRIU is a fully open source project. CRIU can be intalled with your package manager of choice or built from source from: https://github.com/checkpoint-restore/criu.git.
+CRIU is a fully open source project. CRIU can be installed with your package manager of choice or built from source from: https://github.com/checkpoint-restore/criu.git.
 CRIU documentation can be found on the [CRIU wiki](http://criu.org/).
 
 ## CRIU Support with AMDs
