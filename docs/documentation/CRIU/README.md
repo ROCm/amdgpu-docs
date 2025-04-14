@@ -18,7 +18,7 @@ To use CRIU, first the process you want to checkpoint must be running. Start a n
 you want to checkpoint with ps or a similar utility. In the new shell, run:
 
 ```shell
-$ sudo criu dump -vvv --shell-job --link-remap --ext-unix-sk -o dump.log -t <pid>
+sudo criu dump -vvv --shell-job --link-remap --ext-unix-sk -o dump.log -t <pid>
 ```
 
 When CRIU is finished, the target process will be dead and there will be a large number of files in the directory.
@@ -26,7 +26,7 @@ When CRIU is finished, the target process will be dead and there will be a large
 To restore a prcoess, navigate to the directory containing all the files that resulted from checkpoint and run:
 
 ```shell
-$ sudo criu restore -vvv --shell-job --link-remap --ext-unix-sk -o restore.log
+sudo criu restore -vvv --shell-job --link-remap --ext-unix-sk -o restore.log
 ```
 
 ## Common Command-Line Options
