@@ -868,3 +868,12 @@ xz
 yaml
 ysvmadyb
 zypper
+AMDSMI
+AST
+IOD
+IODs
+amd
+amdsmi
+celerator
+chiplets
+vllm
