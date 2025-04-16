@@ -18,7 +18,7 @@ subtrees:
       title: Tutorials
       subtrees:
       - entries:
-        - file: tutorial/gpu-partition.md
+        - file: tutorial/gpu-partition-guide.rst
           title: AMD Instinct MI300X GPU Partition Guide
   - caption: Conceptual
     entries:
@@ -28,13 +28,3 @@ subtrees:
       title: PCIe atomics in ROCm
     - file: conceptual/oversubscription.rst
       title: Oversubscription of hardware resources
-    - file: conceptual/gpu-partition.md
-      title: GPU Partitioning
-  - caption: Reference
-    entries:
-    - file: reference/gpu-partition.md
-      title: GPU Partitioning
-  - caption: Tutorials
-    entries:
-    - file: system-optimization/gpu-partition.md
-      title: GPU Partitioning on AMD Instinct MI300X
