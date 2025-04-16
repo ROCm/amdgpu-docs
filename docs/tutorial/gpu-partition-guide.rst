@@ -96,7 +96,11 @@ c. CPX (Core Partitioned X-celerator)
 
 - CPX works optimally with memory partitioning (NPS4)
 
-**Use Case**: Best for Multi-tenant environments, task-level isolation, or inference workloads where individual models fit within a single XCD's memory, Thus benefiting from dedicated compute and memory.
+**Use Case**: 
+
+1. **Multi-Tenant Environments:** Allocate separate GPU partitions to different users or tenants in a data center to achieve isolation.
+2. **Heterogeneous Workloads:** Run AI training, inference, and HPC workloads simultaneously on different partitions where individual models/data fit within a single XCD's memory.
+3. **Resource Oversubscription:** Optimize resource usage by oversubscribing partitions for workloads with varying demands.
 
 **Behavior:**
 
@@ -157,8 +161,8 @@ c. CPX (Core Partitioned X-celerator)
 .. list-table::
    :header-rows: 1
 
-   * - MI300 NPS1
-     - MI300 NPS4
+   * - MI300X NPS1
+     - MI300X NPS4
    * - .. image:: ../images/gpu-partition_NPS1.png
      - .. image:: ../images/gpu-partition_NPS4.png
    * - **NPS1:** All HBM stacks appear as a unified memory pool.
