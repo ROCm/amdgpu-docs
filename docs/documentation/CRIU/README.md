@@ -23,7 +23,7 @@ sudo criu dump -vvv --shell-job --link-remap --ext-unix-sk -o dump.log -t <pid>
 
 When CRIU is finished, the target process will be dead and there will be a large number of files in the directory.
 
-To restore a prcoess, navigate to the directory containing all the files that resulted from checkpoint and run:
+To restore a process, navigate to the directory containing all the files that resulted from checkpoint and run:
 
 ```shell
 sudo criu restore -vvv --shell-job --link-remap --ext-unix-sk -o restore.log
