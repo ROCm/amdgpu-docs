@@ -25,7 +25,7 @@ If you receive an error when executing partitioning commands using `amd-smi`, ve
          .. code-block:: shell-session
 
             # Check if the GPU is in use
-            $ amd-smi set --gpu all --compute-partition SPX
+            amd-smi set --gpu all --compute-partition SPX
 
 
       .. tab-item:: Shell output
@@ -56,7 +56,7 @@ Partitioning operations can fail if the GPU is actively being used by another pr
          .. code-block:: shell-session
 
             # setting memory partition mode
-            $ sudo amd-smi set --gpu all --compute-partition SPX
+            sudo amd-smi set --gpu all --compute-partition SPX
 
       .. tab-item:: Shell output
 
@@ -87,7 +87,7 @@ NPS4 memory mode is only compatible with CPX compute mode. If you attempt to swi
          .. code-block:: shell-session
 
             # Set compute partition mode
-            $ sudo amd-smi set --gpu all --compute-partition SPX    
+            sudo amd-smi set --gpu all --compute-partition SPX    
 
       .. tab-item:: Shell output
 
@@ -116,7 +116,7 @@ Before switching to SPX mode, first revert the memory partition mode to NPS1:
          .. code-block:: shell-session
 
             # Set memory partition mode
-            $ sudo amd-smi set --memory-partition NPS1  
+            sudo amd-smi set --memory-partition NPS1  
 
       .. tab-item:: Shell output
 
@@ -151,7 +151,7 @@ Once complete, you can safely reset compute partitioning to SPX mode.
 4. All 64 GPUs not visible in `amd-smi` output in CPX mode
 -----------------------------------------------------------
 
-In CPX mode, the system should expose 64 logical GPUs (8 per physical MI300X device). If you observe fewer GPUs, it may be due to a known Linux kernel issue involving the AST virtual video driver.
+In CPX mode, the system should expose 64 logical GPUs (8 per physical MI300X device). If you observe fewer GPUs, it may be due to a known Linux kernel issue involving the BMC virtual video driver. On most systems this virtual video driver is AST (ASPEED AST media controller). 
 
 **Resolution:**
 

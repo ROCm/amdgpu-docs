@@ -12,7 +12,7 @@ This document is particularly useful for AI developers, performance engineers, a
 
 ---
 
-a. One-Time Setup
+1. One-Time Setup
 ------------------
 
 Pull the prebuilt AMD container for vLLM workloads. This container includes all necessary ROCm libraries and pre-installed dependencies.
@@ -24,7 +24,7 @@ Pull the prebuilt AMD container for vLLM workloads. This container includes all 
 
 ---
 
-b. Launching the Container
+2. Launching the Container
 ---------------------------
 
 Run the container with the required privileges and device mappings to enable GPU access:
@@ -36,7 +36,7 @@ Run the container with the required privileges and device mappings to enable GPU
 
 ---
 
-c. Cloning the Benchmark Suite
+3. Cloning the Benchmark Suite
 -------------------------------
 
 Inside the container, clone the ROCm/MAD repository and navigate to the vLLM benchmarking script directory:
@@ -49,7 +49,7 @@ Inside the container, clone the ROCm/MAD repository and navigate to the vLLM ben
 
 ---
 
-d. Authentication - Hugging Face Token
+4. Authentication - Hugging Face Token
 ---------------------------------------
 
 To download LLM models such as `Llama-3`, you need a Hugging Face account and an access token.
@@ -64,7 +64,7 @@ This token is used to pull LLM models (e.g., Llama-3) from Hugging Face.
 
 ---
 
-e. How to Check if an LLM Fits within a CPX GPU?
+5. How to Check if an LLM Fits within a CPX GPU?
 --------------------------------------------------
 
 Before executing a workload, it is critical to ensure that the selected model can fit entirely within the memory available on a single CPX GPU partition, particularly when using CPX/NPS4 mode (which provides 24GB per partition).
@@ -127,14 +127,14 @@ Where:
 How do above partitions affect LLM models?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    - With reduced memory per CPX GPU, models may not fit within one CPX GPU. So, models have to be partitioned across multiple CPX GPUs using tensor parallelism.
-    - With reduced compute per CPX GPU, models may be compute bounded if they run on lesser XCD units compared to SPX mode. As above, using tensor parallelism to split the model across multiple CPX GPUs can take advantage of more compute units.
+    - With reduced memory in the CPX mode (24GB HBM per XCD), models may not fit within one CPX GPU. So, models have to be partitioned across multiple CPX GPUs using tensor parallelism.
+    - With reduced compute in the CPX mode (38CUs per XCD), models may be compute bounded if they run on lesser XCD units compared to SPX mode. As above, using tensor parallelism to split the model across multiple CPX GPUs can take advantage of more compute units.
 
 **Summary:** Always pre-calculate memory needs and compute needs for your selected model and batch size to determine the appropriate number of CPX partitions (i.e., GPUs) to assign.
 
 ---
 
-f. GPU Selection (Optional)
+6. GPU Selection (Optional)
 ----------------------------
 
 If you wish to limit the vLLM workload to a specific set of GPUs (e.g., 8 out of the total available), define the HIP_VISIBLE_DEVICES environment variable. If left unset, all GPUs are utilized.
@@ -148,7 +148,7 @@ If you wish to limit the vLLM workload to a specific set of GPUs (e.g., 8 out of
 
 ---
 
-g. Running the vLLM Benchmark
+7. Running the vLLM Benchmark
 ------------------------------
 
 The benchmark script accepts several command-line options to customize the test. Here's an example that runs the meta-llama/Llama-3.1-8B-Instruct model on 8 GPUs in FP16 mode:

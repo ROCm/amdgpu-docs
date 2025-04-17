@@ -34,7 +34,7 @@ a. **Set compute partitioning mode to CPX:**
          .. code-block:: shell-session
 
             # Set compute partition mode
-            $ sudo amd-smi set --gpu all --compute-partition CPX    
+            sudo amd-smi set --gpu all --compute-partition CPX    
 
       .. tab-item:: Shell output
 
@@ -73,7 +73,7 @@ b. **Set memory partitioning mode to NPS4:**
          .. code-block:: shell-session
 
             # Set memory partition mode
-            $ sudo amd-smi set --memory-partition NPS4  
+            sudo amd-smi set --memory-partition NPS4  
 
       .. tab-item:: Shell output
 
@@ -166,7 +166,7 @@ Use `amd-smi` to confirm active partition states:
          .. code-block:: shell-session
 
             # Check partitioning status
-            $ amd-smi static --partition
+            amd-smi static --partition
 
       .. tab-item:: Shell output
 
@@ -568,7 +568,7 @@ Use the following commands to switch compute or memory partitioning modes.
          .. code-block:: shell-session
 
             # Set compute partition mode
-            $ sudo amd-smi set --gpu all --compute-partition CPX    
+            sudo amd-smi set --gpu all --compute-partition CPX    
 
       .. tab-item:: Shell output
 
@@ -605,7 +605,7 @@ Use the following commands to switch compute or memory partitioning modes.
          .. code-block:: shell-session
 
             # Set compute partition mode
-            $ sudo amd-smi set --gpu all --compute-partition SPX    
+            sudo amd-smi set --gpu all --compute-partition SPX    
 
       .. tab-item:: Shell output
 
@@ -642,7 +642,7 @@ Use the following commands to switch compute or memory partitioning modes.
          .. code-block:: shell-session
 
             # Set memory partition mode
-            $ sudo amd-smi set --memory-partition NPS4  
+            sudo amd-smi set --memory-partition NPS4  
 
       .. tab-item:: Shell output
 
@@ -715,7 +715,7 @@ Use the following commands to switch compute or memory partitioning modes.
          .. code-block:: shell-session
 
             # Set memory partition mode
-            $ sudo amd-smi set --memory-partition NPS1  
+            sudo amd-smi set --memory-partition NPS1  
 
       .. tab-item:: Shell output
 
@@ -773,7 +773,7 @@ To delete or reset partitions, revert both compute and memory partitioning to de
 
 .. code-block:: shell-session
 
-   $ sudo amd-smi set --gpu all --compute-partition SPX
-   $ sudo amd-smi set --memory-partition NPS1
+   sudo amd-smi set --gpu all --compute-partition SPX
+   sudo amd-smi set --memory-partition NPS1
 
 

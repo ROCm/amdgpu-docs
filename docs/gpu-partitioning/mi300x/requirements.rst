@@ -42,7 +42,7 @@ b. Software Requirements
          .. code-block:: shell-session
 
             # Check Linux kernel version
-            $ hostnamectl | grep 'Kernel'
+            hostnamectl | grep 'Kernel'
 
       .. tab-item:: Shell output
 
@@ -61,7 +61,7 @@ b. Software Requirements
          .. code-block:: shell-session
 
             # Check AMD-SMI version
-            $ amd-smi version | grep -o 'AMDSMI [^|]*'
+            amd-smi version | grep -o 'AMDSMI [^|]*'
 
       .. tab-item:: Shell output
 
@@ -81,7 +81,7 @@ b. Software Requirements
          .. code-block:: shell-session
 
             # Check amd gpu version
-            $ amd-smi version | grep -o 'amdgpu version: [^|]*'
+            amd-smi version | grep -o 'amdgpu version: [^|]*'
 
       .. tab-item:: Shell output
 
@@ -104,7 +104,7 @@ c. Firmware Requirements
          .. code-block:: shell-session
 
             # Check VBIOS version
-            $ amd-smi static | grep -A 4 -m 1 'VBIOS'
+            amd-smi static | grep -A 4 -m 1 'VBIOS'
 
       .. tab-item:: Shell output
 
@@ -131,7 +131,7 @@ d. Operating System Requirements
          .. code-block:: shell-session
 
             # Check Operating System version
-            $ hostnamectl | grep 'Operating System'
+            hostnamectl | grep 'Operating System'
 
       .. tab-item:: Shell output
 
@@ -153,7 +153,7 @@ e. Driver Requirements
          .. code-block:: shell-session
 
             # Check ROCm version
-            $ amd-smi version | grep -o 'ROCm version: [^|]*'
+            amd-smi version | grep -o 'ROCm version: [^|]*'
 
       .. tab-item:: Shell output
 
