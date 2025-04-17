@@ -8,7 +8,7 @@ AMD Instinct MI300X GPU
 
 The AMD Instinct™ MI300X GPU represents a significant leap in data center GPU design, purpose-built for large-scale AI inference, high-throughput LLM workloads, and advanced HPC deployments. Featuring cutting-edge CDNA™ 3 architecture and industry-leading memory capacity, the MI300X is designed to meet the most demanding compute and memory bandwidth requirements of today’s generative AI era.
 
-This documentation provides a comprehensive guide for users, system integrators, and infrastructure teams working with the MI300X, covering the complete software and runtime configuration lifecycle — from initial bring-up and partitioning to troubleshooting and real-world workload validation.
+This documentation provides a comprehensive guide for users, system integrators, and infrastructure teams working with the MI300X, covering the complete software and runtime configuration lifecycle — from initial bring-up and partitioning to troubleshooting and running real-world workload.
 
 Key technical highlights of the MI300X include:
 
