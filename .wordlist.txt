@@ -872,3 +872,5 @@ amdsmi
 celerator
 chiplets
 vllm
+misconfigurations
+integrators
