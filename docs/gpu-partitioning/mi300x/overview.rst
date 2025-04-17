@@ -118,7 +118,7 @@ ii. CPX (Core Partitioned X-celerator)
    * - **SPX:** All XCDs appear as one logical device.
      - **CPX:** Each XCD appears as one logical device.
 
-- **The dotted line in the above diagram indicates the partitions.**
+- **The dotted line in the above diagram indicate the partitions.**
 
 b. Memory Partitioning (NPS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -175,7 +175,7 @@ b. Memory Partitioning (NPS)
    * - **NPS1:** All HBM stacks appear as a unified memory pool.
      - **NPS4:** HBM stacks are segmented into memory quadrants.
 
-- **The dotted line in the above diagram indicates the partitions.**
+- **The dotted line in the above diagram indicate the partitions.**
 
 4. Benefits of Partitioning
 ----------------------------
