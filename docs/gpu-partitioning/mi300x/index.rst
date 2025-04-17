@@ -10,4 +10,4 @@ AMD Instinct MI300X GPU
 - :doc:`Requirements <requirements>`
 - :doc:`Quick Start Guide <quick-start-guide>`
 - :doc:`Troubleshooting <troubleshooting>`
-- :doc:`Run Test <run-vllm>`
+- :doc:`Run a VLLM workload <run-vllm>`

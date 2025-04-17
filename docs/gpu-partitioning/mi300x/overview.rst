@@ -1,5 +1,5 @@
-AMD Instinct MI300X GPU Overview
-================================
+AMD Instinct MI300X GPU Partitioning Overview
+===============================================
 
 1. Introduction
 ----------------
@@ -176,27 +176,7 @@ b. Memory Partitioning (NPS)
 .. note::
    Mixed memory partitioning modes are **not recommended** for single-node configurations.
 
-4. GPU Partitioning Schemes Compatibility Matrix
--------------------------------------------------
-
-The following matrix summarizes the validated compatibility between AMD Instinct GPUs and supported combinations of Compute and Memory Partitioning modes. 
-
-Note that certain combinations may be unsupported or may require a minimum ROCm driver version to enable functionality. Where applicable, the minimum supported ROCm version has been indicated.
-
-.. list-table:: GPU Partitioning Schemes Compatibility Matrix
-    :header-rows: 1
-    :widths: 20 20 20 20
-
-    * - Instinct GPUs
-      - SPX + NPS1
-      - CPX + NPS1
-      - CPX + NPS4
-    * - MI300X
-      - ✅
-      - 
-      - ✅ (ROCm 6.4)
-
-5. Benefits of Partitioning
+4. Benefits of Partitioning
 ----------------------------
 
 - CPX + NPS4 mode in the MI300X accelerator delivers improved performance for small language models (13B parameters or less) that fit within the memory capacity of a single CPX GPU.
