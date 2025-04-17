@@ -64,6 +64,19 @@ a. **Set compute partitioning mode to CPX:**
             GPU: 7
                 ACCELERATOR_PARTITION: Successfully set accelerator partition to CPX (profile #3)
 
+.. tip::
+
+   As a usability enhancement, the `amd-smi` tool is designed to automatically switch compute partitioning mode to **CPX** if the current mode is **SPX** and the user sets the memory partition to **NPS4**. This automatic promotion ensures compatibility between memory and compute partitioning schemes, as NPS4 is only supported in CPX mode. 
+
+   For most users, this behavior simplifies configuration by eliminating the need for an explicit compute partition switch. In such cases, it is sufficient to run the memory partition command alone:
+
+   .. code-block:: shell-session
+
+      sudo amd-smi set --memory-partition NPS4
+
+   This command will internally transition the compute mode from SPX to CPX, followed by the memory mode switch to NPS4 — provided all prerequisites are met and no GPU workloads are active.
+
+
 b. **Set memory partitioning mode to NPS4:**
 
    .. tab-set::
