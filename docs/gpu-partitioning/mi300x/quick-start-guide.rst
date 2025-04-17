@@ -66,9 +66,9 @@ a. **Set compute partitioning mode to CPX:**
 
 .. tip::
 
-   As a usability enhancement, the `amd-smi` tool is designed to automatically switch compute partitioning mode to **CPX** if the current mode is **SPX** and the user sets the memory partition to **NPS4**. This automatic promotion ensures compatibility between memory and compute partitioning schemes, as NPS4 is only supported in CPX mode. 
+   On MI300X, memory partitioning requires that the number of memory partitions not exceed the number of compute partitions. As a result, the **SPX+NPS4** configuration is invalid.
 
-   For most users, this behavior simplifies configuration by eliminating the need for an explicit compute partition switch. In such cases, it is sufficient to run the memory partition command alone:
+   When switching from **SPX+NPS1** to **CPX+NPS4**, setting the memory partition to **NPS4** will automatically transition the compute partition to **CPX**. You can skip the explicit CPX compute mode step, setting **NPS4** alone is sufficient to configure a valid **CPX+NPS4** partition.
 
    .. code-block:: shell-session
 
@@ -562,6 +562,12 @@ Use `amd-smi` to confirm active partition states:
                     COMPUTE_PARTITION: CPX
                     MEMORY_PARTITION: NPS4
                     PARTITION_ID: 6
+
+            GPU: 63
+                PARTITION:
+                    COMPUTE_PARTITION: CPX
+                    MEMORY_PARTITION: NPS4
+                    PARTITION_ID: 7
 
 3. Modifying Partitions
 ------------------------
