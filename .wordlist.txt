@@ -5,6 +5,7 @@ ACEs
 ACS
 AccVGPR
 AccVGPRs
+allreduce
 ALU
 AMD
 AMDGPU
@@ -52,6 +53,7 @@ CPF
 CPP
 CPU
 CPUs
+CPX
 Cron
 CSC
 CSE
@@ -214,6 +216,7 @@ LSAN
 LSan
 LTS
 LoRA
+MCP
 MEM
 MERCHANTABILITY
 MFMA
@@ -674,6 +677,7 @@ nanoGPT
 num
 numref
 ocl
+ol
 opencl
 opencv
 openmp
@@ -785,6 +789,7 @@ sm
 smi
 softmax
 spack
+SPX
 src
 stochastically
 strided
@@ -864,3 +869,19 @@ xz
 yaml
 ysvmadyb
 zypper
+AMDs
+INET
+Userspace
+amdkfd
+bfd
+checkpointed
+checkpointing
+criu
+df
+docker's
+inet
+kfdtest
+logfile
+mnt
+ps
+verboseness
