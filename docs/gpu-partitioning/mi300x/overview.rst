@@ -80,6 +80,7 @@ i. SPX (Single Partition X-celerator)
 
 - ``amd-smi`` shows **1 GPU** with **304 CUs** and **192GB HBM**.
 - Workgroups are **automatically distributed** across all XCDs (round-robin).
+- The GPU will always revert back to this default SPX mode when the system is rebooted or when the amdgpu driver is unloaded and reloaded.
 
 ii. CPX (Core Partitioned X-celerator)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,7 +90,7 @@ ii. CPX (Core Partitioned X-celerator)
 - **Memory Allocation:**
 
   - In NPS1, HBM memory is interleaved across all stacks.
-  - In NPS4, each XCD gets a dedicated memory quadrant (2 HBM stacks) which can be used to interleave its dedicated 24GB.
+  - In NPS4, each XCD gets a dedicated memory quadrant (2 HBM stacks) which can be used to interleave the 24GBs of dedicated memory each XCD is given in this mode.
 
 - CPX works optimally with memory partitioning (NPS4)
 
@@ -140,14 +141,12 @@ b. Memory Partitioning (NPS)
 
   - **NPS4 (Partitioned Memory):**
 
-    - Pairs of HBM stacks forming 48GB each are viewed as separate memory partitions. Each CPX only accesses 24GB interleaved in the partition
+    - Pairs of HBM stacks forming 48GB each are viewed as separate memory partitions. Each CPX partition still only has access to 24GBs of HBM memory, but the memory is interleaved across this 48GB memory partition instead of across the entire 192GB of the GPU.
     - Each memory quadrant (partition) of the memory is directly visible to the logical devices in its quadrant.
     - An XCD can still access all portions of memory through multi-GPU programming techniques.
     - Best for workloads requiring dedicated memory resources.
     - Only available with CPX mode.
     - In NPS4 mode, the traffic latency to HBM (High Bandwidth Memory) is minimized because it remains on the same AID (Accelerator Interface Domain), leading to shorter latency and faster transitions from idle to full bandwidth.
-    - In NPS4 mode, higher bandwidth to MALL (Memory Attached Last Level Cache) can be achieved.
-    - NPS4 mode is highly performant when paired with CPX mode for workloads that fit within the memory capacity of a single XCD.
 
 ..  - `amd-smi` will show 4 devices with 48GB of HBM each.
 
