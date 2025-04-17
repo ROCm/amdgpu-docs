@@ -877,3 +877,4 @@ integrators
 hyperscaler
 lifecycle
 prem
+ASPEED
