@@ -14,12 +14,30 @@ subtrees:
           title: AMD Instinct MI200
         - file: system-optimization/mi100.md
           title: AMD Instinct MI100
-    - file: tutorial/index.md
-      title: Tutorials
+    - file: gpu-partitioning/index.rst
+      title: GPU Partitioning
       subtrees:
       - entries:
-        - file: tutorial/gpu-partition-guide.rst
-          title: AMD Instinct MI300X GPU Partition Guide
+        - file: gpu-partitioning/mi300x/index.rst
+          title: AMD Instinct MI300X GPU
+          subtrees:
+          - entries:
+            - file: gpu-partitioning/mi300x/overview.rst
+              title: GPU Partitioning Overview
+            - file: gpu-partitioning/mi300x/requirements.rst
+              title: Requirements
+            - file: gpu-partitioning/mi300x/quick-start-guide.rst
+              title: Quick Start Guide
+            - file: gpu-partitioning/mi300x/troubleshooting.rst
+              title: Troubleshooting
+            - file: gpu-partitioning/mi300x/run-vllm.rst
+              title: Running an example VLLM workload
+        - file: gpu-partitioning/mi300a/index.rst
+          title: AMD Instinct MI300A APU
+          subtrees:
+          - entries:
+            - file: gpu-partitioning/mi300a/overview.rst
+              title: GPU Partitioning Overview
   - caption: Conceptual
     entries:
     - file: conceptual/iommu.rst
