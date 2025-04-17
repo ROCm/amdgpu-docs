@@ -90,7 +90,7 @@ ii. CPX (Core Partitioned X-celerator)
 - **Memory Allocation:**
 
   - In NPS1, HBM memory is interleaved across all stacks.
-  - In NPS4, each XCD gets a dedicated memory quadrant (2 HBM stacks) which can be used to interleave the 24GBs of dedicated memory each XCD is given in this mode.
+  - In NPS4, each XCD gets a dedicated memory quadrant (2 HBM stacks) which can be used to interleave the 24GB of dedicated memory each XCD is given in this mode.
 
 - CPX works optimally with memory partitioning (NPS4)
 
@@ -141,7 +141,7 @@ b. Memory Partitioning (NPS)
 
   - **NPS4 (Partitioned Memory):**
 
-    - Pairs of HBM stacks forming 48GB each are viewed as separate memory partitions. Each CPX partition still only has access to 24GBs of HBM memory, but the memory is interleaved across this 48GB memory partition instead of across the entire 192GB of the GPU.
+    - Pairs of HBM stacks forming 48GB each are viewed as separate memory partitions. Each CPX partition still only has access to 24GB of HBM memory, but the memory is interleaved across this 48GB memory partition instead of across the entire 192GB of the GPU.
     - Each memory quadrant (partition) of the memory is directly visible to the logical devices in its quadrant.
     - An XCD can still access all portions of memory through multi-GPU programming techniques.
     - Best for workloads requiring dedicated memory resources.
