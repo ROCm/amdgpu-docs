@@ -23,6 +23,7 @@ Key architectural components include:
 - **3D Stacking**: Each pair of XCDs is 3D-stacked on a single IOD allowing for tight integration and low-latency interconnects.
 - **HBM (High-Bandwidth Memory):** MI300X includes 8 stacks of HBM, offering 192GB of unified memory.
 - **Total GPU Configuration**:
+
   - 8 XCDs per GPU → 304 total CUs
   - 4 IODs per GPU
   - 8 HBM (High Bandwidth Memory) stacks (2 per IOD)
@@ -147,8 +148,8 @@ b. Memory Partitioning (NPS)
     - Best for workloads requiring dedicated memory resources.
     - Only available with CPX mode.
     - In NPS4 mode, the traffic latency to HBM (High Bandwidth Memory) is minimized because it remains on the same AID (Accelerator Interface Domain), leading to shorter latency and faster transitions from idle to full bandwidth.
-
-..  - `amd-smi` will show 4 devices with 48GB of HBM each.
+    - In NPS4 mode, higher bandwidth to MALL (Memory Attached Last Level Cache) can be achieved.
+    - In most cases, NPS4 mode is highly performant when paired with CPX mode for workloads that fit within the memory capacity of a single XCD.
 
 .. list-table:: Memory Partitioning Modes
     :header-rows: 1
