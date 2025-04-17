@@ -1,6 +1,6 @@
 .. meta::
    :description: Learn how to partition AMD GPUs/APUs.
-   :keywords: AMD, GPU, APU, Partitioning, Overview
+   :keywords: AMD, GPU, APU, partitioning, ROCm, MI300X, MI300A
 
 **************************
 AMD GPU/APU Partitioning

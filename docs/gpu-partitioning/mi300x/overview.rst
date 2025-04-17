@@ -113,10 +113,12 @@ ii. CPX (Core Partitioned X-celerator)
 
    * - MI300X SPX
      - MI300X CPX
-   * - .. image:: ../images/gpu-partition_SPX.png
-     - .. image:: ../images/gpu-partition_CPX.png
+   * - .. image:: ../images/mi300x_SPX.png
+     - .. image:: ../images/mi300x_CPX.png
    * - **SPX:** All XCDs appear as one logical device.
      - **CPX:** Each XCD appears as one logical device.
+
+- **The dotted line in the above diagram indicates the partitions.**
 
 b. Memory Partitioning (NPS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,13 +170,12 @@ b. Memory Partitioning (NPS)
 
    * - MI300X NPS1
      - MI300X NPS4
-   * - .. image:: ../images/gpu-partition_NPS1.png
-     - .. image:: ../images/gpu-partition_NPS4.png
+   * - .. image:: ../images/mi300x_NPS1.png
+     - .. image:: ../images/mi300x_NPS4.png
    * - **NPS1:** All HBM stacks appear as a unified memory pool.
      - **NPS4:** HBM stacks are segmented into memory quadrants.
 
-.. note::
-   Mixed memory partitioning modes are **not recommended** for single-node configurations.
+- **The dotted line in the above diagram indicates the partitions.**
 
 4. Benefits of Partitioning
 ----------------------------
@@ -183,3 +184,6 @@ b. Memory Partitioning (NPS)
 - CPX + NPS4 mode in the MI300X accelerator, benefits significantly to RCCL (Radeon Collective Communication Library) that require high throughput and low latency for collective communication operations.
 - Memory partitioned in NPS4 mode offers significant power savings.
 - Partitioning allows **dynamic resource control**—compute and memory reconfiguration **without requiring reboots**, ensuring high system availability. This is particularly advantageous for maintaining continuous operation in data centers.
+
+.. note::
+   Mixed memory partitioning modes are **not recommended** for single-node configurations.
