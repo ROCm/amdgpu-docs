@@ -20,7 +20,7 @@ Pull the prebuilt AMD container for vLLM workloads. This container includes all 
 .. code-block:: bash
 
     # one time setup
-    docker pull rocm/vllm:instinct_main
+    sudo docker pull rocm/vllm:instinct_main
 
 ---
 
@@ -32,7 +32,7 @@ Run the container with the required privileges and device mappings to enable GPU
 .. code-block:: bash
 
     # run the docker image and open a bash terminal
-    docker run -it --network=host --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --device /dev/kfd --device /dev/dri rocm/vllm:instinct_main /bin/bash
+    sudo docker run -it --network=host --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --device /dev/kfd --device /dev/dri rocm/vllm:instinct_main /bin/bash
 
 ---
 
@@ -43,8 +43,11 @@ Inside the container, clone the ROCm/MAD repository and navigate to the vLLM ben
 
 .. code-block:: bash
 
-    # run the vllm workload from inside the docker image
+    # clone the AMD MAD repo to run vllm workload from inside the docker image
     git clone https://github.com/ROCm/MAD.git
+    cd MAD
+    # install any dependencies required for the benchmark script including python packages and libraries
+    pip install -r requirements.txt
     cd MAD/scripts/vllm
 
 ---
