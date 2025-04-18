@@ -180,9 +180,6 @@ b. Memory Partitioning (NPS)
 4. Benefits of Partitioning
 ----------------------------
 
-4. Benefits of Partitioning
-----------------------------
-
 Partitioning support in the AMD Instinct™ MI300X GPU delivers significant operational and performance advantages in large-scale AI inference and HPC environments. By logically segmenting GPU and memory resources, users can achieve fine-grained workload control, reduce overhead, and boost cluster utilization.
 
 Key benefits of partitioning on MI300X include:
