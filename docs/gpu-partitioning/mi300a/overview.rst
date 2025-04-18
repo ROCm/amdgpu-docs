@@ -214,9 +214,6 @@ The MI300A platform operates exclusively in **NPS1** mode — or **NUMA Per Sock
 
 - **Diagram Note:** All GPU partitions in SPX, TPX, and CPX share the same physical memory pool via the NPS1 model.
 
-c. Benefits of Partitioning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 4. Benefits of Partitioning (MI300A APU)
 ----------------------------------------
 
