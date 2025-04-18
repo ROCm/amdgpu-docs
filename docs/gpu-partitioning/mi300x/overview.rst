@@ -180,10 +180,27 @@ b. Memory Partitioning (NPS)
 4. Benefits of Partitioning
 ----------------------------
 
-- CPX + NPS4 mode in the MI300X accelerator delivers improved performance for small language models (13B parameters or less) that fit within the memory capacity of a single CPX GPU.
-- CPX + NPS4 mode in the MI300X accelerator, benefits significantly to RCCL (Radeon Collective Communication Library) that require high throughput and low latency for collective communication operations.
-- Memory partitioned in NPS4 mode offers significant power savings.
-- Partitioning allows **dynamic resource control**—compute and memory reconfiguration **without requiring reboots**, ensuring high system availability. This is particularly advantageous for maintaining continuous operation in data centers.
+4. Benefits of Partitioning
+----------------------------
+
+Partitioning support in the AMD Instinct™ MI300X GPU delivers significant operational and performance advantages in large-scale AI inference and HPC environments. By logically segmenting GPU and memory resources, users can achieve fine-grained workload control, reduce overhead, and boost cluster utilization.
+
+Key benefits of partitioning on MI300X include:
+
+- **Improved performance for small to mid-sized language models:**  
+  Partitioning the MI300X into four logical CPX GPUs (via `SPP=CPX` and `NPS=4`) allows small models (≤13B parameters) to run independently within each GPU slice. This enables higher concurrency and throughput when serving multiple models simultaneously, especially in VLLM-based inference engines.
+
+- **Enhanced communication efficiency for distributed workloads:**  
+  CPX + NPS4 mode aligns well with multi-GPU collective communication patterns, delivering improved bandwidth and reduced latency for all-to-all and all-reduce operations through ROCm’s optimized RCCL backend.
+
+- **Power savings and thermal optimization:**  
+  Memory partitioning with `NPS=4` reduces the power consumed by the HBM3 memory stacks per workload, enabling energy-efficient inference and better thermal headroom under dense workloads.
+
+- **Dynamic resource provisioning and flexibility:**  
+  Partitioning enables **runtime configuration of compute and memory** without requiring a full system reboot. This supports agile scheduling, workload isolation, and high system uptime in shared or multi-tenant data center environments.
+
+- **Improved workload packing and density:**  
+  Logical GPU slicing allows simultaneous deployment of multiple containerized inference services per MI300X GPU. This leads to higher resource utilization and better GPU consolidation ratios when compared to monolithic deployments.
 
 .. note::
-   Mixed memory partitioning modes are **not recommended** for single-node configurations.
+   Mixed memory partitioning modes (e.g., combining NPS1 and NPS4) are **not recommended** for single-node configurations due to potential performance and synchronization issues across NUMA domains.
