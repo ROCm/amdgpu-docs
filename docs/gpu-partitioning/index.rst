@@ -26,21 +26,24 @@ To streamline deployment planning and reduce configuration friction, we include 
 By consolidating this matrix on the index page, users can quickly evaluate platform capabilities and navigate to device-specific documentation with full awareness of what is supported on their hardware and software stack.
 
 .. list-table:: GPU Partitioning Schemes Compatibility Matrix
-    :header-rows: 1
-    :widths: 20 20 20 20
+  :header-rows: 1
+  :widths: 20 20 20 20 20
 
-    * - Instinct GPUs
-      - SPX + NPS1
-      - CPX + NPS1
-      - CPX + NPS4
-    * - MI300X
-      - ✅
-      - 
-      - ✅ (ROCm 6.4)
-    * - MI300A
-      - ✅
-      - ✅ (ROCm 6.3.3)
-      - 
+  * - Instinct GPUs
+    - SPX + NPS1
+    - TPX + NPS1
+    - CPX + NPS1
+    - CPX + NPS4
+  * - MI300X
+    - ✅
+    - NA
+    - 
+    - ✅ (ROCm 6.4)
+  * - MI300A
+    - ✅
+    - ✅ (ROCm 6.3)
+    - ✅ (ROCm 6.4)
+    - NA
 
 .. note::
     The compatibility matrix is a living document and will be updated as new ROCm releases and device capabilities are validated. Users are encouraged to check back frequently for the latest information.
