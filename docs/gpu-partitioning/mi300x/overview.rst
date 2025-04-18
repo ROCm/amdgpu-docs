@@ -191,7 +191,7 @@ Key benefits of partitioning on MI300X include:
   Partitioning the MI300X into four logical CPX GPUs (via `SPP=CPX` and `NPS=4`) allows small models (≤13B parameters) to run independently within each GPU slice. This enables higher concurrency and throughput when serving multiple models simultaneously, especially in VLLM-based inference engines.
 
 - **Enhanced communication efficiency for distributed workloads:**  
-  CPX + NPS4 mode aligns well with multi-GPU collective communication patterns, delivering improved bandwidth and reduced latency for all-to-all and all-reduce operations through ROCm’s optimized RCCL backend.
+  CPX + NPS4 mode aligns well with multi-GPU collective communication patterns, delivering improved bandwidth and reduced latency for all-to-all and all-reduce operations through optimized ROCm Communication Collectives Library (RCCL) backend.
 
 - **Power savings and thermal optimization:**  
   Memory partitioning with `NPS=4` reduces the power consumed by the HBM3 memory stacks per workload, enabling energy-efficient inference and better thermal headroom under dense workloads.
