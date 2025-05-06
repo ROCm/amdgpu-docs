@@ -46,6 +46,7 @@ CLion
 CMake
 CMakeLists
 CMakePackage
+CRIU
 CP
 CPC
 CPF
