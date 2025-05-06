@@ -65,6 +65,8 @@ This architectural design provides the foundation for software-defined partition
 3. Partitioning Concepts
 -------------------------
 
+.. _mi300a_compute-partitioning:
+
 a. Compute Partitioning (SPX, TPX, CPX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -185,6 +187,8 @@ iii. CPX (Core Partitioned X-celerator)
       - **CPX:** Six partitions, one per XCD.
 
 - **Diagram Note:** Dotted lines in the diagrams indicate compute partition boundaries.
+
+.. _mi300a_memory-partitioning:
 
 b. Memory Partitioning (NPS1)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

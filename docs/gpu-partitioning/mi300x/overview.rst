@@ -34,6 +34,8 @@ This layout provides the foundation for partitioning, allowing resources to be s
 3. Partitioning Concepts
 ------------------------
 
+.. _mi300x_compute-partitioning:
+
 a. Compute Partitioning (SPX, CPX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -121,6 +123,8 @@ ii. CPX (Core Partitioned X-celerator)
      - **CPX:** Each XCD appears as one logical device.
 
 - **Diagram Note:** Dotted lines in the diagrams indicate compute partition boundaries.
+
+.. _mi300x_memory-partitioning:
 
 b. Memory Partitioning (NPS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

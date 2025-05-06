@@ -23,6 +23,13 @@ Compatibility Matrix
 
 To streamline deployment planning and reduce configuration friction, we include below a **GPU Partitioning Schemes Compatibility Matrix**. This matrix outlines which combinations of **Compute Partitioning Modes** (e.g., SPX, CPX) and **Memory Partitioning Modes** (e.g., NPS1, NPS4) are validated for each supported device. It also notes any **minimum ROCm driver version requirements** necessary to enable specific configurations.
 
+.. important::
+   **New to partitioning modes?** Before using the compatibility matrix, it's essential to understand the core concepts of **Compute Partitioning Modes** (SPX, CPX, TPX) and **Memory Partitioning Modes** (NPS1, NPS4). These modes determine how compute and memory resources are logically divided across a single device.
+
+   See our detailed overview here: 
+    - :ref:`MI300X Compute Partitioning <mi300x_compute-partitioning>` / :ref:`MI300A Compute Partitioning <mi300a_compute-partitioning>`
+    - :ref:`MI300X Memory Partitioning <mi300x_memory-partitioning>` / :ref:`MI300A Memory Partitioning <mi300a_memory-partitioning>`
+
 By consolidating this matrix on the index page, users can quickly evaluate platform capabilities and navigate to device-specific documentation with full awareness of what is supported on their hardware and software stack.
 
 .. list-table:: GPU Partitioning Schemes Compatibility Matrix
