@@ -8,10 +8,10 @@ if os.environ.get("READTHEDOCS", "") == "True":
 project = "Data Center GPU driver"
 
 version = "1.0.0"
-rocm_version = '6.4'
-rocm_directory_version = '6.4.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '6.4' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_install_version = '6.4.60400-1'
+rocm_version = '6.4.1'
+rocm_directory_version = '6.4.1' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '6.4.1' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_install_version = '6.4.60401-1'
 release = version
 html_title = project
 author = "Advanced Micro Devices, Inc."
@@ -24,7 +24,7 @@ rhel_release_version_numbers = ['9', '8']
 rhel_version_numbers = ['9.5', '9.4', '8.10']
 sles_version_numbers = ['15.6']
 ol_release_version_numbers = ['9', '8']
-ol_version_numbers = [('9.5'), ('8.10')]
+ol_version_numbers = ['9.5', '8.10']
 azl_version_numbers = ['3.0']
 
 html_context = {
