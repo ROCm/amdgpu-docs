@@ -4,42 +4,22 @@ subtrees:
     entries:
       - file: install/detailed-install/prerequisites
         title: Prerequisites
-      - file: install/install-overview
-        title: Installation methods
+      - file: install/package-manager-index
+        title: Install via package manager
         subtrees:
         - entries:
-          - file: install/package-manager-index
-            title: Package manager
-            subtrees:
-            - entries:
-              - file: install/detailed-install/package-manager/package-manager-ubuntu
-                title: Ubuntu
-              - file: install/detailed-install/package-manager/package-manager-debian
-                title: Debian
-              - file: install/detailed-install/package-manager/package-manager-rhel
-                title: Red Hat Enterprise Linux
-              - file: install/detailed-install/package-manager/package-manager-ol
-                title: Oracle Linux
-              - file: install/detailed-install/package-manager/package-manager-sles
-                title: SUSE Linux Enterprise Server
-              - file: install/detailed-install/package-manager/package-manager-azl
-                title: Azure Linux
-          - file: install/amdgpu-installer-index
-            title: AMDGPU installer
-            subtrees:
-            - entries:
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-ubuntu
-                title: Ubuntu
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-debian
-                title: Debian
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-rhel
-                title: Red Hat Enterprise Linux
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-ol
-                title: Oracle Linux
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-sles
-                title: SUSE Linux Enterprise Server
-              - file: install/detailed-install/amdgpu-installer/amdgpu-installer-azl
-                title: Azure Linux
+          - file: install/detailed-install/package-manager/package-manager-ubuntu
+            title: Ubuntu
+          - file: install/detailed-install/package-manager/package-manager-debian
+            title: Debian
+          - file: install/detailed-install/package-manager/package-manager-rhel
+            title: Red Hat Enterprise Linux
+          - file: install/detailed-install/package-manager/package-manager-ol
+            title: Oracle Linux
+          - file: install/detailed-install/package-manager/package-manager-sles
+            title: SUSE Linux Enterprise Server
+          - file: install/detailed-install/package-manager/package-manager-azl
+            title: Azure Linux
       - file: install/detailed-install/post-install
         title: Post-install instructions
   - caption: How to
