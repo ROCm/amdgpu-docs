@@ -19,7 +19,7 @@ The AMD Instinct documentation is organized into the following categories:
 :class-body: rocm-card-banner rocm-hue-16
 
 * [Prerequisites](./install/detailed-install/prerequisites.rst)
-* [Installation methods](./install/install-overview.rst)
+* [Installation via native package manager](./install/package-manager-index.rst)
 * [Post-install instructions](./install/detailed-install/post-install.rst)
 :::
 
