@@ -23,7 +23,7 @@ Register kernel-mode driver
     .. tab-set::
         {% for os_version in config.html_context['ol_version_numbers'] %}
         {% set os_major, _  = os_version.split('.') %}
-        .. tab-item:: OL {{ os_major }}
+        .. tab-item:: OL {{ os_version }}
             :sync: ol-{{ os_version }} ol-{{ os_major }}
 
             .. code-block:: bash

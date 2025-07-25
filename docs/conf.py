@@ -20,10 +20,10 @@ copyright = "Copyright (c) 2024 Advanced Micro Devices, Inc. All rights reserved
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
 debian_version_numbers = [('12', 'jammy')]
 rhel_release_version_numbers = ['9', '8']
-rhel_version_numbers = ['9.5', '9.4', '8.10']
-sles_version_numbers = ['15.6']
+rhel_version_numbers = ['9.6', '9.4', '8.10']
+sles_version_numbers = ['15.7', '15.6']
 ol_release_version_numbers = ['9', '8']
-ol_version_numbers = ['9.5', '8.10']
+ol_version_numbers = ['9.6', '8.10']
 azl_version_numbers = ['3.0']
 
 html_context = {
