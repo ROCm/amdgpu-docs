@@ -19,6 +19,7 @@ APBDIS
 APIC
 APIs
 APU
+APUs
 ASIC
 ASICs
 ASan
@@ -33,6 +34,7 @@ Autocast
 BARs
 BLAS
 BMC
+BKC
 Blit
 Blockwise
 Bluefield
