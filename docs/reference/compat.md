@@ -1,10 +1,15 @@
 # Compatiblity Matrix for Instinct System + Board BIOS, Instinct Driver and ROCm
 
-::::{tab-set}
+:::::{tab-set}
 
-:::{tab-item} MI300X
+::::{tab-item} MI300X
 
 :::{dropdown} Valid Instinct System + Board BIOS and Instinct Driver Combinations
+
+|PLDM Version|Instinct Driver Version|
+|25.02|6.4.0, 6.4.1|
+|25.04|7.0.0|
+|25.05|7.0.1|
 
 :::
 
@@ -19,14 +24,14 @@ Dropdown content
 Dropdown content
 :::
 
-:::
-
-:::{tab-item} MI325X
-Content 2
-:::
-
-:::{tab-item} MI355X
-Content 2
-:::
-
 ::::
+
+::::{tab-item} MI325X
+Content 2
+::::
+
+::::{tab-item} MI355X
+Content 2
+::::
+
+:::::
