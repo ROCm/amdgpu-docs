@@ -211,10 +211,9 @@ To install for the currently active kernel run the command corresponding to your
 
             .. tab-set::
 
-              {% for os_version in config.html_context['rhel_release_version_numbers']  %}
-              {% set os_major, _  = os_version.split('.') %}
+              {% for os_release in config.html_context['rhel_release_version_numbers']  %}
 
-                  .. tab-item:: {{ os_version }}
+                  .. tab-item:: RHEL {{ os_release }}
 
                     .. code-block:: shell
 
