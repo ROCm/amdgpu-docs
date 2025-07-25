@@ -429,6 +429,7 @@ TorchVision
 TransferBench
 TrapStatus
 UAC
+UBB
 UC
 UCC
 UCX
@@ -696,6 +697,7 @@ passthrough
 perfcounter
 performant
 perl
+pldm
 pragma
 pre
 prebuild
