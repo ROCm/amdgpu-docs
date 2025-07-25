@@ -24,7 +24,6 @@
 :::
 
 :::{dropdown} Complete compatiblity matrix
-:open:
 
 |PLDM Version|Instinct Driver Version|ROCm Version|
 |25.02|6.4.0, 6.4.1|6.4.0|
