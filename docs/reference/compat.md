@@ -3,6 +3,7 @@
 AMD fully validates recommended software collections for our GPUs to ensure the best performance, computational accuracy and software compatiblity. The compatibility matrix in this page should be referred to by system administrators and ROCm users to select, upgrade and run compatible software configuration on your Instinct GPU system.
 
 ## Defintions
+
 AMD distributes separate collections of software to enable running software on the Instinct GPU product family. The three software collections that system adminstrators should familiarize themselves are as follows:
 
 * Instinct GPU + Board BIOS is a collection of software running on the GPU and PCB board hosting the GPUs socket. We refer to this software collection as the Instinct BIOS. This software is distributed through a standard pldm bundle. The PCB board hosting the GPU is either the PCIe card, or a UBB standard board, or the system motherboard for APUs. From the system administration purposes, this software collection is flashed onto ROM via OS utilities or the BMC. AMD previously referred to this software collection as the BKC.
