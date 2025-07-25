@@ -37,8 +37,8 @@ AMD distributes separate collections of software to enable running software on t
 :::{dropdown} Complete compatiblity matrix
 
 |Instinct BIOS Version|Instinct Driver Version|ROCm Version|
+|-------|-------|-------|
 |25.02|6.4.0, 6.4.1|6.4.0|
-|-------|-----|-----------|
 |25.04|30.10.0|7.0.0|
 |25.05|30.10.1|7.0.1|
 :::
