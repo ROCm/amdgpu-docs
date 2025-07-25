@@ -218,7 +218,7 @@ To install for the currently active kernel run the command corresponding to your
 
                     .. code-block:: shell
 
-                        {% if os_major == '9' -%}
+                        {% if os_release == '9' -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)" "kernel-devel-matched-$(uname -r)"
                         {%- else -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
