@@ -1,4 +1,4 @@
-# Compatiblity Matrix for Instinct System + Board BIOS, Instinct Driver and ROCm
+# Compatiblity Matrix for Instinct GPU + Board BIOS, Instinct Driver and ROCm
 
 ## Defintions
 
