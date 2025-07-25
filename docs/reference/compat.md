@@ -10,7 +10,7 @@ AMD distributes separate collections of software to enable running software on t
 * Instinct Driver is the driver loaded by the operating system to expose the GPU capabilities to the userspace. The driver includes a set of runtime loaded firmware that runs on the GPU. AMD previously referred to this software collection as the ROCm driver.
 * ROCm is the userspace software collection including runtimes, libraries and prebuilt binaries to compile and run user applications on the GPU.
 
-## Compatibility matrixes
+## Compatibility matrices
 
 :::::{tab-set}
 
