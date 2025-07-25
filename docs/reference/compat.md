@@ -15,13 +15,19 @@
 
 :::{dropdown}  Valid Instinct Driver Combinations and ROCm
 
-Dropdown content
+|Instinct Driver Version|ROCm Version|
+|6.4.0, 6.4.1|6.4.0|
+|30.10.0|7.0.0|
+|30.10.1|7.0.1|
 :::
 
 :::{dropdown} Complete compatiblity matrix
 :open:
 
-Dropdown content
+|PLDM Version|Instinct Driver Version|ROCm Version|
+|25.02|6.4.0, 6.4.1|6.4.0|
+|25.04|30.10.0|7.0.0|
+|25.05|30.10.1|7.0.1|
 :::
 
 ::::
