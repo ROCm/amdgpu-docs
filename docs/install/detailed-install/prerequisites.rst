@@ -211,13 +211,14 @@ To install for the currently active kernel run the command corresponding to your
 
             .. tab-set::
 
-              {% for os_release in config.html_context['rhel_release_version_numbers']  %}
+              {% for os_version in config.html_context['rhel_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
 
-                  .. tab-item:: RHEL {{ os_release }}
+                  .. tab-item:: RHEL {{ os_version }}
 
                     .. code-block:: shell
 
-                        {% if os_release == '9' -%}
+                        {% if os_major == '9' -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)" "kernel-devel-matched-$(uname -r)"
                         {%- else -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
