@@ -6,7 +6,7 @@ AMD fully validates recommended software collections for our GPUs to ensure the 
 
 AMD distributes separate collections of software to enable running software on the Instinct GPU product family. The three software collections that system administrators should familiarize themselves are as follows:
 
-* Instinct GPU + Board BIOS is a collection of software running on the GPU and PCB board hosting the GPUs socket. We refer to this software collection as the Instinct BIOS. This software is distributed through a standard pldm bundle. The PCB board hosting the GPU is either the PCIe card, or a UBB standard board, or the system motherboard for APUs. From the system administration purposes, this software collection is flashed onto ROM via OS utilities or the BMC. AMD previously referred to this software collection as the BKC.
+* Instinct GPU + Board BIOS is a collection of software running on the GPU and PCB board hosting the GPUs socket. We refer to this software collection as the Instinct BIOS. This software is distributed through a standard pldm bundle. The PCB board hosting the GPU is either the PCIe card, or a UBB standard board, or the system motherboard for APUs. From the system administration purposes, this software collection is flashed onto ROM via OS utilities or the BMC. AMD previously referred to this software collection as the BKC. The version of the pldm bundle is used for AMD's BIOS releases to our OEM/ODM partners. Check the OEM/ODM partner's BIOS release notes to see which BIOS or BMC updates the minimum version of the AMD BIOS version needed on your GPU.
 * Instinct Driver is the driver loaded by the operating system to expose the GPU capabilities to the user space. The driver includes a set of runtime loaded firmware that runs on the GPU. AMD previously referred to this software collection as the ROCm driver.
 * ROCm is the user space software collection including runtimes, libraries and prebuilt binaries to compile and run user applications on the GPU.
 
@@ -33,6 +33,15 @@ AMD distributes separate collections of software to enable running software on t
 |6.4.0, 6.4.1|6.4.0|
 |30.10.0|7.0.0|
 |30.10.1|7.0.1|
+:::
+
+:::{dropdown}  Valid Virtualization Driver Combinations and Instinct driver
+
+|Virtualization Version|Instinct driver Version|
+|-------|-------|
+|8.0.0| 6.4.0|
+|8.1.0|30.10.0|
+|8.3.0|30.10.1|
 :::
 
 :::{dropdown} Complete compatibility matrix
