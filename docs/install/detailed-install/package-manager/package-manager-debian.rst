@@ -99,5 +99,6 @@ Remove AMDGPU repositories
     sudo apt clean all
     sudo apt update
 
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.

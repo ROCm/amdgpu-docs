@@ -104,6 +104,7 @@ Remove AMDGPU repositories
     sudo zypper clean --all
     sudo zypper refresh
     
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.
 

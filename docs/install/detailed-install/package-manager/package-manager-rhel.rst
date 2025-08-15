@@ -78,5 +78,6 @@ Remove AMDGPU repositories
     sudo rm -rf /var/cache/dnf
     sudo dnf clean all
 
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.
