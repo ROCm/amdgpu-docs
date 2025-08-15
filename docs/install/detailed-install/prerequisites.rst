@@ -101,14 +101,19 @@ your operating system to ensure you're able to download and install packages.
 
         There is no registration required for Azure Linux.
 
+  .. tab-item:: Rocky Linux
+        :sync: rl-tab
+
+        There is no registration required for Rocky Linux.
+
 .. _update-enterprise-linux:
 
 Update your Enterprise Linux
 ==========================================================
 
-If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux, 
+If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux (OL), or Rocky Linux (RL), 
 it is recommended that you update your operating system to the latest packages from the Linux distribution.
-This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
+This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or RL.
 
 .. datatemplate:nodata::
 
@@ -171,6 +176,21 @@ This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
             :sync: azl-tab
 
             There is no update required for Azure Linux.
+
+        .. tab-item:: Rocky Linux
+            :sync: rl-tab
+
+            .. tab-set::
+
+                {% for os_version in config.html_context['rl_version_numbers'] %}
+                {% set os_major, _  = os_version.split('.') %}
+                .. tab-item:: {{ os_version }}
+
+                   .. code-block:: bash
+                       :substitutions:
+
+                       sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
+                {% endfor %}
 
 .. important::
 
@@ -256,3 +276,19 @@ To install for the currently active kernel run the command corresponding to your
                         sudo zypper install kernel-default-devel
                 {% endfor %}
 
+    .. tab-item:: Rocky Linux
+        :sync: rl-tab
+
+        .. datatemplate:nodata::
+
+            .. tab-set::
+
+              {% for os_version in config.html_context['rl_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
+
+                  .. tab-item:: {{ os_version }}
+
+                    .. code-block:: shell
+
+                        sudo dnf install "kernel-headers" "kernel-devel" "kernel-devel-matched"
+              {% endfor %}
