@@ -24,9 +24,9 @@ Before installing the driver, complete the following prerequisites.
 
             x86_64
             DISTRIB_ID=Ubuntu
-            DISTRIB_RELEASE=20.04
-            DISTRIB_CODENAME=focal
-            DISTRIB_DESCRIPTION="Ubuntu 20.04.5 LTS"
+            DISTRIB_RELEASE=24.04
+            DISTRIB_CODENAME=noble
+            DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
 
 .. _verify_kernel_version:
 
@@ -42,7 +42,7 @@ Before installing the driver, complete the following prerequisites.
 
      .. code-block:: shell
 
-            Linux 5.15.0-46-generic #44~20.04.5-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022 x86_64
+            Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024 x86_64
 
    * Confirm that your kernel version matches the system requirements, as listed in :ref:`supported_distributions`.
 
@@ -101,14 +101,19 @@ your operating system to ensure you're able to download and install packages.
 
         There is no registration required for Azure Linux.
 
+  .. tab-item:: Rocky Linux
+        :sync: rl-tab
+
+        There is no registration required for Rocky Linux.
+
 .. _update-enterprise-linux:
 
 Update your Enterprise Linux
 ==========================================================
 
-If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux, 
+If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux (OL), or Rocky Linux, 
 it is recommended that you update your operating system to the latest packages from the Linux distribution.
-This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
+This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or Rocky Linux.
 
 .. datatemplate:nodata::
 
@@ -171,6 +176,11 @@ This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
             :sync: azl-tab
 
             There is no update required for Azure Linux.
+
+        .. tab-item:: Rocky Linux
+            :sync: rl-tab
+
+            There is no update required for Rocky Linux.
 
 .. important::
 
@@ -259,6 +269,21 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Azure Linux
         :sync: azl-tab
 
-        .. code-block:: shell
+        There are no kernel headers required for Azure Linux.
 
-            sudo tdnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
+    .. tab-item:: Rocky Linux
+        :sync: rl-tab
+
+        .. datatemplate:nodata::
+
+            .. tab-set::
+
+              {% for os_version in config.html_context['rl_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
+
+                  .. tab-item:: {{ os_version }}
+
+                    .. code-block:: shell
+
+                        sudo dnf install "kernel-headers" "kernel-devel" "kernel-devel-matched"
+              {% endfor %}

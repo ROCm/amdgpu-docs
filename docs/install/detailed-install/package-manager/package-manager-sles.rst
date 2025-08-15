@@ -3,7 +3,7 @@
   :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, SUSE Enterprise Linux, SLES, SLES native installation, AMD
 
 *********************************************************************************************
-SUSE Linux Enterprise native installation
+SUSE Linux Enterprise Server native installation
 *********************************************************************************************
 
 .. caution::
@@ -56,7 +56,7 @@ Register kernel-mode driver
                 sudo tee /etc/zypp/repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/sle/{{ os_version }}/main/x86_64/
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/sle/{{ os_version }}/main/x86_64/
                 enabled=1
                 gpgcheck=1
                 gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
@@ -77,7 +77,11 @@ Install kernel driver
 .. code-block:: bash
 
     sudo zypper --gpg-auto-import-keys install amdgpu-dkms
-    sudo reboot
+
+.. Important::
+
+    To apply all settings, reboot your system.
+
 
 .. _sles-package-manager-uninstall-driver:
 
@@ -104,6 +108,7 @@ Remove AMDGPU repositories
     sudo zypper clean --all
     sudo zypper refresh
     
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.
 

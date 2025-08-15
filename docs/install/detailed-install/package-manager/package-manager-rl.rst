@@ -1,18 +1,18 @@
 .. meta::
-  :description: Oracle Linux native installation
-  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Oracle Linux, Oracle Linux native installation, AMD
+  :description: Rocky Linux native installation
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Rocky Linux, Rocky Linux native installation, AMD
 
 **********************************************************************************************
-Oracle Linux native installation
+Rocky Linux native installation
 **********************************************************************************************
 
 .. caution::
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
-.. _ol-register-repo:
+.. _rl-register-repo:
 
-Register repositories
+Registering ROCm repositories
 =====================================================
 
 Register kernel-mode driver
@@ -21,10 +21,10 @@ Register kernel-mode driver
 .. datatemplate:nodata::
 
     .. tab-set::
-        {% for os_version in config.html_context['ol_version_numbers'] %}
+        {% for os_version in config.html_context['rl_version_numbers'] %}
         {% set os_major, _  = os_version.split('.') %}
-        .. tab-item:: OL {{ os_version }}
-            :sync: ol-{{ os_version }} ol-{{ os_major }}
+        .. tab-item:: Rocky {{ os_version }}
+            :sync: rl-{{ os_version }} rl-{{ os_major }}
 
             .. code-block:: bash
                 :substitutions:
@@ -32,11 +32,7 @@ Register kernel-mode driver
                 sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                {% if os_major == '10' -%}
-                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_major }}/main/x86_64/
-                {%- else -%}
                 baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_version }}/main/x86_64/
-                {%- endif %}
                 enabled=1
                 priority=50
                 gpgcheck=1
@@ -45,7 +41,7 @@ Register kernel-mode driver
                 sudo dnf clean all
         {% endfor %}
 
-.. _ol-install:
+.. _rl-install:
 
 Installing
 =====================================================
@@ -62,7 +58,7 @@ Install kernel driver
     To apply all settings, reboot your system.
 
 
-.. _ol-package-manager-uninstall-driver:
+.. _rl-package-manager-uninstall-driver:
 
 Uninstalling
 =====================================================
@@ -85,8 +81,7 @@ Remove AMDGPU repositories
     # Clear the cache and clean the system
     sudo rm -rf /var/cache/dnf
     sudo dnf clean all
-    
+
 .. Important::
 
     To apply all settings, reboot your system.
-

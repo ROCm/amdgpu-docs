@@ -56,8 +56,9 @@ Add the AMDGPU repository for the driver.
             .. code-block:: bash
                 :substitutions:
 
-                echo "deb [arch=amd64,i386 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|rocm_version|/ubuntu {{ os_release }} main" \
-                    | sudo tee /etc/apt/sources.list.d/amdgpu.list
+                sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
+                deb [arch=amd64,i386 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|amdgpu_url_version|/ubuntu {{ os_release }} main
+                EOF
                 sudo apt update
         {% endfor %}
 
@@ -72,7 +73,11 @@ Install kernel driver
 .. code-block:: bash
 
     sudo apt install amdgpu-dkms
-    sudo reboot
+
+.. Important::
+
+    To apply all settings, reboot your system.
+
 
 .. _ubuntu-package-manager-uninstall-driver:
 
@@ -99,5 +104,6 @@ Remove AMDGPU repositories
     sudo apt clean all
     sudo apt update
 
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.
