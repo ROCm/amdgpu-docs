@@ -256,9 +256,3 @@ To install for the currently active kernel run the command corresponding to your
                         sudo zypper install kernel-default-devel
                 {% endfor %}
 
-    .. tab-item:: Azure Linux
-        :sync: azl-tab
-
-        .. code-block:: shell
-
-            sudo tdnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
