@@ -20,6 +20,8 @@ subtrees:
             title: SUSE Linux Enterprise Server
           - file: install/detailed-install/package-manager/package-manager-azl
             title: Azure Linux
+          - file: install/detailed-install/package-manager/package-manager-rl
+            title: Rocky Linux
       - file: install/detailed-install/post-install
         title: Post-install instructions
   - caption: How to

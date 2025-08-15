@@ -29,6 +29,7 @@ Select the install instructions for your operating system
         * :doc:`Oracle Linux <./detailed-install/package-manager/package-manager-ol>`
         * :doc:`SUSE Linux Enterprise Server <./detailed-install/package-manager/package-manager-sles>`
         * :doc:`Azure Linux <./detailed-install/package-manager/package-manager-azl>`
+        * :doc:`Rocky Linux <./detailed-install/package-manager/package-manager-rl>`
 
     .. grid-item-card:: Uninstall
 
@@ -38,7 +39,7 @@ Select the install instructions for your operating system
         * :ref:`Oracle Linux <ol-package-manager-uninstall-driver>`
         * :ref:`SUSE Linux Enterprise Server <sles-package-manager-uninstall-driver>`
         * :ref:`Azure Linux <azl-package-manager-uninstall-driver>`
-        
+        * :ref:`Rocky Linux <rl-package-manager-uninstall-driver>`        
 
     
 
