@@ -24,9 +24,9 @@ Before installing the driver, complete the following prerequisites.
 
             x86_64
             DISTRIB_ID=Ubuntu
-            DISTRIB_RELEASE=20.04
-            DISTRIB_CODENAME=focal
-            DISTRIB_DESCRIPTION="Ubuntu 20.04.5 LTS"
+            DISTRIB_RELEASE=24.04
+            DISTRIB_CODENAME=noble
+            DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
 
 .. _verify_kernel_version:
 
