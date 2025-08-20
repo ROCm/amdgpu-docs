@@ -63,5 +63,6 @@ exclude_patterns = ['.venv']
 rst_prolog = f"""
 .. |rocm_version| replace:: {rocm_version}
 .. |amdgpu_version| replace:: {amdgpu_version}
+.. |amdgpu_url_version| replace:: {amdgpu_url_version}
 .. |rocm_directory_version| replace:: {rocm_directory_version}
 """
