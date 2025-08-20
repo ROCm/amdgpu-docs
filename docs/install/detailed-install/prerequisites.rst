@@ -42,7 +42,7 @@ Before installing the driver, complete the following prerequisites.
 
      .. code-block:: shell
 
-            Linux 5.15.0-46-generic #44~20.04.5-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022 x86_64
+            Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024 x86_64
 
    * Confirm that your kernel version matches the system requirements, as listed in :ref:`supported_distributions`.
 
