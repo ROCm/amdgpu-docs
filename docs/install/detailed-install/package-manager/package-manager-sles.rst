@@ -77,11 +77,7 @@ Install kernel driver
 .. code-block:: bash
 
     sudo zypper --gpg-auto-import-keys install amdgpu-dkms
-
-.. Important::
-
-    To apply all settings, reboot your system.
-
+    sudo reboot
 
 .. _sles-package-manager-uninstall-driver:
 

@@ -52,11 +52,7 @@ Install kernel driver
 .. code-block:: bash
 
     sudo dnf install amdgpu-dkms
-
-.. Important::
-
-    To apply all settings, reboot your system.
-
+    sudo reboot
 
 .. _rhel-package-manager-uninstall-driver:
 

@@ -73,11 +73,7 @@ Install kernel driver
 .. code-block:: bash
 
     sudo apt install amdgpu-dkms
-
-.. Important::
-
-    To apply all settings, reboot your system.
-
+    sudo reboot
 
 .. _debian-package-manager-uninstall-driver:
 
