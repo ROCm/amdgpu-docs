@@ -73,7 +73,11 @@ Install kernel driver
 .. code-block:: bash
 
     sudo apt install amdgpu-dkms
-    sudo reboot
+
+.. Important::
+
+    To apply all settings, reboot your system.
+
 
 .. _ubuntu-package-manager-uninstall-driver:
 
