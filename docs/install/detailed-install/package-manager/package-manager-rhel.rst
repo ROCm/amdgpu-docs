@@ -32,7 +32,11 @@ Register kernel-mode driver
                 sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
+                {% if os_major == '10' -%}
+                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/10/main/x86_64/
+                {%- else -%}
                 baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_version }}/main/x86_64/
+                {%- endif %}
                 enabled=1
                 priority=50
                 gpgcheck=1
