@@ -8,7 +8,7 @@ if os.environ.get("READTHEDOCS", "") == "True":
 project = "Data Center GPU driver"
 
 version = "1.0.0"
-rocm_version = '7.0.0'
+rocm_version = '7.0'
 rocm_directory_version = '7.0.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
 amdgpu_version = '7.0.0' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
 amdgpu_url_version = '30.10'
@@ -21,9 +21,9 @@ copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
 debian_version_numbers = [('12', 'jammy')]
 rhel_release_version_numbers = ['10', '9', '8']
-rhel_version_numbers = ['10.0', '9.6', '9.4', '8.10']
+rhel_version_numbers = ['10', '9.6', '9.4', '8.10']
 sles_version_numbers = ['15.7']
-ol_release_version_numbers = ['10.0', '9', '8']
+ol_release_version_numbers = ['10', '9', '8']
 ol_version_numbers = ['10', '9.6', '8.10']
 azl_version_numbers = ['3.0']
 rl_version_numbers = ['9.6']
