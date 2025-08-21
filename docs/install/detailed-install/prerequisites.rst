@@ -180,7 +180,17 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
         .. tab-item:: Rocky Linux
             :sync: rl-tab
 
-            There is no update required for Rocky Linux.
+            .. tab-set::
+
+                {% for os_version in config.html_context['rl_version_numbers'] %}
+                {% set os_major, _  = os_version.split('.') %}
+                .. tab-item:: {{ os_version }}
+
+                   .. code-block:: bash
+                       :substitutions:
+
+                       sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
+                {% endfor %}
 
 .. important::
 
