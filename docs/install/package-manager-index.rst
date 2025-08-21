@@ -27,9 +27,9 @@ Select the install instructions for your operating system
         * :doc:`Debian <./detailed-install/package-manager/package-manager-debian>`
         * :doc:`Red Hat Enterprise Linux <./detailed-install/package-manager/package-manager-rhel>`
         * :doc:`Oracle Linux <./detailed-install/package-manager/package-manager-ol>`
+        * :doc:`Rocky Linux <./detailed-install/package-manager/package-manager-rl>`
         * :doc:`SUSE Linux Enterprise Server <./detailed-install/package-manager/package-manager-sles>`
         * :doc:`Azure Linux <./detailed-install/package-manager/package-manager-azl>`
-        * :doc:`Rocky Linux <./detailed-install/package-manager/package-manager-rl>`
 
     .. grid-item-card:: Uninstall
 
@@ -37,9 +37,9 @@ Select the install instructions for your operating system
         * :ref:`Debian <debian-package-manager-uninstall-driver>`
         * :ref:`Red Hat Enterprise Linux <rhel-package-manager-uninstall-driver>`
         * :ref:`Oracle Linux <ol-package-manager-uninstall-driver>`
+        * :ref:`Rocky Linux <rl-package-manager-uninstall-driver>`   
         * :ref:`SUSE Linux Enterprise Server <sles-package-manager-uninstall-driver>`
-        * :ref:`Azure Linux <azl-package-manager-uninstall-driver>`
-        * :ref:`Rocky Linux <rl-package-manager-uninstall-driver>`        
+        * :ref:`Azure Linux <azl-package-manager-uninstall-driver>`     
 
     
 
