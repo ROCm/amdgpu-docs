@@ -269,7 +269,7 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Azure Linux
         :sync: azl-tab
 
-        There is no kernel headers required for Azure Linux.
+        There are no kernel headers required for Azure Linux.
 
     .. tab-item:: Rocky Linux
         :sync: rl-tab
