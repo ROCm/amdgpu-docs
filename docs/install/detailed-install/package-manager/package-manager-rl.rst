@@ -1,6 +1,6 @@
 .. meta::
   :description: Rocky Linux native installation
-  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Rocky Linux, RL, RL native installation, AMD
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Rocky Linux, Rocky Linux native installation, AMD
 
 **********************************************************************************************
 Rocky Linux native installation
@@ -23,7 +23,7 @@ Register kernel-mode driver
     .. tab-set::
         {% for os_version in config.html_context['rl_version_numbers'] %}
         {% set os_major, _  = os_version.split('.') %}
-        .. tab-item:: RL {{ os_version }}
+        .. tab-item:: Rocky {{ os_version }}
             :sync: rl-{{ os_version }} rl-{{ os_major }}
 
             .. code-block:: bash

@@ -111,9 +111,9 @@ your operating system to ensure you're able to download and install packages.
 Update your Enterprise Linux
 ==========================================================
 
-If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux (OL), or Rocky Linux (RL), 
+If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux (OL), or Rocky Linux, 
 it is recommended that you update your operating system to the latest packages from the Linux distribution.
-This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or RL.
+This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or Rocky Linux.
 
 .. datatemplate:nodata::
 
@@ -265,6 +265,11 @@ To install for the currently active kernel run the command corresponding to your
 
                         sudo zypper install kernel-default-devel
                 {% endfor %}
+
+    .. tab-item:: Azure Linux
+        :sync: azl-tab
+
+        There is no kernel headers required for Azure Linux.
 
     .. tab-item:: Rocky Linux
         :sync: rl-tab
