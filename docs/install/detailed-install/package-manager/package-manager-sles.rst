@@ -3,7 +3,7 @@
   :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, SUSE Enterprise Linux, SLES, SLES native installation, AMD
 
 *********************************************************************************************
-SUSE Linux Enterprise native installation
+SUSE Linux Enterprise Server native installation
 *********************************************************************************************
 
 .. caution::
