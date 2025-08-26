@@ -70,3 +70,6 @@ subtrees:
       title: PCIe atomics in ROCm
     - file: conceptual/oversubscription.rst
       title: Oversubscription of hardware resources
+  - caption: Release Notes
+    entries:
+    - file: docs/documentation/change-logs/README.md
