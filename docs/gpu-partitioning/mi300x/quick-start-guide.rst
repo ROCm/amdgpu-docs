@@ -183,391 +183,74 @@ Use `amd-smi` to confirm active partition states:
 
       .. tab-item:: Shell output
 
-         ::
+         .. code-block:: shell-session
 
             GPU: 0
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: CPX
+                    MEMORY_PARTITION: NPS1
                     PARTITION_ID: 0
 
             GPU: 1
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 1
 
             GPU: 2
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 2
 
             GPU: 3
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 3
 
             GPU: 4
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 4
 
             GPU: 5
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 5
 
             GPU: 6
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 6
 
             GPU: 7
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 7
-            
+
             GPU: 8
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: CPX
+                    MEMORY_PARTITION: NPS1
                     PARTITION_ID: 0
 
             GPU: 9
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 1
 
             GPU: 10
                 PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
+                    ACCELERATOR_PARTITION: N/A
+                    MEMORY_PARTITION: N/A
                     PARTITION_ID: 2
-
-            GPU: 11
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 12
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 13
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 14
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 15
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 16
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 17
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 18
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 19
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 20
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 21
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 22
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 23
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 24
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 25
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 26
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 27
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 28
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 29
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 30
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 31
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 32
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 33
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 34
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 35
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 36
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 37
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 38
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 39
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 40
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 41
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 42
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 43
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 44
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 45
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 46
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 47
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 48
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 49
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 50
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 51
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 52
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 53
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 54
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 55
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
-            
-            GPU: 56
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 0
-
-            GPU: 57
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 1
-
-            GPU: 58
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 2
-
-            GPU: 59
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 3
-
-            GPU: 60
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 4
-
-            GPU: 61
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 5
-
-            GPU: 62
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 6
-
-            GPU: 63
-                PARTITION:
-                    COMPUTE_PARTITION: CPX
-                    MEMORY_PARTITION: NPS4
-                    PARTITION_ID: 7
+            ...
 
 3. Modifying Partitions
 ------------------------
