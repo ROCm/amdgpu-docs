@@ -72,5 +72,5 @@ subtrees:
       title: Oversubscription of hardware resources
   - caption: Release Notes
     entries:
-    - file: documentation/change-logs/README.md
+    - file: documentation/change-logs/30.10.0.md
       title: Release Notes
