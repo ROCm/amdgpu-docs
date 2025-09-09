@@ -1,7 +1,7 @@
 Quick Start Guide to Partitioning MI300X GPUs
 ==============================================
 
-This guide serves as a practical and technically detailed reference for configuring compute and memory partitioning on AMD Instinct™ MI300X GPUs using the `amd-smi` utility. Partitioning is a key feature that enables system administrators, developers, and data center operators to dynamically subdivide a single MI300X GPU into multiple logical devices—each with its own dedicated compute and memory resources. This empowers users to maximize resource utilization, improve workload isolation, and optimize performance for diverse AI, HPC, and multi-tenant cloud environments.
+This guide serves as a practical and technically detailed reference for configuring compute and memory partitioning on AMD Instinct™ MI300X GPUs using the ``amd-smi`` utility. Partitioning is a key feature that enables system administrators, developers, and data center operators to dynamically subdivide a single MI300X GPU into multiple logical devices—each with its own dedicated compute and memory resources. This empowers users to maximize resource utilization, improve workload isolation, and optimize performance for diverse AI, HPC, and multi-tenant cloud environments.
 
 Partitioning on MI300X involves two dimensions:
 
@@ -167,8 +167,6 @@ b. **Set memory partitioning mode to NPS4:**
 
     - After setting the partitioning modes, you can verify the partition creation using the ``amd-smi`` tool.
     - The command will display the current partitioning status of the GPUs, including compute and memory partitioning modes.
-
-To confirm active partitioning state:
 
 Use ``amd-smi`` to confirm active partition states:
 
