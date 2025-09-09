@@ -250,6 +250,12 @@ Use ``amd-smi`` to confirm active partition states:
                  PARTITION_ID: 2
          ...
 
+      .. note::
+
+         Recently created partitions will display N/A for their partition
+         information. This is to be expected for security reasons and will be
+         addressed in a later feature update to ``amd-smi``.
+
 3. Modifying Partitions
 ------------------------
 
