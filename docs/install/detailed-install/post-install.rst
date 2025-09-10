@@ -39,6 +39,12 @@ Use the following command to check the installation of AMDGPU driver:
 
             sudo dkms status
 
+    .. tab-item:: Rocky
+
+        .. code-block:: bash
+
+            sudo dkms status
+
     .. tab-item:: SLES
 
         .. code-block:: bash
@@ -51,7 +57,7 @@ Use the following command to check the installation of AMDGPU driver:
 
             modinfo amdgpu | grep -w "version:"
 
-**Sample output:**
+**Sample output for Ubuntu 24.04:**
 
 .. code-block:: bash
 
