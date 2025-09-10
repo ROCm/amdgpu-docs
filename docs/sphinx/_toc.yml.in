@@ -1,5 +1,10 @@
 root: index.md
 subtrees:
+  - entries:
+    - file: what-is-DCGPU-Driver.rst
+      title: What is DC GPU Driver?
+    - file: documentation/change-logs/30.10.0.md
+      title: Release notes
   - caption: Install AMDGPU driver
     entries:
       - file: install/detailed-install/prerequisites
@@ -70,7 +75,3 @@ subtrees:
       title: PCIe atomics in ROCm
     - file: conceptual/oversubscription.rst
       title: Oversubscription of hardware resources
-  - caption: Release Notes
-    entries:
-    - file: documentation/change-logs/30.10.0.md
-      title: 30.10.0
