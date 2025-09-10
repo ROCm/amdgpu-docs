@@ -33,9 +33,9 @@ Register kernel-mode driver
                 [amdgpu]
                 name=amdgpu
                 {% if os_major == '10' -%}
-                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_major }}/main/x86_64/
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_major }}/main/x86_64/
                 {%- else -%}
-                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_version }}/main/x86_64/
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_version }}/main/x86_64/
                 {%- endif %}
                 enabled=1
                 priority=50

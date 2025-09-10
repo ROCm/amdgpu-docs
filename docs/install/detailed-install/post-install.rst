@@ -55,13 +55,13 @@ Use the following command to check the installation of AMDGPU driver:
 
 .. code-block:: bash
 
-    amdgpu/6.12.12-2133686.22.04, 6.8.0-52-generic, x86_64: installed
+    amdgpu/6.14.14-2204008.24.04, 6.14.0-29-generic, x86_64: installed
 
-- ``amdgpu``: dkms module name \
-- ``6.12.12``: amdgpu driver version
-- ``2133686``: amdgpu driver build number
-- ``22.04``: distro version
-- ``6.8.0-52-generic``: kernel version of dkms build
+- ``amdgpu``: dkms module name 
+- ``6.14.14``: amdgpu driver version
+- ``2204008``: amdgpu driver build number
+- ``24.04``: distro version
+- ``6.14.0-29-generic``: kernel version of dkms build
 - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
 .. _other_resources:
