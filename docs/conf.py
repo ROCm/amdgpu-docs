@@ -9,9 +9,9 @@ project = "Data Center GPU driver"
 
 version = "1.0.0"
 rocm_version = '7.0'
-rocm_directory_version = '7.0.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '7.0.0' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '30.10'
+rocm_directory_version = '7.0.1' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '7.0.1' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '30.10.1'
 release = version
 html_title = project
 author = "Advanced Micro Devices, Inc."
