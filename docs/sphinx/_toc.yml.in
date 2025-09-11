@@ -5,6 +5,8 @@ subtrees:
       title: What is DC GPU Driver?
     - file: documentation/change-logs/30.10.0.md
       title: Release notes
+    - file: compatibility/compatibility-matrix.rst
+      title: Compatibility matrix
   - caption: Install AMDGPU driver
     entries:
       - file: install/detailed-install/prerequisites
