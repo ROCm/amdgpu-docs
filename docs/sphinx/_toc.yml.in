@@ -1,13 +1,11 @@
 root: index.md
 subtrees:
   - entries:
-    - file: what-is-DCGPU-Driver.rst
-      title: What is DC GPU Driver?
     - file: documentation/change-logs/30.10.0.md
       title: Release notes
     - file: compatibility/compatibility-matrix.rst
       title: Compatibility matrix
-  - caption: Install AMDGPU driver
+  - caption: Install AMD GPU driver
     entries:
       - file: install/detailed-install/prerequisites
         title: Prerequisites
