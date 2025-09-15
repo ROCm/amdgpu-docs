@@ -7,7 +7,7 @@ Installation via native package manager
 ******************************************************************************
 
 The documentation in this section describes installation instructions for the
-AMDGPU driver, which enables support for AMD accelerators on Linux systems. You
+AMD GPU Driver (amdgpu), which enables support for AMD accelerators on Linux systems. You
 can install the driver using your Linux distribution's package manager.
 
 .. important::

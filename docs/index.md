@@ -5,9 +5,12 @@ myst:
     "keywords": "Instinct, GPU, how to, conceptual, PCIe, IOMMU, install"
 ---
 
-# AMD GPU Driver
+# AMD GPU Driver (amdgpu)
 
-The AMD GPU driver is an open-source software. It is a key element in the software ecosystems (ROCm user space, AMD GPU virtualization and frameworks) that allows powerful AMD GPUs in data centers to function optimally for AI & HPC applications workloads.
+The AMD GPU driver (amdgpu) is an open-source software. It is a key element in
+the software ecosystems (ROCm user space, AMD GPU virtualization and
+frameworks) that allows powerful AMD GPUs in data centers to function optimally
+for AI & HPC applications workloads.
 
 This site documents the features and capabilities of the AMD GPU driver, installation, and compatibility information.
 

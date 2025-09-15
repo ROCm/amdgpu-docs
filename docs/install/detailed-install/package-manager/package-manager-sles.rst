@@ -95,7 +95,7 @@ Uninstall kernel-mode driver
 
     sudo zypper remove amdgpu-dkms amdgpu-dkms-firmware
 
-Remove AMDGPU repositories
+Remove amdgpu repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash

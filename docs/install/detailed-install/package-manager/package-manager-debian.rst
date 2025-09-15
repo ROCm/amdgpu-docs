@@ -44,7 +44,7 @@ Download and convert the package signing key.
 Register kernel-mode driver
 ---------------------------------------------------------------------------
 
-Add the AMDGPU repository for the driver.
+Add the amdgpu repository for the driver.
 
 .. datatemplate:nodata::
 
@@ -91,7 +91,7 @@ Uninstall kernel-mode driver
 
     sudo apt autoremove amdgpu-dkms
 
-Remove AMDGPU repositories
+Remove amdgpu repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash
