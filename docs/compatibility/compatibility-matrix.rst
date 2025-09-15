@@ -6,7 +6,9 @@
 Compatibility matrix
 **************************************************************************************
 
-The AMD GPU Driver 30.10 is compatible with ROCm 7.0.x, 6.4.x, 6.3.x, and 6.2.x. For more details, see `User and kernel-space support matrix <https://rocm.docs.amd.com/projects/install-on-linux-internal/en/latest/reference/user-kernel-space-compat-matrix.html>`_
+The AMD GPU Driver 30.10 is compatible with ROCm 7.0.x, 6.4.x, 6.3.x, and
+6.2.x. For more details, see `User and kernel-space support matrix
+<https://rocm.docs.amd.com/projects/install-on-linux-internal/en/latest/reference/user-kernel-space-compat-matrix.html>`__.
 
 ======================================
 Operating system and kernel version
