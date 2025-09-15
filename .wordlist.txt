@@ -49,6 +49,8 @@ CMakePackage
 CRIU
 CP
 CPC
+CPER
+CPERs
 CPF
 CPP
 CPU
@@ -87,6 +89,7 @@ DMA
 DNN
 DNNL
 DPM
+DPX
 DRI
 DW
 DWORD
@@ -305,6 +308,7 @@ PEFT
 PEQT
 PIL
 PILImage
+PLDM
 POR
 PRNG
 PRs
@@ -441,6 +445,7 @@ Unittests
 Unhandled
 VALU
 VBIOS
+VCN
 VGPR
 VGPRs
 VM
