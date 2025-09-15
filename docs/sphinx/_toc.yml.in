@@ -5,7 +5,7 @@ subtrees:
       title: Release notes
     - file: compatibility/compatibility-matrix.rst
       title: Compatibility matrix
-  - caption: Install AMD GPU driver
+  - caption: Install AMD GPU Driver
     entries:
       - file: install/detailed-install/prerequisites
         title: Prerequisites
