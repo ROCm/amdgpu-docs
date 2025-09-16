@@ -62,7 +62,7 @@ Uninstall kernel-mode driver
 
     sudo tdnf remove amdgpu amdgpu-firmware kernel-drivers-gpu
 
-Remove AMDGPU repositories
+Remove amdgpu repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash
