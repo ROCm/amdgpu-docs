@@ -19,6 +19,7 @@ APBDIS
 APIC
 APIs
 APU
+APUs
 ASIC
 ASICs
 ASan
@@ -33,6 +34,7 @@ Autocast
 BARs
 BLAS
 BMC
+BKC
 Blit
 Blockwise
 Bluefield
@@ -431,6 +433,7 @@ TorchVision
 TransferBench
 TrapStatus
 UAC
+UBB
 UC
 UCC
 UCX
@@ -699,6 +702,7 @@ passthrough
 perfcounter
 performant
 perl
+pldm
 pragma
 pre
 prebuild
