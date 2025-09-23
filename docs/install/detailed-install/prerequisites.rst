@@ -137,6 +137,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                 {% for os_version in config.html_context['rhel_version_numbers'] %}
                 {% set os_major, _  = os_version.split('.') %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}
 
                    .. code-block:: bash
                        :substitutions:
@@ -152,6 +153,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                 {% for os_version in config.html_context['ol_version_numbers'] %}
                 {% set os_major, _  = os_version.split('.') %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}                    
 
                    .. code-block:: bash
                        :substitutions:
@@ -166,6 +168,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
 
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}
 
                    .. code-block:: bash
 
@@ -225,6 +228,7 @@ To install for the currently active kernel run the command corresponding to your
               {% set os_major, _  = os_version.split('.') %}
 
                   .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
                     .. code-block:: shell
 
@@ -245,6 +249,7 @@ To install for the currently active kernel run the command corresponding to your
 
                 {% for os_version in config.html_context['ol_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
                     .. code-block:: shell
 
@@ -260,6 +265,7 @@ To install for the currently active kernel run the command corresponding to your
 
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}
 
                     .. code-block:: shell
 
@@ -282,6 +288,7 @@ To install for the currently active kernel run the command corresponding to your
               {% set os_major, _  = os_version.split('.') %}
 
                   .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
                     .. code-block:: shell
 
