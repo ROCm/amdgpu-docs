@@ -168,7 +168,6 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
 
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
-                   :sync: {{ os_version }}
 
                    .. code-block:: bash
 
@@ -265,7 +264,6 @@ To install for the currently active kernel run the command corresponding to your
 
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
-                   :sync: {{ os_version }}
 
                     .. code-block:: shell
 
