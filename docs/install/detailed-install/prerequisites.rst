@@ -12,7 +12,7 @@ Before installing the driver, complete the following prerequisites.
 
    * To obtain the Linux distribution information, use the following command:
 
-     .. code-block:: shell
+     .. code-block:: 
 
           uname -m && cat /etc/*release
 
@@ -34,7 +34,7 @@ Before installing the driver, complete the following prerequisites.
 
    * To check the kernel version of your Linux system, type the following command:
 
-     .. code-block:: shell
+     .. code-block:: 
 
             uname -srmv
 
@@ -72,7 +72,7 @@ your operating system to ensure you're able to download and install packages.
         Typically you can register by following the step-by-step user interface.
         If you need to register by command line, use the following commands:
         
-        .. code-block:: shell
+        .. code-block:: 
 
             subscription-manager register --username <username> --password <password>
             subscription-manager attach --auto
@@ -90,7 +90,7 @@ your operating system to ensure you're able to download and install packages.
         Typically you can register by following the step-by-step user interface.
         If you need to register by command line, use the following commands:
             
-        .. code-block:: shell
+        .. code-block:: 
 
             sudo SUSEConnect -r <REGCODE>
 
@@ -139,7 +139,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                 .. tab-item:: {{ os_version }}
                    :sync: {{ os_version }}
 
-                   .. code-block:: bash
+                   .. code-block:: 
                        :substitutions:
 
                        sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
@@ -155,7 +155,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                 .. tab-item:: {{ os_version }}
                    :sync: {{ os_version }}                    
 
-                   .. code-block:: bash
+                   .. code-block:: 
                        :substitutions:
 
                        sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
@@ -169,7 +169,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
 
-                   .. code-block:: bash
+                   .. code-block:: 
 
                         sudo zypper update
                 {% endfor %}
@@ -205,14 +205,14 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Ubuntu
         :sync: ubuntu-tab
 
-        .. code-block:: shell
+        .. code-block:: 
 
             sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 
     .. tab-item:: Debian
         :sync: debian-tab
 
-        .. code-block:: shell
+        .. code-block:: 
 
             sudo apt install "linux-headers-$(uname -r)"
 
@@ -229,7 +229,7 @@ To install for the currently active kernel run the command corresponding to your
                   .. tab-item:: {{ os_version }}
                     :sync: {{ os_version }}
 
-                    .. code-block:: shell
+                    .. code-block:: 
 
                         {% if os_major == '8' -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
@@ -250,7 +250,7 @@ To install for the currently active kernel run the command corresponding to your
                 .. tab-item:: {{ os_version }}
                     :sync: {{ os_version }}
 
-                    .. code-block:: shell
+                    .. code-block:: 
 
                         sudo dnf install "kernel-uek-devel-$(uname -r)"
                 {% endfor %}
@@ -265,7 +265,7 @@ To install for the currently active kernel run the command corresponding to your
                 {% for os_version in config.html_context['sles_version_numbers'] %}
                 .. tab-item:: {{ os_version }}
 
-                    .. code-block:: shell
+                    .. code-block:: 
 
                         sudo zypper install kernel-default-devel
                 {% endfor %}
@@ -288,7 +288,7 @@ To install for the currently active kernel run the command corresponding to your
                   .. tab-item:: {{ os_version }}
                     :sync: {{ os_version }}
 
-                    .. code-block:: shell
+                    .. code-block:: 
 
                         sudo dnf install "kernel-headers" "kernel-devel" "kernel-devel-matched"
               {% endfor %}
