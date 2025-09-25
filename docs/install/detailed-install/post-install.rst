@@ -59,7 +59,7 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
 **Sample output for Ubuntu 24.04:**
 
-.. code-block:: bash
+.. code-block:: 
 
     amdgpu/6.14.14-2204008.24.04, 6.14.0-29-generic, x86_64: installed
 
