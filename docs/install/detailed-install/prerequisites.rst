@@ -20,7 +20,7 @@ Before installing the driver, complete the following prerequisites.
 
      **Example:** Running the preceding command on an Ubuntu system produces the following output:
 
-     .. code-block:: shell
+     .. code-block:: 
 
             x86_64
             DISTRIB_ID=Ubuntu
@@ -40,7 +40,7 @@ Before installing the driver, complete the following prerequisites.
 
      **Example:** The preceding command lists the kernel version in the following format:
 
-     .. code-block:: shell
+     .. code-block:: 
 
             Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024 x86_64
 
