@@ -19,7 +19,7 @@ copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved
 
 # Supported linux version numbers
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
-debian_version_numbers = [('12', 'jammy')]
+debian_version_numbers = [('13', 'noble'), ('12', 'jammy')]
 rhel_release_version_numbers = ['10', '9', '8']
 rhel_version_numbers = ['10.0', '9.6', '9.4', '8.10']
 sles_version_numbers = ['15.7']
