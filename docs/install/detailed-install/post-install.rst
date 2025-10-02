@@ -49,7 +49,6 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
         - ``amdgpu``: dkms module name 
         - ``6.14.14``: amdgpu driver version
         - ``2222715``: amdgpu driver build number
-        - ``24.04``: distro version
         - ``6.1.0-40-amd64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
