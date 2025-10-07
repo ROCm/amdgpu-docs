@@ -212,9 +212,25 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Debian
         :sync: debian-tab
 
-        .. code-block:: 
+        .. datatemplate:nodata::
 
-            sudo apt install "linux-headers-$(uname -r)"
+            .. tab-set::
+
+              {% for os_version in config.html_context['debian_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
+
+                  .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
+
+                    .. code-block:: 
+
+                        {% if os_major == '12' -%}
+                        sudo apt install "linux-headers-$(uname -r)"
+                        {%- else -%}
+                        sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+                        {%- endif %}
+
+              {% endfor %}
 
     .. tab-item:: Red Hat Enterprise Linux
         :sync: rhel-tab
