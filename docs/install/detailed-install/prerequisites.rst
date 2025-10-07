@@ -216,7 +216,7 @@ To install for the currently active kernel run the command corresponding to your
 
             .. tab-set::
 
-              {% for os_version in config.html_context['debian_version_numbers']  %}
+              {% for (os_version, os_release) in config.html_context['debian_version_numbers'] %}
               {% set os_major, _  = os_version.split('.') %}
 
                   .. tab-item:: {{ os_version }}
