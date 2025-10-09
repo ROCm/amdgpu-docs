@@ -54,57 +54,72 @@ Register your Enterprise Linux
 If you're using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Server (SLES), register
 your operating system to ensure you're able to download and install packages.
 
-.. tab-set::
+.. datatemplate:nodata::
 
-  .. tab-item:: Ubuntu
-        :sync: ubuntu-tab
+    .. tab-set::
 
-        There is no registration required for Ubuntu.
+        .. tab-item:: Ubuntu
+            :sync: ubuntu-tab
 
-  .. tab-item:: Debian
-        :sync: debian-tab
+            There is no registration required for Ubuntu.
 
-        There is no registration required for Debian.
+        .. tab-item:: Debian
+            :sync: debian-tab
 
-  .. tab-item:: Red Hat Enterprise Linux
-        :sync: rhel-tab
+            There is no registration required for Debian.
 
-        Typically you can register by following the step-by-step user interface.
-        If you need to register by command line, use the following commands:
-        
-        .. code-block:: shell
+        .. tab-item:: Red Hat Enterprise Linux
+            :sync: rhel-tab
 
-            subscription-manager register --username <username> --password <password>
-            subscription-manager attach --auto
+            .. tab-set::
 
-        More details about `registering for RHEL <https://access.redhat.com/solutions/253273>`_
+                {% for os_version in config.html_context['rhel_version_numbers'] %}
+                .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
-  .. tab-item:: Oracle Linux
-        :sync: ol-tab
+                    Typically you can register by following the step-by-step user interface.
+                    If you need to register by command line, use the following commands:
 
-        There is no registration required for Oracle Linux.
+                    .. code-block:: shell
+                        :substitutions:
 
-  .. tab-item:: SUSE Linux Enterprise Server
-        :sync: sle-tab
+                        {% if os_version == '10.0' -%}
+                        subscription-manager register --username <username> --password <password>
+                        {%- else -%}
+                        subscription-manager register --username <username> --password <password>
+                        subscription-manager attach --auto
+                        {%- endif %}
 
-        Typically you can register by following the step-by-step user interface.
-        If you need to register by command line, use the following commands:
-            
-        .. code-block:: shell
+                    More details about `registering for RHEL <https://access.redhat.com/solutions/253273>`_
 
-            sudo SUSEConnect -r <REGCODE>
+                {% endfor %}
 
-        More details about `registering for SLES <https://www.suse.com/support/kb/doc/?id=000018564>`_
+        .. tab-item:: Oracle Linux
+            :sync: ol-tab
 
-  .. tab-item:: Azure Linux
-        :sync: azl-tab
+            There is no registration required for Oracle Linux.
 
-        There is no registration required for Azure Linux.
+        .. tab-item:: SUSE Linux Enterprise Server
+            :sync: sle-tab
 
-  .. tab-item:: Rocky Linux
-        :sync: rl-tab
+            Typically you can register by following the step-by-step user interface.
+            If you need to register by command line, use the following commands:
+                
+            .. code-block:: shell
 
-        There is no registration required for Rocky Linux.
+                sudo SUSEConnect -r <REGCODE>
+
+            More details about `registering for SLES <https://www.suse.com/support/kb/doc/?id=000018564>`_
+
+        .. tab-item:: Azure Linux
+            :sync: azl-tab
+
+            There is no registration required for Azure Linux.
+
+        .. tab-item:: Rocky Linux
+            :sync: rl-tab
+
+            There is no registration required for Rocky Linux.
 
 .. _update-enterprise-linux:
 
