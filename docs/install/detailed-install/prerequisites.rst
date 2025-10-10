@@ -26,7 +26,7 @@ Before installing the driver, complete the following prerequisites.
             DISTRIB_ID=Ubuntu
             DISTRIB_RELEASE=24.04
             DISTRIB_CODENAME=noble
-            DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+            DISTRIB_DESCRIPTION="Ubuntu 24.04.3 LTS"
 
 .. _verify_kernel_version:
 
