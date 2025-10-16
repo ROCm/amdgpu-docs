@@ -1,6 +1,6 @@
 # AMD GPU Driver (amdgpu) 30.10.1 release notes
 
-AMD GPU Driver (amdgpu) 30.10.1 is a quality release that resolves the issue listed in the Release highlights.
+AMD GPU Driver (amdgpu) 30.10.1 is a quality release that resolves the issue listed in the release highlights.
 
 ## Release highlights
 

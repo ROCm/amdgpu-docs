@@ -1,7 +1,7 @@
 root: index.md
 subtrees:
   - entries:
-    - file: documentation/change-logs/release-notes.md
+    - file: documentation/release-notes.md
       title: Release notes
     - file: compatibility/compatibility-matrix.rst
       title: Compatibility matrix
