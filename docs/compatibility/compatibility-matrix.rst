@@ -6,8 +6,8 @@
 Compatibility matrix
 **************************************************************************************
 
-The AMD GPU Driver (amdgpu) 30.10.1 is compatible with ROCm 7.0.x, 6.4.x, 6.3.x, and
-6.2.x. For more details, see `User and kernel-space support matrix
+The AMD GPU Driver (amdgpu) 30.10.2 is compatible with ROCm 7.0.x, 6.4.x, 6.3.x, and
+6.2.x. For more information, see `User and kernel-space support matrix
 <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/user-kernel-space-compat-matrix.html>`__.
 
 ======================================
@@ -20,4 +20,4 @@ See `Supported operating systems <https://rocm.docs.amd.com/projects/install-on-
 GPU support
 =============
 
-See `Supported GPUs <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-gpus>`_ for the list of supported AMD Instinct™ accelerators, Radeon™ PRO, and Radeon GPUs.
+See `Supported GPUs <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-gpus>`_ for the list of supported AMD Instinct™, Radeon™ PRO, and Radeon GPUs.

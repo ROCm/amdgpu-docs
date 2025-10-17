@@ -5,6 +5,7 @@ ACEs
 ACS
 AccVGPR
 AccVGPRs
+AER
 allreduce
 ALU
 AMD
@@ -31,6 +32,7 @@ Andrej
 Arb
 Autocast
 BARs
+BKC
 BLAS
 BMC
 Blit
@@ -88,6 +90,7 @@ DL
 DMA
 DNN
 DNNL
+DPC
 DPM
 DPX
 DRI
@@ -435,6 +438,7 @@ UC
 UCC
 UCX
 UE
+UEK
 UIF
 UMC
 USM

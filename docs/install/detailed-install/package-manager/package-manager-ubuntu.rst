@@ -57,7 +57,7 @@ Add the amdgpu repository for the driver.
                 :substitutions:
 
                 sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
-                deb [arch=amd64,i386 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|amdgpu_url_version|/ubuntu {{ os_release }} main
+                deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|amdgpu_url_version|/ubuntu {{ os_release }} main
                 EOF
                 sudo apt update
         {% endfor %}
