@@ -1,28 +1,12 @@
-# AMD GPU Driver (amdgpu) 30.10.1 release notes
-
-AMD GPU Driver (amdgpu) 30.10.1 is a quality release that resolves the issue listed in the Release highlights.
-
-## Release highlights
-
-The following issue has been resolved in the AMD GPU Driver (amdgpu) 30.10.1 to be used with ROCm 7.0.1.
-
-### Failure to declare out-of-bound CPERs for bad memory page
-
-The issue of failing to declare Out-Of-Band Common Platform Error Records (CPERs) when exceeding bad memory page threshold has been resolved. The fix applies to all AMD Instinct MI300 Series and MI350 Series GPUs.
-
-```{note}
-AMD GPU Driver (amdgpu) 30.10.1 doesn't include any other significant changes or feature additions. For comprehensive changes in the previous release, refer to the [AMD GPU Driver (amdgpu) 30.10 release notes](#amd-gpu-driver-amdgpu-30-10-release-notes) below.
-```
-
-## AMD GPU Driver (amdgpu) 30.10 release notes
+# AMD GPU Driver (amdgpu) 30.10 release notes
 
 The release notes provide a summary of notable changes since the previous AMD GPU Driver release.
 
-### Release highlights
+## Release highlights
 
 The following are notable new features and improvements in AMD GPU Driver 30.10.
 
-#### Operating system and hardware support changes
+### Operating system and hardware support changes
 
 The AMD GPU Driver 30.10 adds support for [AMD Instinct
 MI355X](https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html) and
@@ -37,7 +21,7 @@ AMD GPU Driver 30.10 also introduces support for the following operating systems
 AMD GPU Driver 30.10 marks end-of-support (EOS) for Ubuntu 24.04.2. For the compatibility between
 AMD GPU Driver, ROCm, GPUs, and OS, see the [Compatibility matrix](../../compatibility/compatibility-matrix.rst).
 
-#### Partitioning
+### Partitioning
 
 The AMD GPU Driver 30.10 adds the following memory and compute partitioning support:
 
@@ -52,14 +36,14 @@ The AMD GPU Driver 30.10 adds the following memory and compute partitioning supp
   each with 4 XCDs (out of 8 total), 8 DMA engines, and 2 VCN decoder groups. This feature requires
   PLDM bundle (firmware) 01.25.13.04.
 
-#### GPU resiliency
+### GPU resiliency
 
 The following GPU resiliency feature is supported in the AMD GPU Driver 30.10 for AMD Instinct MI300X, MI350X, and MI355X:
 
 * SDMA engine reset enables recovery from SDMA-related faults without requiring a full GPU reset,
   improving system stability and fault tolerance.
 
-#### Program counter (PC) sampling
+### Program counter (PC) sampling
 
 The AMD GPU Driver 30.10.0 adds support for Stochastic (hardware-based) and Host-trap PC sampling, a
 GPU profiling technique used for analyzing kernel execution performance.
@@ -90,13 +74,13 @@ hsa_status_t hsa_ven_amd_pcs_stop(hsa_ven_amd_pcs_t pc_sampling);
 hsa_status_t hsa_ven_amd_pcs_flush(hsa_ven_amd_pcs_t pc_sampling);
 ```
 
-### Known issues
+## Known issues
 
 Exceeding bad memory page threshold fails to declare Out-Of-Band Common
 Platform Error Records (CPERs). This issue affects all AMD Instinct MI350
 Series and MI300 Series GPUs, and will be fixed in a future AMD GPU
 Driver release.
 
-### Resolved issues
+## Resolved issues
 
 Issue with restoring a CRIU checkpoint for workloads on AMD Instinct MI Series GPUs is resolved.
