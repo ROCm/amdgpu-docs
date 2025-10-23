@@ -36,14 +36,15 @@ This layout provides the foundation for partitioning, allowing resources to be s
 
 .. _mi300x_compute-partitioning:
 
-a. Compute Partitioning (SPX, CPX)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+a. Compute Partitioning (SPX, DPX, CPX)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Compute partitioning (also referred to as MCP – Modular Chiplet Platform) is the division of the GPU's compute and memory resources into smaller logical units, which can then be addressed as independent devices by applications. This is implemented in the driver layer and can be dynamically adjusted at runtime using command-line tools like ``amd-smi``.
 
-There are two key compute partitioning modes:
+There are three key compute partitioning modes:
 
 - **SPX (Single Partition X-celerator):** Treats the entire GPU as a single device.
+- **DPX (Dual Partition X-celerator):** Exposes the GPU as two logical devices, each with 4 XCDs.
 - **CPX (Core Partitioned X-celerator):** Exposes each XCD as an individual logical GPU.
 
 **Key Benefits of Partitioning:**
@@ -65,6 +66,9 @@ There are two key compute partitioning modes:
 +========+==================+================+===================+===============================+
 | SPX    | 1                | 304            | 192GB             | Unified workloads             |
 +--------+------------------+----------------+-------------------+-------------------------------+
+| DPX    | 2                | 152            | 96GB              | Medium models, balanced       |
+|        |                  |                |                   | multi-tenancy                 |
++--------+------------------+----------------+-------------------+-------------------------------+
 | CPX    | 8                | 38             | 24GB              | Isolation, fine-grained       |
 |        |                  |                |                   | scheduling, small batch sizes |
 +--------+------------------+----------------+-------------------+-------------------------------+
@@ -85,7 +89,32 @@ i. SPX (Single Partition X-celerator)
 - Workgroups are **automatically distributed** across all XCDs (round-robin).
 - The GPU will always revert back to this default SPX mode when the system is rebooted or when the amdgpu driver is unloaded and reloaded.
 
-ii. CPX (Core Partitioned X-celerator)
+ii. DPX (Dual Partition X-celerator)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Divides the GPU into **2 logical devices**.
+- Each partition contains **4 XCDs** (152 CUs per partition).
+- Each partition receives **96GB of HBM** in default configuration.
+
+**Memory Allocation:**
+
+- Compatible with NPS1, NPS2, and NPS4 memory modes (platform-dependent).
+- In NPS2, each DPX partition aligns with a memory quadrant for optimal memory locality.
+- Provides balance between full GPU utilization and workload isolation.
+
+**Use Case:**
+
+1. **Medium-sized model deployment:** Ideal for models that require more resources than a single XCD but don't need the full GPU.
+2. **Balanced multi-tenancy:** Run two isolated workloads with substantial resources each.
+3. **Development and testing:** Partition GPU for parallel development workflows.
+
+**Behavior:**
+
+- ``amd-smi`` shows **2 GPUs**, each with **152 CUs** and **96GB HBM**.
+- Peer-to-Peer access between partitions available.
+- Workgroups distributed within each partition's 4 XCDs.
+
+iii. CPX (Core Partitioned X-celerator)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Each XCD is represented as a **separate logical GPU**.
@@ -144,6 +173,12 @@ b. Memory Partitioning (NPS)
     - Best for workloads requiring unified memory.
     - Compatible mode with SPX and CPX.
 
+  - **NPS2 (Dual Memory Partition):**
+
+    - Divides HBM into 2 memory partitions of 96GB each.
+    - Each memory partition is accessible to the logical devices in its partition.
+    - Compatible with DPX mode, providing optimal memory locality for dual-partition workloads.
+
   - **NPS4 (Partitioned Memory):**
 
     - Pairs of HBM stacks forming 48GB each are viewed as separate memory partitions. Each CPX partition still only has access to 24GB of HBM memory, but the memory is interleaved across this 48GB memory partition instead of across the entire 192GB of the GPU.
@@ -164,7 +199,10 @@ b. Memory Partitioning (NPS)
       - Compute Mode Compatibility
     * - **NPS1**
       - Unified memory pool (192GB)
-      - SPX, CPX
+      - SPX, DPX, CPX
+    * - **NPS2**
+      - 2 memory partitions (96GB each)
+      - DPX
     * - **NPS4**
       - 4 memory partitions (48GB each). Note- Each CPX only accesses 24GB from the partition.
       - CPX only

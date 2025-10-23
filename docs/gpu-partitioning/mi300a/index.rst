@@ -14,9 +14,9 @@ Key technical highlights of the MI300A platform include:
 
 - **24 Zen 4 CPU cores** integrated with **228 CDNA 3 CUs**, all sharing a unified addressable HBM memory pool.
 - Up to **128 GB of unified HBM3 memory**, accessible by both CPU and GPU without the need for explicit memory copies.
-- **Advanced GPU partitioning** support (SPX, CPX, TPX) enabling workload isolation, fine-grained scheduling, and resource optimization.
+- **Advanced GPU partitioning** support (SPX, CPX) enabling workload isolation, fine-grained scheduling, and resource optimization.
 - Hardware-accelerated **coherent shared memory**, enabling low-latency CPU-GPU communication for tightly coupled compute models.
-- Full compatibility with the **ROCm 6.x software stack**, including HIP, OpenMP offload, and leading AI/ML libraries.
+- Full compatibility with the **ROCm 7.0+ software stack**, including HIP, OpenMP offload, and leading AI/ML libraries.
 
 This guide is structured to help users get the most out of MI300A across a wide range of applications:
 
