@@ -127,20 +127,6 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
         - ``6.4.0-150700.53.16-default``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
-    .. tab-item:: AZL
-
-        .. code-block:: bash
-
-            modinfo amdgpu | grep -w "version:"
-
-        **Sample output for AZL 3.0:**
-
-        .. code-block:: bash
-
-            version:        6.8.5
-
-        - ``6.8.5``: amdgpu driver version
-
 .. _other_resources:
 
 Additional software for user space

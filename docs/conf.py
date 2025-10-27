@@ -25,7 +25,6 @@ rhel_version_numbers = ['10.0', '9.6', '9.4', '8.10']
 sles_version_numbers = ['15.7']
 ol_release_version_numbers = ['10', '9', '8']
 ol_version_numbers = ['10.0', '9.6', '8.10']
-azl_version_numbers = ['3.0']
 rl_version_numbers = ['9.6']
 
 html_context = {
@@ -36,7 +35,6 @@ html_context = {
     "rhel_version_numbers" : rhel_version_numbers,
     "ol_release_version_numbers" : ol_release_version_numbers,
     "ol_version_numbers" : ol_version_numbers,
-    "azl_version_numbers": azl_version_numbers,
     "rl_version_numbers" : rl_version_numbers
 }
 
