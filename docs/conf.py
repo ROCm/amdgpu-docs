@@ -7,13 +7,13 @@ if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "1.0.0"
-rocm_version = '7.0'
-rocm_directory_version = '7.0.2' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '30.10.2' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '30.10.2'
+version = "30.20.0"
+rocm_version = '7.1'
+rocm_directory_version = '7.1.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '30.20' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '30.20'
 release = version
-html_title = project
+html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
 copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved."
 
@@ -25,7 +25,6 @@ rhel_version_numbers = ['10.0', '9.6', '9.4', '8.10']
 sles_version_numbers = ['15.7']
 ol_release_version_numbers = ['10', '9', '8']
 ol_version_numbers = ['10.0', '9.6', '8.10']
-azl_version_numbers = ['3.0']
 rl_version_numbers = ['9.6']
 
 html_context = {
@@ -36,7 +35,6 @@ html_context = {
     "rhel_version_numbers" : rhel_version_numbers,
     "ol_release_version_numbers" : ol_release_version_numbers,
     "ol_version_numbers" : ol_version_numbers,
-    "azl_version_numbers": azl_version_numbers,
     "rl_version_numbers" : rl_version_numbers
 }
 
