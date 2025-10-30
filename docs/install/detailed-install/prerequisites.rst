@@ -111,11 +111,6 @@ your operating system to ensure you're able to download and install packages.
 
             More details about `registering for SLES <https://www.suse.com/support/kb/doc/?id=000018564>`_
 
-        .. tab-item:: Azure Linux
-            :sync: azl-tab
-
-            There is no registration required for Azure Linux.
-
         .. tab-item:: Rocky Linux
             :sync: rl-tab
 
@@ -188,11 +183,6 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
 
                         sudo zypper update
                 {% endfor %}
-
-        .. tab-item:: Azure Linux
-            :sync: azl-tab
-
-            There is no update required for Azure Linux.
 
         .. tab-item:: Rocky Linux
             :sync: rl-tab
@@ -284,11 +274,6 @@ To install for the currently active kernel run the command corresponding to your
 
                         sudo zypper install kernel-default-devel
                 {% endfor %}
-
-    .. tab-item:: Azure Linux
-        :sync: azl-tab
-
-        There are no kernel headers required for Azure Linux.
 
     .. tab-item:: Rocky Linux
         :sync: rl-tab
