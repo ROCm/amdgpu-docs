@@ -13,9 +13,9 @@ This documentation provides a comprehensive guide for users, system integrators,
 Key technical highlights of the MI300X include:
 
 - Up to **192 GB of HBM3 memory** with ultra-high bandwidth to accelerate large model inference.
-- Support for advanced **GPU partitioning modes**, enabling logical GPU segmentation (SPX, CPX) for multi-tenant deployments and workload isolation.
-- Fine-grained **memory partitioning** (NPS1, NPS4) for optimizing memory locality and performance in dense compute clusters.
-- Full-stack compatibility with **ROCm 6.x**, the open software platform for AMD GPUs, enabling tight integration with PyTorch, Hugging Face, and other AI/ML frameworks.
+- Support for advanced **GPU partitioning modes**, enabling logical GPU segmentation (SPX, DPX, CPX) for multi-tenant deployments and workload isolation.
+- Fine-grained **memory partitioning** (NPS1, NPS2, NPS4) for optimizing memory locality and performance in dense compute clusters.
+- Full-stack compatibility with **ROCm 7.0+**, the open software platform for AMD GPUs, enabling tight integration with PyTorch, Hugging Face, and other AI/ML frameworks.
 
 The sections below provide targeted guidance for each step of working with the MI300X platform:
 
