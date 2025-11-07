@@ -45,7 +45,7 @@ The following GPU resiliency feature is supported in the AMD GPU Driver 30.10 fo
 
 ### Program counter (PC) sampling
 
-The AMD GPU Driver 30.10.0 adds support for Stochastic (hardware-based) and Host-trap PC sampling, a
+The AMD GPU Driver 30.10 adds support for Stochastic (hardware-based) and Host-trap PC sampling, a
 GPU profiling technique used for analyzing kernel execution performance.
 
 * **Stochastic PC sampling**: This method randomly triggers wave traps across compute units to
