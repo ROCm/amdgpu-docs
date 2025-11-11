@@ -158,3 +158,4 @@ Driver release.
 ### Resolved issues
 
 Issue with restoring a CRIU checkpoint for workloads on AMD Instinct MI Series GPUs is resolved.
+
