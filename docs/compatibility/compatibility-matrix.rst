@@ -20,4 +20,4 @@ See `Supported operating systems <https://rocm.docs.amd.com/projects/install-on-
 GPU support
 =============
 
-See `Supported GPUs <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-gpus>`_ for the list of supported AMD Instinct™ GPUs, Radeon™ PRO, and Radeon GPUs.
+See `Supported GPUs <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-gpus>`_ for the list of supported AMD Instinct™ accelerators, Radeon™ PRO, and Radeon GPUs.
