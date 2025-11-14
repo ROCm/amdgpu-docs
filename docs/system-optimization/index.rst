@@ -1,6 +1,6 @@
 .. meta::
    :description: AMD hardware optimization for specific workloads
-   :keywords: high-performance computing, HPC, Instinct accelerators, Radeon,
+   :keywords: high-performance computing, HPC, Instinct GPUs, Radeon,
               tuning, tuning guide, AMD, ROCm
 
 *******************
@@ -40,7 +40,7 @@ for HPC applications include:
   troubleshooting (strongly recommended)
 
 This document provides guidance on tuning systems with various AMD Instinct
-accelerators for HPC workloads. The following sections don't comprise an
+GPUs for HPC workloads. The following sections don't comprise an
 all-inclusive guide, and some items referred to may have similar, but different,
 names in various OEM systems (for example, OEM-specific BIOS settings). This
 following sections also provide suggestions on items that should be the initial
