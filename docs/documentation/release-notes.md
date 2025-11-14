@@ -84,7 +84,7 @@ The following are notable new features and improvements in AMD GPU Driver 30.10.
 
 The AMD GPU Driver 30.10 adds support for [AMD Instinct
 MI355X](https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html) and
-[MI350X](https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html) accelerators.
+[MI350X](https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html) GPUs.
 
 AMD GPU Driver 30.10 also introduces support for the following operating systems:
 
