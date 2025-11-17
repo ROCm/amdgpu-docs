@@ -10,6 +10,10 @@ Ubuntu native installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
+.. caution::
+
+    Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
+
 .. _ubuntu-register-repo:
 
 Registering ROCm repositories
