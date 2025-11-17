@@ -10,6 +10,10 @@ Debian native installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
+.. caution::
+
+    Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`debian-package-manager-uninstall-driver`.
+
 .. _debian-register-repo:
 
 Registering ROCm repositories

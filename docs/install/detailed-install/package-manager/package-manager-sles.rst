@@ -10,6 +10,10 @@ SUSE Linux Enterprise Server native installation
 
     Ensure that the :doc:`../prerequisites` are met before installing.
 
+.. caution::
+
+    Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`sles-package-manager-uninstall-driver`.
+
 .. _sles-addtional-package:
 
 Additional package repositories
