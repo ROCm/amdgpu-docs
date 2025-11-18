@@ -7,14 +7,14 @@ Installation via native package manager
 ******************************************************************************
 
 The documentation in this section describes installation instructions for the
-AMD GPU Driver (amdgpu), which enables support for AMD accelerators on Linux systems. You
+AMD GPU Driver (amdgpu), which enables support for AMD GPUs on Linux systems. You
 can install the driver using your Linux distribution's package manager.
 
 .. important::
 
    Review the :doc:`Linux system requirements
    <rocm-install-on-linux:reference/system-requirements>` for a list of supported
-   AMD Instinct accelerators, Linux distributions, and any compatibility notices.
+   AMD Instinct GPUs, Linux distributions, and any compatibility notices.
 
 Select the install instructions for your operating system
 
