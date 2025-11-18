@@ -1,7 +1,7 @@
 .. meta::
    :description: AMD Instinct MI300A system settings
    :keywords: AMD, Instinct, MI300A, HPC, tuning, BIOS settings, NBIO, ROCm,
-              environment variable, performance, accelerator, GPU, EPYC, GRUB,
+              environment variable, performance, GPU, EPYC, GRUB,
               operating system
 
 ***************************************************
@@ -9,7 +9,7 @@ AMD Instinct MI300A system optimization
 ***************************************************
 
 This topic discusses the operating system settings and system management commands for 
-the AMD Instinct MI300A accelerator. This topic can help you optimize performance.
+the AMD Instinct MI300A GPU. This topic can help you optimize performance.
 
 System settings
 ========================================
@@ -19,7 +19,7 @@ optimize its performance.
 
 The MI300A system-on-a-chip (SOC) design requires you to review and potentially adjust your OS configuration as explained in 
 the :ref:`operating-system-settings-label` section. These settings are critical for 
-performance because the OS on an accelerated processing unit (APU) is responsible for memory management across the CPU and GPU accelerators.
+performance because the OS on an accelerated processing unit (APU) is responsible for memory management across the CPU and GPUs.
 In the APU memory model, system settings are available to limit GPU memory allocation. 
 This limit is important because legacy software often determines the 
 amount of allowable memory at start-up time
