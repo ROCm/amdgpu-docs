@@ -8,11 +8,8 @@ Ubuntu native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
-
-.. caution::
-
-    Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
+    * Ensure that the :doc:`../prerequisites` are met before installing.
+    * Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
 
 .. _ubuntu-register-repo:
 
@@ -41,9 +38,7 @@ Download and convert the package signing key.
 
 .. note::
 
-    The GPG key may change; ensure it is updated when installing a new release.
-    If the key signature verification fails while updating,
-    re-add the key from the ROCm to the apt repository as mentioned above.
+    The GPG key might change. Ensure it's updated when installing a new version. If the key signature verification fails during the update, re-add the key from the ROCm repository to the apt repository as mentioned above.
 
 Register kernel-mode driver
 ---------------------------------------------------------------------------
