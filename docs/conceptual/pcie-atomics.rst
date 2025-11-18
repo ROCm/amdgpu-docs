@@ -32,8 +32,7 @@ To learn more about the industry standards and specifications of PCIe, see `PCI-
 To learn more about PCIe and its capabilities, consult the following white papers:
 
 * `Atomic Read Modify Write Primitives by Intel <https://www.intel.es/content/dam/doc/white-paper/atomic-read-modify-write-primitives-i-o-devices-paper.pdf>`_
-* `PCI Express 3 Accelerator White paper by Intel <https://www.intel.sg/content/dam/doc/white-paper/pci-express3-accelerator-white-paper.pdf>`_
-* `PCIe Generation 4 Base Specification includes atomic operations <https://astralvx.com/storage/2020/11/PCI_Express_Base_4.0_Rev0.3_February19-2014.pdf>`_
+* `PCI Express 3 GPU White paper by Intel <https://www.intel.sg/content/dam/doc/white-paper/pci-express3-accelerator-white-paper.pdf>`_
 * `Xilinx PCIe Ultrascale White paper <https://docs.xilinx.com/v/u/8OZSA2V1b1LLU2rRCDVGQw>`_
 
 Working with PCIe 3.0 in ROCm
@@ -48,9 +47,6 @@ To enable atomic operations routing between multiple root ports, each root port 
 field is set. These requests can only be serviced if the upstream components also support atomic operation completion or if the requests can be routed to a component that supports atomic operation completion.
 
 ROCm uses the PCIe-ID-based ordering technology for peer-to-peer (P2P) data transmission. PCIe-ID-based ordering technology is used when the GPU initiates multiple write operations to different memory locations.
-
-For more information on changes implemented in PCIe 3.0, see `Overview of Changes to PCI Express 3.0 <https://www.mindshare.com/files/resources/PCIe%203-0.pdf>`_.
-
 
 
 
