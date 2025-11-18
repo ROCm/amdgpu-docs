@@ -8,11 +8,8 @@ Oracle Linux native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
-
-.. caution::
-
-    Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ol-package-manager-uninstall-driver`.
+    * Ensure that the :doc:`../prerequisites` are met before installing.
+    * Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ol-package-manager-uninstall-driver`.
 
 .. _ol-register-repo:
 
