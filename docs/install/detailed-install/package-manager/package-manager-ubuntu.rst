@@ -8,8 +8,8 @@ Ubuntu native installation
 
 .. caution::
 
-    * Ensure that the :doc:`../prerequisites` are met before installing.
-    * Before proceeding, remove any existing amdgpu-dkms installation by following the uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
 
 .. _ubuntu-register-repo:
 
