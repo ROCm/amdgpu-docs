@@ -83,7 +83,7 @@ your operating system to ensure you're able to download and install packages.
                     .. code-block:: shell
                         :substitutions:
 
-                        {% if os_version == '10.0' -%}
+                        {% if os_version == '10.0' or '10.1' -%}
                         subscription-manager register --username <username> --password <password>
                         {%- else -%}
                         subscription-manager register --username <username> --password <password>

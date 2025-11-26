@@ -7,14 +7,11 @@ myst:
 
 # AMD GPU Driver (amdgpu)
 
-The AMD GPU driver (amdgpu) is an open-source software. It is a key element in
-the software ecosystems (ROCm user space, AMD GPU virtualization and
-frameworks) that allows powerful AMD GPUs in data centers to function optimally
-for AI & HPC applications workloads.
+The AMD GPU driver (amdgpu) is open source software. It’s a key element in the software ecosystems (ROCm user space, AMD GPU virtualization, and frameworks) that enables powerful AMD GPUs in data centers to function optimally for AI and HPC applications workloads.
 
-This site documents the features and capabilities of the AMD GPU driver, installation, and compatibility information.
+This documentation describes AMD GPU driver features and capabilities, installation instructions, and compatibility information.
 
-The AMD Instinct documentation is organized into the following categories:
+The AMD GPU Driver documentation is organized into the following categories:
 
 ::::{grid} 1 2 2 2
 :gutter: 3

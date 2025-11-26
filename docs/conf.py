@@ -1,17 +1,17 @@
 """Configuration file for the Sphinx documentation builder."""
 import os
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "dcgpu.docs.amd.com")
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "instinct.docs.amd.com")
 html_context = {}
 if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "30.20.0"
-rocm_version = '7.1'
-rocm_directory_version = '7.1.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '30.20' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '30.20'
+version = "30.20.1"
+rocm_version = '7.1.1'
+rocm_directory_version = '7.1.1' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '30.20.1' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '30.20.1'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
@@ -21,7 +21,7 @@ copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
 debian_version_numbers = [('13', 'noble'), ('12', 'jammy')]
 rhel_release_version_numbers = ['10', '9', '8']
-rhel_version_numbers = ['10.0', '9.6', '9.4', '8.10']
+rhel_version_numbers = ['10.1', '10.0', '9.7', '9.6', '9.4', '8.10']
 sles_version_numbers = ['15.7']
 ol_release_version_numbers = ['10', '9', '8']
 ol_version_numbers = ['10.0', '9.6', '8.10']
