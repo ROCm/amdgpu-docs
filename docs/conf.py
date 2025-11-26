@@ -42,7 +42,7 @@ html_context = {
 # Required settings
 html_theme = "rocm_docs_theme"
 html_theme_options = {
-    "flavor": "instinct",
+    "flavor": "amdgpu",
     "link_main_doc": True,
     # Add any additional theme options here
 }
