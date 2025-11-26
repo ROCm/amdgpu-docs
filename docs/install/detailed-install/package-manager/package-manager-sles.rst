@@ -8,7 +8,8 @@ SUSE Linux Enterprise Server native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`sles-package-manager-uninstall-driver`.
 
 .. _sles-addtional-package:
 
