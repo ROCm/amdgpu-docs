@@ -8,7 +8,8 @@ Red Hat Enterprise Linux native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`rhel-package-manager-uninstall-driver`.
 
 .. _rhel-register-repo:
 
