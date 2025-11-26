@@ -8,7 +8,8 @@ Oracle Linux native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`ol-package-manager-uninstall-driver`.
 
 .. _ol-register-repo:
 
