@@ -12,7 +12,7 @@ The AMD GPU Driver 30.20.1 introduces support for RHEL 9.7 and RHEL 10.1.
 
 For compatibility between AMD GPU Driver, ROCm, GPUs, and operating systems, see the [Compatibility matrix](../compatibility/compatibility-matrix.rst).
 
-### GPU resiliency
+#### GPU resiliency
 
 AMD GPU Driver now supports Multimedia Engine Reset for AMD Instinct MI355X GPUs. This finer-grain GPU resiliency feature enables recovery from faults related to VCN or JPEG without requiring a full GPU reset, thereby improving system stability and fault tolerance. Note that VCN queue reset functionality requires PLDM bundle 01.25.16.03 (or later) firmware.
 

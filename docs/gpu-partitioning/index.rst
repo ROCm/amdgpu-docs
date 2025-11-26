@@ -9,9 +9,9 @@ AMD GPU/APU Partitioning
 Partitioning Overview
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Modern large-scale AI and HPC workloads demand fine-grained control over GPU resource allocation, memory isolation, and multi-tenant scheduling. AMD's Instinct™ MI300 series accelerators — including the MI300X GPU and MI300A APU — support flexible partitioning schemes that allow users to logically subdivide a single device into multiple independent partitions optimized for different workloads.
+Modern large-scale AI and HPC workloads demand fine-grained control over GPU resource allocation, memory isolation, and multi-tenant scheduling. AMD's Instinct™ MI300 series GPUs — including the MI300X GPU and MI300A APU — support flexible partitioning schemes that allow users to logically subdivide a single device into multiple independent partitions optimized for different workloads.
 
-This documentation portal serves as a centralized index for navigating the complete GPU partitioning workflow on AMD platforms. It links to detailed technical guides for each supported accelerator, including:
+This documentation portal serves as a centralized index for navigating the complete GPU partitioning workflow on AMD platforms. It links to detailed technical guides for each supported GPU, including:
 
 - **Architecture deep dives** to understand partitioning capabilities.
 - **Quick start instructions** to apply compute and memory partition modes using `amd-smi`.
