@@ -91,42 +91,52 @@ b. **Set memory partitioning mode to NPS4:**
 
          .. code-block:: shell-session
 
-            ****** WARNING ******
+            ******WARNING******
 
-            Setting Dynamic Memory (NPS) partition modes require users to quit all GPU workloads.
-            AMD SMI will then attempt to change memory (NPS) partition mode.
-            Upon a successful set, AMD SMI will then initiate an action to restart AMD GPU driver.
-            This action will change all GPU's in the hive to the requested memory (NPS) partition mode.
+            After changing memory (NPS) partition modes, users MUST restart
+            (reload) the AMD GPU driver. This command NO LONGER AUTOMATICALLY
+            reloads the driver, see `amd-smi reset -h` and
+            `sudo amd-smi reset -r` for more information.
 
-            Please use this utility with caution.
+            This change is intended to allow users the ability to control when is
+            the best time to restart the AMD GPU driver, as it may not be desired
+            to restart the AMD GPU driver immediately after changing the
+            memory (NPS) partition mode.
 
-            Do you accept these terms? [Y/N] Y
+            Please use `sudo amd-smi reset -r` AFTER successfully
+            changing the memory (NPS) partition mode. A successful driver reload
+            is REQUIRED in order to complete updating ALL GPUs in the hive to
+            the requested partition mode.
 
-            Trying again - Updating memory partition for gpu 0: [██████████████..........................] 50/140 secs remain
+            ******REMINDER******
+            In order to reload the AMD GPU driver, users MUST quit all GPU
+            workloads across all devices.
+
+            Do you accept these terms? [Y/N] y
 
             GPU: 0
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 1
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 2
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 3
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 4
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 5
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 6
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             GPU: 7
-              MEMORY_PARTITION: Successfully set memory partition to NPS4
+                MEMORY_PARTITION: Successfully set memory partition to NPS4, reload driver when ready
 
             ...
 
@@ -233,8 +243,7 @@ Use ``amd-smi`` to confirm active partition states:
       .. note::
 
          Recently created partitions will display N/A for their partition
-         information. This is to be expected for security reasons and will be
-         addressed in a later feature update to ``amd-smi``.
+         information. This is to be expected.
 
 3. Modifying Partitions
 ------------------------
