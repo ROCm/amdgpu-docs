@@ -20,7 +20,7 @@ Whether you are deploying MI300X GPUs for large-scale language model inference, 
 
     - This section describes how to create a CPX/NPS4 partition on MI300X GPUs using the ``amd-smi`` tool.
     - The partitioning process involves setting compute and memory partitioning modes to CPX and NPS4, respectively.
-    - The example below demonstrates how to set up a CPX/NPS4 partition on all GPUs in the system. 
+    - The example below demonstrates how to set up a CPX/NPS4 partition on all GPUs in the system.
 
 To create a CPX/NPS4 partition:
 
@@ -91,65 +91,45 @@ b. **Set memory partitioning mode to NPS4:**
 
          .. code-block:: shell-session
 
-             ****** WARNING ******
+            ****** WARNING ******
 
-             Setting Dynamic Memory (NPS) partition modes require users to quit all GPU workloads.
-             AMD SMI will then attempt to change memory (NPS) partition mode.
-             Upon a successful set, AMD SMI will then initiate an action to restart AMD GPU driver.
-             This action will change all GPU's in the hive to the requested memory (NPS) partition mode.
+            Setting Dynamic Memory (NPS) partition modes require users to quit all GPU workloads.
+            AMD SMI will then attempt to change memory (NPS) partition mode.
+            Upon a successful set, AMD SMI will then initiate an action to restart AMD GPU driver.
+            This action will change all GPU's in the hive to the requested memory (NPS) partition mode.
 
-             Please use this utility with caution.
+            Please use this utility with caution.
 
-             Do you accept these terms? [Y/N] Y
+            Do you accept these terms? [Y/N] Y
 
-             Trying again - Updating memory partition for gpu 0: [██████████████..........................] 50/140 secs remain
+            Trying again - Updating memory partition for gpu 0: [██████████████..........................] 50/140 secs remain
 
-             GPU: 0
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 0
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 1
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 1
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 2
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 2
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 3
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 3
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 4
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 4
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 5
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 5
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 6
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 6
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 7
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            GPU: 7
+              MEMORY_PARTITION: Successfully set memory partition to NPS4
 
-             GPU: 8
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
+            ...
 
-             GPU: 9
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             GPU: 10
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             GPU: 11
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             GPU: 12
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             GPU: 13
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             GPU: 14
-               MEMORY_PARTITION: Successfully set memory partition to NPS4
-
-             OSError: [Errno 24] Too many open files
 
 .. note::
 
