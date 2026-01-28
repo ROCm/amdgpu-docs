@@ -8,7 +8,8 @@ Oracle Linux native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`ol-package-manager-uninstall-driver`.
 
 .. _ol-register-repo:
 
@@ -23,7 +24,7 @@ Register kernel-mode driver
     .. tab-set::
         {% for os_version in config.html_context['ol_version_numbers'] %}
         {% set os_major, _  = os_version.split('.') %}
-        .. tab-item:: OL {{ os_major }}
+        .. tab-item:: OL {{ os_version }}
             :sync: ol-{{ os_version }} ol-{{ os_major }}
 
             .. code-block:: bash
@@ -32,7 +33,11 @@ Register kernel-mode driver
                 sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                baseurl=https://repo.radeon.com/amdgpu/|rocm_version|/el/{{ os_version }}/main/x86_64/
+                {% if os_major == '9' -%}
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_version }}/main/x86_64/
+                {%- else -%}
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_major }}/main/x86_64/
+                {%- endif %}
                 enabled=1
                 priority=50
                 gpgcheck=1
@@ -52,7 +57,11 @@ Install kernel driver
 .. code-block:: bash
 
     sudo dnf install amdgpu-dkms
-    sudo reboot
+
+.. Important::
+
+    To apply all settings, reboot your system.
+
 
 .. _ol-package-manager-uninstall-driver:
 
@@ -66,7 +75,7 @@ Uninstall kernel-mode driver
 
     sudo dnf remove amdgpu-dkms
 
-Remove AMDGPU repositories
+Remove amdgpu repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash
@@ -78,6 +87,7 @@ Remove AMDGPU repositories
     sudo rm -rf /var/cache/dnf
     sudo dnf clean all
     
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.
 

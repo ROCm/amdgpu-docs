@@ -1,17 +1,17 @@
 .. meta::
-  :description: Red Hat Enterprise Linux native installation
-  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Red Hat Enterprise Linux, RHEL, RHEL native installation, AMD
+  :description: Rocky Linux native installation
+  :keywords: AMDGPU driver install, AMDGPU driver, driver installation instructions, Rocky Linux, Rocky Linux native installation, AMD
 
 **********************************************************************************************
-Red Hat Enterprise Linux native installation
+Rocky Linux native installation
 **********************************************************************************************
 
 .. caution::
 
     * Ensure that the :doc:`../prerequisites` are met.
-    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`rhel-package-manager-uninstall-driver`.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`rl-package-manager-uninstall-driver`.
 
-.. _rhel-register-repo:
+.. _rl-register-repo:
 
 Registering ROCm repositories
 =====================================================
@@ -22,10 +22,10 @@ Register kernel-mode driver
 .. datatemplate:nodata::
 
     .. tab-set::
-        {% for os_version in config.html_context['rhel_version_numbers'] %}
+        {% for os_version in config.html_context['rl_version_numbers'] %}
         {% set os_major, _  = os_version.split('.') %}
-        .. tab-item:: RHEL {{ os_version }}
-            :sync: rhel-{{ os_version }} rhel-{{ os_major }}
+        .. tab-item:: Rocky {{ os_version }}
+            :sync: rl-{{ os_version }} rl-{{ os_major }}
 
             .. code-block:: bash
                 :substitutions:
@@ -33,11 +33,7 @@ Register kernel-mode driver
                 sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                {% if os_major == '9' -%}
                 baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_version }}/main/x86_64/
-                {%- else -%}
-                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_major }}/main/x86_64/
-                {%- endif %}
                 enabled=1
                 priority=50
                 gpgcheck=1
@@ -46,7 +42,7 @@ Register kernel-mode driver
                 sudo dnf clean all
         {% endfor %}
 
-.. _rhel-install:
+.. _rl-install:
 
 Installing
 =====================================================
@@ -63,7 +59,7 @@ Install kernel driver
     To apply all settings, reboot your system.
 
 
-.. _rhel-package-manager-uninstall-driver:
+.. _rl-package-manager-uninstall-driver:
 
 Uninstalling
 =====================================================
@@ -75,7 +71,7 @@ Uninstall kernel-mode driver
 
     sudo dnf remove amdgpu-dkms
 
-Remove amdgpu repositories
+Remove AMDGPU repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash

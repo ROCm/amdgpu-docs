@@ -11,7 +11,7 @@ Post-installation instructions
 Verify kernel-mode driver installation
 =========================================================================
 
-Use the following command to check the installation of AMDGPU driver:
+Use the following command to check the installation of the AMD GPU Driver (amdgpu):
 
 .. tab-set::
 
@@ -21,11 +21,36 @@ Use the following command to check the installation of AMDGPU driver:
 
             sudo dkms status
 
+        **Sample output for Ubuntu 24.04:**
+
+        .. code-block:: bash 
+
+            amdgpu/6.16.13-2278356.24.04, 6.14.0-37-generic, x86_64: installed
+
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``24.04``: distro version
+        - ``6.14.0-37-generic``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
+
     .. tab-item:: Debian
 
         .. code-block:: bash
 
             sudo dkms status
+
+        **Sample output for Debian 13:**
+
+        .. code-block:: bash
+
+            amdgpu/6.16.13-2278356.24.04, 6.12.57+deb13-amd64, x86_64: installed (Original modules exist)
+
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``6.12.57+deb13-amd64``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: RHEL
 
@@ -33,11 +58,56 @@ Use the following command to check the installation of AMDGPU driver:
 
             sudo dkms status
 
+        **Sample output for RHEL 10.1:**
+
+        .. code-block:: bash
+
+            amdgpu/6.16.13-2278356.el10, 6.12.0-124.8.1.el10_1.x86_64: installed (Original modules exist)
+
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``el10``: distro version
+        - ``6.12.0-124.8.1.el10_1.x86_64``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
+
     .. tab-item:: OL
 
         .. code-block:: bash
 
             sudo dkms status
+
+        **Sample output for OL 10.0:**
+
+        .. code-block:: bash
+
+            amdgpu/6.16.13-2278356.el10, 6.12.0-106.55.4.2.el10uek.x86_64, x86_64: installed (Original modules exist)
+
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``el10``: distro version
+        - ``6.12.0-106.55.4.2.el10uek.x86_64``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
+
+    .. tab-item:: Rocky
+
+        .. code-block:: bash
+
+            sudo dkms status
+
+        **Sample output for Rocky 9.6:**
+
+        .. code-block:: bash
+
+            amdgpu/6.16.13-2278356.el9, 5.14.0-611.20.1.el9_7.x86_64, x86_64: installed
+
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``el9``: distro version
+        - ``5.14.0-611.20.1.el9_7.x86_64``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: SLES
 
@@ -45,24 +115,17 @@ Use the following command to check the installation of AMDGPU driver:
 
             sudo dkms status
 
-    .. tab-item:: AZL
+        **Sample output for SLES 15.7:**
 
         .. code-block:: bash
 
-            modinfo amdgpu | grep -w "version:"
+            amdgpu/6.16.13-2278356, 6.4.0-150700.53.25-default, x86_64: installed (original_module exists)
 
-**Sample output:**
-
-.. code-block:: bash
-
-    amdgpu/6.12.12-2133686.22.04, 6.8.0-52-generic, x86_64: installed
-
-- ``amdgpu``: dkms module name \
-- ``6.12.12``: amdgpu driver version
-- ``2133686``: amdgpu driver build number
-- ``22.04``: distro version
-- ``6.8.0-52-generic``: kernel version of dkms build
-- ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
+        - ``amdgpu``: dkms module name 
+        - ``6.16.13``: amdgpu driver version
+        - ``2278356``: amdgpu driver build number
+        - ``6.4.0-150700.53.25-default``: kernel version of dkms build
+        - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
 .. _other_resources:
 

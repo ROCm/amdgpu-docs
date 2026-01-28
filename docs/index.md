@@ -5,21 +5,23 @@ myst:
     "keywords": "Instinct, GPU, how to, conceptual, PCIe, IOMMU, install"
 ---
 
-# AMD Instinct Data Center GPU Driver
+# AMD GPU Driver (amdgpu)
 
-This site documents the features and capabilities of the AMD GPU driver, amdgpu, along with GPU BIOS compatibility information.
+The AMD GPU driver (amdgpu) is open source software. It’s a key element in the software ecosystems (ROCm user space, AMD GPU virtualization, and frameworks) that enables powerful AMD GPUs in data centers to function optimally for AI and HPC applications workloads.
 
-The AMD Instinct documentation is organized into the following categories:
+This documentation describes AMD GPU driver features and capabilities, installation instructions, and compatibility information.
+
+The AMD GPU Driver documentation is organized into the following categories:
 
 ::::{grid} 1 2 2 2
 :gutter: 3
 :class-container: rocm-doc-grid
 
-:::{grid-item-card} Install AMDGPU driver
+:::{grid-item-card} Install AMD GPU driver
 :class-body: rocm-card-banner rocm-hue-16
 
 * [Prerequisites](./install/detailed-install/prerequisites.rst)
-* [Installation methods](./install/install-overview.rst)
+* [Installation via native package manager](./install/package-manager-index.rst)
 * [Post-install instructions](./install/detailed-install/post-install.rst)
 :::
 

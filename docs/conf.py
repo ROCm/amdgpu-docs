@@ -1,31 +1,31 @@
 """Configuration file for the Sphinx documentation builder."""
 import os
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "dcgpu.docs.amd.com")
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "instinct.docs.amd.com")
 html_context = {}
 if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
-project = "Data Center GPU driver"
+project = "AMD GPU Driver (amdgpu)"
 
-version = "1.0.0"
-rocm_version = '6.4.1'
-rocm_directory_version = '6.4.1' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '6.4.1' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_install_version = '6.4.60401-1'
+version = "30.30.0"
+rocm_version = '7.2'
+rocm_directory_version = '7.2.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '30.30' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '30.30'
 release = version
-html_title = project
+html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
-copyright = "Copyright (c) 2024 Advanced Micro Devices, Inc. All rights reserved."
+copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved."
 
 # Supported linux version numbers
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
-debian_version_numbers = [('12', 'jammy')]
-rhel_release_version_numbers = ['9', '8']
-rhel_version_numbers = ['9.5', '9.4', '8.10']
-sles_version_numbers = ['15.6']
-ol_release_version_numbers = ['9', '8']
-ol_version_numbers = ['9.5', '8.10']
-azl_version_numbers = ['3.0']
+debian_version_numbers = [('13', 'noble'), ('12', 'jammy')]
+rhel_release_version_numbers = ['10', '9', '8']
+rhel_version_numbers = ['10.1', '10.0', '9.7', '9.6', '9.4', '8.10']
+sles_version_numbers = ['15.7']
+ol_release_version_numbers = ['10', '9', '8']
+ol_version_numbers = ['10.0', '9.6', '8.10']
+rl_version_numbers = ['9.6']
 
 html_context = {
     "ubuntu_version_numbers" : ubuntu_version_numbers,
@@ -35,14 +35,14 @@ html_context = {
     "rhel_version_numbers" : rhel_version_numbers,
     "ol_release_version_numbers" : ol_release_version_numbers,
     "ol_version_numbers" : ol_version_numbers,
-    "azl_version_numbers": azl_version_numbers
+    "rl_version_numbers" : rl_version_numbers
 }
 
 
 # Required settings
 html_theme = "rocm_docs_theme"
 html_theme_options = {
-    "flavor": "instinct",
+    "flavor": "amdgpu",
     "link_main_doc": True,
     # Add any additional theme options here
 }
@@ -61,6 +61,6 @@ exclude_patterns = ['.venv']
 rst_prolog = f"""
 .. |rocm_version| replace:: {rocm_version}
 .. |amdgpu_version| replace:: {amdgpu_version}
+.. |amdgpu_url_version| replace:: {amdgpu_url_version}
 .. |rocm_directory_version| replace:: {rocm_directory_version}
-.. |amdgpu_install_version| replace:: {amdgpu_install_version}
 """

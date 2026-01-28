@@ -8,7 +8,8 @@ Ubuntu native installation
 
 .. caution::
 
-    Ensure that the :doc:`../prerequisites` are met before installing.
+    * Ensure that the :doc:`../prerequisites` are met.
+    * Remove any AMDGPU driver from a previous installation by following uninstallation steps in :ref:`ubuntu-package-manager-uninstall-driver`.
 
 .. _ubuntu-register-repo:
 
@@ -37,14 +38,12 @@ Download and convert the package signing key.
 
 .. note::
 
-    The GPG key may change; ensure it is updated when installing a new release.
-    If the key signature verification fails while updating,
-    re-add the key from the ROCm to the apt repository as mentioned above.
+    The GPG key might change. Ensure it's updated when installing a new version. If the key signature verification fails during the update, re-add the key from the ROCm repository to the apt repository as mentioned above.
 
 Register kernel-mode driver
 ---------------------------------------------------------------------------
 
-Add the AMDGPU repository for the driver.
+Add the amdgpu repository for the driver.
 
 .. datatemplate:nodata::
 
@@ -56,8 +55,9 @@ Add the AMDGPU repository for the driver.
             .. code-block:: bash
                 :substitutions:
 
-                echo "deb [arch=amd64,i386 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|rocm_version|/ubuntu {{ os_release }} main" \
-                    | sudo tee /etc/apt/sources.list.d/amdgpu.list
+                sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
+                deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/|amdgpu_url_version|/ubuntu {{ os_release }} main
+                EOF
                 sudo apt update
         {% endfor %}
 
@@ -72,7 +72,11 @@ Install kernel driver
 .. code-block:: bash
 
     sudo apt install amdgpu-dkms
-    sudo reboot
+
+.. Important::
+
+    To apply all settings, reboot your system.
+
 
 .. _ubuntu-package-manager-uninstall-driver:
 
@@ -86,7 +90,7 @@ Uninstall kernel-mode driver
 
     sudo apt autoremove amdgpu-dkms
 
-Remove AMDGPU repositories
+Remove amdgpu repositories
 ---------------------------------------------------------------------------
 
 .. code-block:: bash
@@ -99,5 +103,6 @@ Remove AMDGPU repositories
     sudo apt clean all
     sudo apt update
 
-    # Restart the system
-    sudo reboot
+.. Important::
+
+    To apply all settings, reboot your system.

@@ -24,9 +24,9 @@ Before installing the driver, complete the following prerequisites.
 
             x86_64
             DISTRIB_ID=Ubuntu
-            DISTRIB_RELEASE=20.04
-            DISTRIB_CODENAME=focal
-            DISTRIB_DESCRIPTION="Ubuntu 20.04.5 LTS"
+            DISTRIB_RELEASE=24.04
+            DISTRIB_CODENAME=noble
+            DISTRIB_DESCRIPTION="Ubuntu 24.04.3 LTS"
 
 .. _verify_kernel_version:
 
@@ -42,7 +42,7 @@ Before installing the driver, complete the following prerequisites.
 
      .. code-block:: shell
 
-            Linux 5.15.0-46-generic #44~20.04.5-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022 x86_64
+            Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024 x86_64
 
    * Confirm that your kernel version matches the system requirements, as listed in :ref:`supported_distributions`.
 
@@ -54,61 +54,77 @@ Register your Enterprise Linux
 If you're using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Server (SLES), register
 your operating system to ensure you're able to download and install packages.
 
-.. tab-set::
+.. datatemplate:nodata::
 
-  .. tab-item:: Ubuntu
-        :sync: ubuntu-tab
+    .. tab-set::
 
-        There is no registration required for Ubuntu.
+        .. tab-item:: Ubuntu
+            :sync: ubuntu-tab
 
-  .. tab-item:: Debian
-        :sync: debian-tab
+            There is no registration required for Ubuntu.
 
-        There is no registration required for Debian.
+        .. tab-item:: Debian
+            :sync: debian-tab
 
-  .. tab-item:: Red Hat Enterprise Linux
-        :sync: rhel-tab
+            There is no registration required for Debian.
 
-        Typically you can register by following the step-by-step user interface.
-        If you need to register by command line, use the following commands:
-        
-        .. code-block:: shell
+        .. tab-item:: Red Hat Enterprise Linux
+            :sync: rhel-tab
 
-            subscription-manager register --username <username> --password <password>
-            subscription-manager attach --auto
+            .. tab-set::
 
-        More details about `registering for RHEL <https://access.redhat.com/solutions/253273>`_
+                {% for os_version in config.html_context['rhel_version_numbers'] %}
+                {% set os_major, _  = os_version.split('.') %}
+                .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
-  .. tab-item:: Oracle Linux
-        :sync: ol-tab
+                    Typically you can register by following the step-by-step user interface.
+                    If you need to register by command line, use the following commands:
 
-        There is no registration required for Oracle Linux.
+                    .. code-block:: shell
+                        :substitutions:
 
-  .. tab-item:: SUSE Linux Enterprise Server
-        :sync: sle-tab
+                        {% if os_major == '10' -%}
+                        subscription-manager register --username <username> --password <password>
+                        {%- else -%}
+                        subscription-manager register --username <username> --password <password>
+                        subscription-manager attach --auto
+                        {%- endif %}
 
-        Typically you can register by following the step-by-step user interface.
-        If you need to register by command line, use the following commands:
-            
-        .. code-block:: shell
+                    More details about `registering for RHEL <https://access.redhat.com/solutions/253273>`_
 
-            sudo SUSEConnect -r <REGCODE>
+                {% endfor %}
 
-        More details about `registering for SLES <https://www.suse.com/support/kb/doc/?id=000018564>`_
+        .. tab-item:: Oracle Linux
+            :sync: ol-tab
 
-  .. tab-item:: Azure Linux
-        :sync: azl-tab
+            There is no registration required for Oracle Linux.
 
-        There is no registration required for Azure Linux.
+        .. tab-item:: SUSE Linux Enterprise Server
+            :sync: sle-tab
+
+            Typically you can register by following the step-by-step user interface.
+            If you need to register by command line, use the following commands:
+                
+            .. code-block:: shell
+
+                sudo SUSEConnect -r <REGCODE>
+
+            More details about `registering for SLES <https://www.suse.com/support/kb/doc/?id=000018564>`_
+
+        .. tab-item:: Rocky Linux
+            :sync: rl-tab
+
+            There is no registration required for Rocky Linux.
 
 .. _update-enterprise-linux:
 
 Update your Enterprise Linux
 ==========================================================
 
-If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux, 
+If you are using Red Hat Enterprise Linux (RHEL) or SUSE Linux Enterprise Servers (SLES), or Oracle Linux (OL), or Rocky Linux, 
 it is recommended that you update your operating system to the latest packages from the Linux distribution.
-This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
+This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or Rocky Linux.
 
 .. datatemplate:nodata::
 
@@ -132,6 +148,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
                 {% for os_version in config.html_context['rhel_version_numbers'] %}
                 {% set os_major, _  = os_version.split('.') %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}
 
                    .. code-block:: bash
                        :substitutions:
@@ -147,6 +164,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
                 {% for os_version in config.html_context['ol_version_numbers'] %}
                 {% set os_major, _  = os_version.split('.') %}
                 .. tab-item:: {{ os_version }}
+                   :sync: {{ os_version }}                    
 
                    .. code-block:: bash
                        :substitutions:
@@ -167,10 +185,10 @@ This is a requirement for newer hardware on older versions of RHEL, SLES or OL.
                         sudo zypper update
                 {% endfor %}
 
-        .. tab-item:: Azure Linux
-            :sync: azl-tab
+        .. tab-item:: Rocky Linux
+            :sync: rl-tab
 
-            There is no update required for Azure Linux.
+            There is no update required for Rocky Linux.
 
 .. important::
 
@@ -211,16 +229,18 @@ To install for the currently active kernel run the command corresponding to your
 
             .. tab-set::
 
-              {% for os_release in config.html_context['rhel_release_version_numbers']  %}
+              {% for os_version in config.html_context['rhel_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
 
-                  .. tab-item:: RHEL {{ os_release }}
+                  .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
 
                     .. code-block:: shell
 
-                        {% if os_release == '9' -%}
-                        sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)" "kernel-devel-matched-$(uname -r)"
-                        {%- else -%}
+                        {% if os_major == '8' -%}
                         sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
+                        {%- else -%}
+                        sudo dnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)" "kernel-devel-matched-$(uname -r)"
                         {%- endif %}
 
               {% endfor %}
@@ -228,20 +248,48 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Oracle Linux
         :sync: ol-tab
 
-        .. code-block:: shell
+        .. datatemplate:nodata::
 
-            sudo dnf install "kernel-uek-devel-$(uname -r)"
+            .. tab-set::
+
+                {% for os_version in config.html_context['ol_version_numbers'] %}
+                .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
+
+                    .. code-block:: shell
+
+                        sudo dnf install "kernel-uek-devel-$(uname -r)"
+                {% endfor %}
 
     .. tab-item:: SUSE Linux Enterprise Server
         :sync: sle-tab
 
-        .. code-block:: shell
+        .. datatemplate:nodata::
 
-            sudo zypper install kernel-default-devel
+            .. tab-set::
 
-    .. tab-item:: Azure Linux
-        :sync: azl-tab
+                {% for os_version in config.html_context['sles_version_numbers'] %}
+                .. tab-item:: {{ os_version }}
 
-        .. code-block:: shell
+                    .. code-block:: shell
 
-            sudo tdnf install "kernel-headers-$(uname -r)" "kernel-devel-$(uname -r)"
+                        sudo zypper install kernel-default-devel
+                {% endfor %}
+
+    .. tab-item:: Rocky Linux
+        :sync: rl-tab
+
+        .. datatemplate:nodata::
+
+            .. tab-set::
+
+              {% for os_version in config.html_context['rl_version_numbers']  %}
+              {% set os_major, _  = os_version.split('.') %}
+
+                  .. tab-item:: {{ os_version }}
+                    :sync: {{ os_version }}
+
+                    .. code-block:: shell
+
+                        sudo dnf install "kernel-headers" "kernel-devel" "kernel-devel-matched"
+              {% endfor %}

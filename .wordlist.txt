@@ -5,6 +5,7 @@ ACEs
 ACS
 AccVGPR
 AccVGPRs
+AER
 allreduce
 ALU
 AMD
@@ -31,6 +32,7 @@ Andrej
 Arb
 Autocast
 BARs
+BKC
 BLAS
 BMC
 Blit
@@ -49,6 +51,8 @@ CMakePackage
 CRIU
 CP
 CPC
+CPER
+CPERs
 CPF
 CPP
 CPU
@@ -86,7 +90,9 @@ DL
 DMA
 DNN
 DNNL
+DPC
 DPM
+DPX
 DRI
 DW
 DWORD
@@ -261,6 +267,7 @@ NICs
 NLI
 NLP
 NPKit
+NPM
 NPS
 NSP
 NUMA
@@ -305,6 +312,7 @@ PEFT
 PEQT
 PIL
 PILImage
+PLDM
 POR
 PRNG
 PRs
@@ -431,6 +439,7 @@ UC
 UCC
 UCX
 UE
+UEK
 UIF
 UMC
 USM
@@ -441,6 +450,7 @@ Unittests
 Unhandled
 VALU
 VBIOS
+VCN
 VGPR
 VGPRs
 VM
