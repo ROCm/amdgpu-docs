@@ -9,14 +9,14 @@ Compatibility matrix
 The AMD GPU Driver (amdgpu) 31.10.0 is compatible with ROCm 7.11. For more information, see `AMD GPU Driver (amdgpu) support matrix
 <https://rocm.docs.amd.com/en/7.11.0-preview/compatibility/compatibility-matrix.html>`__.
 
-======================================
-Hardware and operating system support
-======================================
+====================================
+Operating system and kernel version
+====================================
 
-See `Supported hardware and operating systems <https://rocm.docs.amd.com/en/7.11.0-preview/about/release-notes.html#supported-hardware-and-operating-systems>`_ for ROCm supported hardware and operating systems.
+See `Operating system support <https://advanced-micro-devices-rocm-internal--682.com.readthedocs.build/en/682/about/release-notes.html#operating-system-support>`_ for ROCm supported operating systems and their kernel versions.
 
-===========================================
-Kernel driver and firmware bundles support
-===========================================
+============
+GPU support
+============
 
-See `Supported kernel driver and firmware bundles <https://rocm.docs.amd.com/en/7.11.0-preview/about/release-notes.html#supported-kernel-driver-and-firmware-bundles>`_ for the list of supported hardware and firmware.
+See `Hardware support <https://advanced-micro-devices-rocm-internal--682.com.readthedocs.build/en/682/about/release-notes.html#hardware-support>`_ for the list of supported AMD Instinct™, Radeon™ PRO, Radeon, and Ryzen™ AI GPUs.
