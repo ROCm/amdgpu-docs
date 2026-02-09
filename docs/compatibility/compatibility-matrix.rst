@@ -6,17 +6,17 @@
 Compatibility matrix
 **************************************************************************************
 
-The AMD GPU Driver (amdgpu) 30.30.0 is compatible with ROCm 7.2.x, 7.1.x, 7.0.x, 6.4.x, and 6.3.x. For more information, see `AMD GPU Driver (amdgpu) support matrix
-<https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/user-kernel-space-compat-matrix.html>`__.
+The AMD GPU Driver (amdgpu) 31.10.0 is compatible with ROCm 7.11. For more information, see `AMD GPU Driver (amdgpu) support matrix
+<https://rocm.docs.amd.com/en/7.11.0-preview/compatibility/compatibility-matrix.html>`__.
 
 ======================================
-Operating system and kernel version
+Hardware and operating system support
 ======================================
 
-See `Supported operating systems <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-operating-systems>`_ for ROCm supported operating systems and their kernel versions.
+See `Supported hardware and operating systems <https://rocm.docs.amd.com/en/7.11.0-preview/about/release-notes.html#supported-hardware-and-operating-systems>`_ for ROCm supported hardware and operating systems.
 
-=============
-GPU support
-=============
+===========================================
+Kernel driver and firmware bundles support
+===========================================
 
-See `Supported GPUs <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-gpus>`_ for the list of supported AMD Instinct™, Radeon™ PRO, and Radeon GPUs.
+See `Supported kernel driver and firmware bundles <https://rocm.docs.amd.com/en/7.11.0-preview/about/release-notes.html#supported-kernel-driver-and-firmware-bundles>`_ for the list of supported hardware and firmware.
