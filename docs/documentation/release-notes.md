@@ -4,7 +4,7 @@ The release notes provide release highlights and resolved issues since the previ
 
 ## Release highlights
 
-This is the first AMD GPU driver released alongside [TheRock](https://github.com/ROCm/TheRock). It also includes general stability and robustness improvements to the VCN (Video Core Next) software through ongoing mainline integration.
+This is the first AMD GPU driver released alongside [TheRock](https://github.com/ROCm/TheRock), the new open build and release system. It also includes general stability and robustness improvements to the VCN (Video Core Next) software through ongoing mainline integration.
 
 The following are notable new features and improvements in AMD GPU Driver 31.10.0.
 
