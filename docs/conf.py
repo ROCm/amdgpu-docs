@@ -43,7 +43,7 @@ html_context = {
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "amdgpu",
-    "announcement": f"This is AMD GPU Driver {version} technology preview release, intended for use only with the <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>7.11.0 technology preview release</a>. For the latest production stream release, refer to <a id='rocm-banner' href='https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/'>AMD GPU Driver documentation</a>.",
+    "announcement": f"AMD GPU Driver {version} is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>AMD ROCm 7.11.0 technology preview</a>.",
     "link_main_doc": True,
     # Add any additional theme options here
 }
