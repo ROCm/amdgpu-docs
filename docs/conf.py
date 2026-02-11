@@ -43,6 +43,7 @@ html_context = {
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "amdgpu",
+    "announcement": f"This is AMD GPU Driver {version} technology preview release, intended for use only with the <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>7.11.0 technology preview release</a>. For the latest production stream release, refer to <a id='rocm-banner' href='https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/'>AMD GPU Driver documentation</a>.",
     "link_main_doc": True,
     # Add any additional theme options here
 }
@@ -60,6 +61,7 @@ exclude_patterns = ['.venv']
 # Add the following replacements to every RST file.
 rst_prolog = f"""
 .. |rocm_version| replace:: {rocm_version}
+.. |version| replace:: {version}
 .. |amdgpu_version| replace:: {amdgpu_version}
 .. |amdgpu_url_version| replace:: {amdgpu_url_version}
 .. |rocm_directory_version| replace:: {rocm_directory_version}
