@@ -77,7 +77,7 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
             sudo dkms status
 
-        **Sample output for OL 10.0:**
+        **Sample output for OL 10.1:**
 
         .. code-block:: bash
 
