@@ -6,7 +6,7 @@
 Compatibility matrix
 **************************************************************************************
 
-The AMD GPU Driver (amdgpu) 31.10.0 is compatible with ROCm 7.11. For more information, see `ROCm 7.11.0 compatibility matrix
+The AMD GPU Driver (amdgpu) 31.10.0 is compatible with ROCm 7.11.0. For more information, see `ROCm 7.11.0 compatibility matrix
 <https://rocm.docs.amd.com/en/7.11.0-preview/compatibility/compatibility-matrix.html>`__.
 
 ====================================
