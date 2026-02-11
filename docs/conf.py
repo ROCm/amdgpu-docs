@@ -15,7 +15,7 @@ amdgpu_url_version = '30.30'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
-copyright = "Copyright (c) 2025 Advanced Micro Devices, Inc. All rights reserved."
+copyright = "Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved."
 
 # Supported linux version numbers
 ubuntu_version_numbers = [('24.04', 'noble'), ('22.04', 'jammy')]
@@ -43,6 +43,7 @@ html_context = {
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "amdgpu",
+    "announcement": f"AMD GPU Driver 31.10.0 is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>AMD ROCm 7.11.0 technology preview</a>. For production use, continue to use AMD GPU Driver {version} documentation.",
     "link_main_doc": True,
     # Add any additional theme options here
 }
@@ -59,6 +60,7 @@ exclude_patterns = ['.venv']
 
 # Add the following replacements to every RST file.
 rst_prolog = f"""
+.. |version| replace:: {version}
 .. |rocm_version| replace:: {rocm_version}
 .. |amdgpu_version| replace:: {amdgpu_version}
 .. |amdgpu_url_version| replace:: {amdgpu_url_version}
