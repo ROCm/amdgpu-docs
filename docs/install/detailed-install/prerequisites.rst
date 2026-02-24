@@ -153,7 +153,12 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                    .. code-block:: bash
                        :substitutions:
 
-                       sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
+                        {% if os_version == '10.1' -%}
+                        sudo dnf update redhat-release
+                        sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
+                        {%- else -%}
+                        sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
+                        {%- endif %}
                 {% endfor %}
 
         .. tab-item:: Oracle Linux
