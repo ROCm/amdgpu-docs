@@ -1,10 +1,10 @@
 **************************************
-Requirements to Partition MI300X GPUs
+Requirements to partition MI300X GPUs
 **************************************
 
 Partitioning AMD Instinct™ MI300X GPUs is a critical enabler for modern heterogeneous computing environments where isolation, resource sharing, and workload-specific optimization are paramount. By dividing a single physical GPU into multiple logical partitions, developers and system administrators can tailor computational resources to meet the unique performance, memory, and security demands of diverse applications—including large-scale AI inference, training, HPC simulations, and cloud-native deployments.
 
-This document provides a comprehensive overview of the system, software, and firmware requirements needed to successfully configure and operate GPU partitioning on MI300X devices. Partitioning support for the MI300X platform is tightly integrated with the ROCm software stack and relies on both hardware-level and OS-level infrastructure. As such, careful attention must be given to platform readiness, including validated driver versions, kernel support, supported memory modes, and compatibility with partitioning utilities such as `amd-smi`.
+This document provides a comprehensive overview of the system, software, and firmware requirements needed to successfully configure and operate GPU partitioning on MI300X devices. Partitioning support for the MI300X platform is tightly integrated with the ROCm software stack and relies on both hardware-level and OS-level infrastructure. As such, careful attention must be given to platform readiness, including validated driver versions, kernel support, supported memory modes, and compatibility with partitioning utilities such as ``amd-smi``.
 
 Users should ensure their system environment meets all listed prerequisites prior to attempting partition configuration. Failure to do so may result in incomplete GPU enumeration, missing partitioning capabilities, or instability during execution.
 
@@ -13,10 +13,10 @@ This guide is intended for system integrators, developers, platform architects, 
 Prerequisites
 -------------
 
-- MI300X GPUs must be installed and recognized by the system.
-- ROCm stack must be correctly installed.
+- AMD Instinct MI300X GPUs must be installed and recognized by the system.
+- ROCm software stack must be correctly installed.
 - Firmware and kernel must support partitioning (latest recommended).
-- `amd-smi` tool is required for runtime management.
+- ``amd-smi`` tool is required for runtime management.
 - Bare-metal OS installation—no virtualization layer.
 
 System requirements
@@ -27,96 +27,7 @@ To ensure successful partitioning with MI300X GPUs, confirm the following system
 Hardware requirements
 ~~~~~~~~~~~~~~~~~~~~~
 
-- GPU: AMD Instinct MI300X
-
-Software requirements
-~~~~~~~~~~~~~~~~~~~~~
-
-- **Linux kernel**: version 5.15 or newer
-
-  To find the kernel version, run the following command.
-
-   .. tab-set::
-
-      .. tab-item:: Command
-
-         .. code-block:: shell
-
-            # Check Linux kernel version
-            uname -srmv
-
-      .. tab-item:: Shell output
-
-         .. code-block:: shell-session
-
-            Linux 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64
-
-- **`amd-smi` CLI tool**: version 25.3.0 or newer
-
-   To find the AMD SMI version, run the following command.
-
-   .. tab-set::
-
-      .. tab-item:: Command
-
-         .. code-block:: shell
-
-            amd-smi version
-
-      .. tab-item:: Shell output
-
-         .. code-block:: shell-session
-
-            AMDSMI Tool: 26.0.0+37d158ab | AMDSMI Library version: 26.0.0 | ROCm version: 7.0.1 | amdgpu version: 6.14.14 | amd_hsmp version: N/A
-
-- AMD GPU Driver (amdgpu) version: 6.12.12 (amdgpu-build 2120656) or newer
-
-  To find the amdgpu driver version, run `amd-smi`.
-
-   .. tab-set::
-
-      .. tab-item:: Command
-
-         .. code-block:: shell-session
-
-            amd-smi
-
-      .. tab-item:: Shell output
-
-         .. code-block:: shell-session
-
-            +------------------------------------------------------------------------------+
-            | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
-            | Platform: Linux Baremetal                                                    |
-            |-------------------------------------+----------------------------------------|
-            ... [output truncated]
-
-
-Firmware requirements
-~~~~~~~~~~~~~~~~~~~~~
-
-VBIOS version 022.040.003.043.000001 is required.
-
-To find the VBIOS version, run the following command.
-
-   .. tab-set::
-
-      .. tab-item:: Command
-
-         .. code-block:: shell
-
-            amd-smi static --vbios
-
-      .. tab-item:: Shell output
-
-         .. code-block:: shell-session
-
-            GPU: 0
-                VBIOS:
-                    NAME: AMD MI300X_HW_SRIOV_CVS_1VF
-                    BUILD_DATE: 2024/10/17 16:32
-                    PART_NUMBER: 113-M3000100-103
-                    VERSION: 022.040.003.043.000001
+- **GPU**: AMD Instinct MI300X
 
 Operating system requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -152,29 +63,81 @@ To check the operating system version, run the following command.
          VERSION_CODENAME=noble
          ID=ubuntu
          ID_LIKE=debian
+
          ... [output truncated]
 
-Driver requirements
-~~~~~~~~~~~~~~~~~~~
+Software requirements
+~~~~~~~~~~~~~~~~~~~~~
 
-ROCm: Version 6.4 or newer
+- **Linux kernel**: version 5.15 or newer
 
-To find the ROCm version, run `amd-smi`.
+  To find the kernel version, run the following command.
 
-.. tab-set::
+  .. tab-set::
 
-   .. tab-item:: Command
+     .. tab-item:: Command
 
-      .. code-block:: shell
+        .. code-block:: shell
 
-         amd-smi
+           # Check Linux kernel version
+           uname -srmv
 
-   .. tab-item:: Shell output
+     .. tab-item:: Shell output
 
-      .. code-block:: shell-session
+        .. code-block:: shell-session
 
-         +------------------------------------------------------------------------------+
-         | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
-         | Platform: Linux Baremetal                                                    |
-         |-------------------------------------+----------------------------------------|
-         ... [output truncated]
+           Linux 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64
+
+- ``amd-smi`` **CLI**: version 25.3.0 or newer
+
+- **ROCm**: version 6.4 or newer
+
+- **AMD GPU Driver (amdgpu)**: version 6.12.12 (amdgpu-build 2120656) or newer
+
+  To find the AMD SMI, ROCm, and amdgpu driver versions, run ``amd-smi`` or ``amd-smi version``.
+
+  .. tab-set::
+
+     .. tab-item:: Command
+
+        .. code-block:: shell-session
+
+           amd-smi
+
+     .. tab-item:: Shell output
+
+        .. code-block:: shell-session
+
+           +------------------------------------------------------------------------------+
+           | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
+           | Platform: Linux Baremetal                                                    |
+           |-------------------------------------+----------------------------------------|
+
+           ... [output truncated]
+
+
+Firmware requirements
+~~~~~~~~~~~~~~~~~~~~~
+
+- **VBIOS**: version 022.040.003.043.000001
+
+  To find the VBIOS version, run the following command.
+
+  .. tab-set::
+
+     .. tab-item:: Command
+
+        .. code-block:: shell
+
+           amd-smi static --vbios
+
+     .. tab-item:: Shell output
+
+        .. code-block:: shell-session
+
+           GPU: 0
+               VBIOS:
+                   NAME: AMD MI300X_HW_SRIOV_CVS_1VF
+                   BUILD_DATE: 2024/10/17 16:32
+                   PART_NUMBER: 113-M3000100-103
+                   VERSION: 022.040.003.043.000001
