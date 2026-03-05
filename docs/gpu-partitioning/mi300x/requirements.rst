@@ -71,22 +71,22 @@ Software requirements
 
 - **Linux kernel**: version 5.15 or newer
 
-  To find the kernel version, run the following command.
+To find the kernel version, run the following command.
 
-  .. tab-set::
+.. tab-set::
 
-     .. tab-item:: Command
+   .. tab-item:: Command
 
-        .. code-block:: shell
+      .. code-block:: shell
 
-           # Check Linux kernel version
-           uname -srmv
+         # Check Linux kernel version
+         uname -srmv
 
-     .. tab-item:: Shell output
+   .. tab-item:: Shell output
 
-        .. code-block:: shell-session
+      .. code-block:: shell-session
 
-           Linux 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64
+         Linux 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64
 
 - ``amd-smi`` **CLI**: version 25.3.0 or newer
 
@@ -94,50 +94,70 @@ Software requirements
 
 - **AMD GPU Driver (amdgpu)**: version 6.12.12 (amdgpu-build 2120656) or newer
 
-  To find the AMD SMI, ROCm, and amdgpu driver versions, run ``amd-smi`` or ``amd-smi version``.
+To find the AMD SMI, ROCm, and amdgpu driver versions, run ``amd-smi version`` or ``amd-smi``.
 
-  .. tab-set::
+.. tab-set::
 
-     .. tab-item:: Command
+   .. tab-item:: Command
 
-        .. code-block:: shell-session
+      .. code-block:: shell-session
 
-           amd-smi
+         amd-smi version
 
-     .. tab-item:: Shell output
+   .. tab-item:: Shell output
 
-        .. code-block:: shell-session
+      .. code-block:: shell-session
 
-           +------------------------------------------------------------------------------+
-           | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
-           | Platform: Linux Baremetal                                                    |
-           |-------------------------------------+----------------------------------------|
+         AMDSMI Tool: 26.2.1+fc0010cf6a | AMDSMI Library version: 26.2.1 | ROCm version: 7.2.0 | amdgpu version: 6.16.13 | hsmp version: N/A
 
-           ... [output truncated]
+.. tab-set::
 
+   .. tab-item:: Command
+
+      .. code-block:: shell-session
+
+         amd-smi
+
+   .. tab-item:: Shell output
+
+      .. code-block:: shell-session
+
+         +------------------------------------------------------------------------------+
+         | AMD-SMI 26.2.1+fc0010cf6a    amdgpu version: 6.16.13  ROCm version: 7.2.0    |
+         | VBIOS version: 022.040.003.043.000001                                        |
+         | Platform: Linux Baremetal                                                    |
+         |-------------------------------------+----------------------------------------|
+
+         ... [output truncated]
+
+      .. note::
+
+         This tabular ``amd-smi`` default view featuring version
+         information was introduced with ROCm 7.0. If you're using an older
+         version, stick to ``amd-smi version``.
 
 Firmware requirements
 ~~~~~~~~~~~~~~~~~~~~~
 
 - **VBIOS**: version 022.040.003.043.000001
 
-  To find the VBIOS version, run the following command.
+To find the VBIOS version, run the following command.
 
-  .. tab-set::
+.. tab-set::
 
-     .. tab-item:: Command
+   .. tab-item:: Command
 
-        .. code-block:: shell
+      .. code-block:: shell
 
-           amd-smi static --vbios
+         amd-smi static --vbios
 
-     .. tab-item:: Shell output
+   .. tab-item:: Shell output
 
-        .. code-block:: shell-session
+      .. code-block:: shell-session
 
-           GPU: 0
-               VBIOS:
-                   NAME: AMD MI300X_HW_SRIOV_CVS_1VF
-                   BUILD_DATE: 2024/10/17 16:32
-                   PART_NUMBER: 113-M3000100-103
-                   VERSION: 022.040.003.043.000001
+         GPU: 0
+             VBIOS:
+                 NAME: AMD MI300X_HW_SRIOV_CVS_1VF
+                 BUILD_DATE: 2024/10/17 16:32
+                 PART_NUMBER: 113-M3000100-103
+                 VERSION: 022.040.003.043.000001
