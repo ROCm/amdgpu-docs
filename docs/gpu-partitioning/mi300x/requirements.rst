@@ -1,5 +1,6 @@
+**************************************
 Requirements to Partition MI300X GPUs
-======================================
+**************************************
 
 Partitioning AMD Instinct™ MI300X GPUs is a critical enabler for modern heterogeneous computing environments where isolation, resource sharing, and workload-specific optimization are paramount. By dividing a single physical GPU into multiple logical partitions, developers and system administrators can tailor computational resources to meet the unique performance, memory, and security demands of diverse applications—including large-scale AI inference, training, HPC simulations, and cloud-native deployments.
 
@@ -9,8 +10,8 @@ Users should ensure their system environment meets all listed prerequisites prio
 
 This guide is intended for system integrators, developers, platform architects, and IT administrators tasked with deploying MI300X-based platforms in bare-metal, production-grade environments. All configurations, tools, and commands referenced herein have been validated on supported operating systems and are based on ROCm version 6.4 or newer.
 
-1. Prerequisites
------------------
+Prerequisites
+-------------
 
 - MI300X GPUs must be installed and recognized by the system.
 - ROCm stack must be correctly installed.
@@ -18,41 +19,59 @@ This guide is intended for system integrators, developers, platform architects, 
 - `amd-smi` tool is required for runtime management.
 - Bare-metal OS installation—no virtualization layer.
 
-2. System Requirements
-----------------------
+System requirements
+-------------------
 
-To ensure a successful partitioning experience with MI300X GPUs, confirm the following system requirements:
+To ensure successful partitioning with MI300X GPUs, confirm the following system requirements:
 
-a. Hardware Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~
+Hardware requirements
+~~~~~~~~~~~~~~~~~~~~~
 
-- **GPU**: AMD MI300X
+- GPU: AMD Instinct MI300X
 
-b. Software Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Software requirements
+~~~~~~~~~~~~~~~~~~~~~
 
-- **Linux Kernel**: Version 5.15 or newer
+- **Linux kernel**: version 5.15 or newer
 
-  #. to find the kernel version, run the following command 
+  To find the kernel version, run the following command.
 
    .. tab-set::
 
       .. tab-item:: Command
 
-         .. code-block:: shell-session
+         .. code-block:: shell
 
             # Check Linux kernel version
-            hostnamectl | grep 'Kernel'
+            uname -srmv
 
       .. tab-item:: Shell output
 
-         ::
+         .. code-block:: shell-session
 
-            Kernel: Linux 5.15.0-134-generic
+            Linux 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64
 
-- **AMDSMI Tool Library**: Version 25.3.0 or newer
+- **`amd-smi` CLI tool**: version 25.3.0 or newer
 
-  #. to find the amdsmi version, run the following command
+   To find the AMD SMI version, run the following command.
+
+   .. tab-set::
+
+      .. tab-item:: Command
+
+         .. code-block:: shell
+
+            amd-smi version
+
+      .. tab-item:: Shell output
+
+         .. code-block:: shell-session
+
+            AMDSMI Tool: 26.0.0+37d158ab | AMDSMI Library version: 26.0.0 | ROCm version: 7.0.1 | amdgpu version: 6.14.14 | amd_hsmp version: N/A
+
+- AMD GPU Driver (amdgpu) version: 6.12.12 (amdgpu-build 2120656) or newer
+
+  To find the amdgpu driver version, run `amd-smi`.
 
    .. tab-set::
 
@@ -60,103 +79,102 @@ b. Software Requirements
 
          .. code-block:: shell-session
 
-            # Check AMD-SMI version
-            amd-smi version | grep -o 'AMDSMI [^|]*'
+            amd-smi
 
       .. tab-item:: Shell output
 
-         ::
+         .. code-block:: shell-session
 
-            AMDSMI Tool: 25.2.0+f4ad5ee
-            AMDSMI Library version: 25.3.0
+            +------------------------------------------------------------------------------+
+            | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
+            | Platform: Linux Baremetal                                                    |
+            |-------------------------------------+----------------------------------------|
+            ... [output truncated]
 
-- **AMD GPU Driver**: amdgpu-build 2120656 (>= 6.12.12)
 
-  #. to find the amdgpu version, run the following command
+Firmware requirements
+~~~~~~~~~~~~~~~~~~~~~
+
+VBIOS version 022.040.003.043.000001 is required.
+
+To find the VBIOS version, run the following command.
 
    .. tab-set::
 
       .. tab-item:: Command
 
-         .. code-block:: shell-session
+         .. code-block:: shell
 
-            # Check amd gpu version
-            amd-smi version | grep -o 'amdgpu version: [^|]*'
-
-      .. tab-item:: Shell output
-
-         ::
-
-            amdgpu version: 6.12.12
-
-
-c. Firmware Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- **VBIOS Version**:  022.040.003.043.000001
-
-  #. to find the VBIOS version, run the following command
-
-   .. tab-set::
-
-      .. tab-item:: Command
-
-         .. code-block:: shell-session
-
-            # Check VBIOS version
-            amd-smi static | grep -A 4 -m 1 'VBIOS'
+            amd-smi static --vbios
 
       .. tab-item:: Shell output
 
-         ::
+         .. code-block:: shell-session
 
-            VBIOS:
-              NAME: AMD MI300X_HW_SRIOV_CVS_1VF
-              BUILD_DATE: 2024/09/25 10:52
-              PART_NUMBER: 113-M3000100-102
-              VERSION: 022.040.003.042.000001
+            GPU: 0
+                VBIOS:
+                    NAME: AMD MI300X_HW_SRIOV_CVS_1VF
+                    BUILD_DATE: 2024/10/17 16:32
+                    PART_NUMBER: 113-M3000100-103
+                    VERSION: 022.040.003.043.000001
 
-d. Operating System Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Operating system requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following Linux distributions are recommended:
 
 - Ubuntu 22.04+, 24.04+
 - Oracle Linux Server 8.8+
 
-  #. to check the operating system version, run the following command
+To check the operating system version, run the following command.
 
-   .. tab-set::
+.. tab-set::
 
-      .. tab-item:: Command
+   .. tab-item:: Command
 
-         .. code-block:: shell-session
+      .. code-block:: shell
 
-            # Check Operating System version
-            hostnamectl | grep 'Operating System'
+         uname -m && cat /etc/*release
 
-      .. tab-item:: Shell output
+   .. tab-item:: Shell output
 
-         ::
+      .. code-block:: shell-session
 
-            Operating System: Ubuntu 22.04.5 LTS
+         x86_64
+         DISTRIB_ID=Ubuntu
+         DISTRIB_RELEASE=24.04
+         DISTRIB_CODENAME=noble
+         DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
+         PRETTY_NAME="Ubuntu 24.04 LTS"
+         NAME="Ubuntu"
+         VERSION_ID="24.04"
+         VERSION="24.04 LTS (Noble Numbat)"
+         VERSION_CODENAME=noble
+         ID=ubuntu
+         ID_LIKE=debian
+         ... [output truncated]
 
-e. Driver Requirements
-~~~~~~~~~~~~~~~~~~~~~~~
+Driver requirements
+~~~~~~~~~~~~~~~~~~~
 
-- **ROCm**: Version 6.4 or newer
+ROCm: Version 6.4 or newer
 
-  #. to find the ROCm version, run the following command
+To find the ROCm version, run `amd-smi`.
 
-   .. tab-set::
+.. tab-set::
 
-      .. tab-item:: Command
+   .. tab-item:: Command
 
-         .. code-block:: shell-session
+      .. code-block:: shell
 
-            # Check ROCm version
-            amd-smi version | grep -o 'ROCm version: [^|]*'
+         amd-smi
 
-      .. tab-item:: Shell output
+   .. tab-item:: Shell output
 
-         ::
+      .. code-block:: shell-session
 
-            ROCm version: 6.4.0
+         +------------------------------------------------------------------------------+
+         | AMD-SMI 26.0.0+37d158ab      amdgpu version: 6.14.14  ROCm version: 7.0.1    |
+         | Platform: Linux Baremetal                                                    |
+         |-------------------------------------+----------------------------------------|
+         ... [output truncated]
