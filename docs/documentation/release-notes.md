@@ -6,10 +6,6 @@ The release notes provide release highlights and resolved issues since the previ
 
 The following are notable new features and improvements in AMD GPU Driver 31.20.0.
 
-### Operating system and hardware support changes
-
-This release introduces support for a new hardware IP block: SMU 15, a system management unit that provides updated power and thermal management.
-
 For compatibility between AMD GPU Driver, ROCm, GPUs, and operating systems, see the [Compatibility matrix](../compatibility/compatibility-matrix.rst).
 
 ### Compute and AI workload improvements
