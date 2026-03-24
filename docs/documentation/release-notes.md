@@ -24,14 +24,10 @@ Introduced asynchronous SMU messaging across all SMU generations (v11 through v1
 
 The following previously known issues have been resolved in this release:
 
-### Power management
-
 - Resolved a null pointer crash in the power management subsystem during certain SMU operations.
 
 - Resolved a race condition in power state checking that could report incorrect GPU power states.
 
 - Resolved incorrect clock frequency settings on SMU v13 and SMU v14 platforms when using software clock limits.
 
-### Reliability
-
-Resolved a memory leak in the RAS (Reliability, Availability, Serviceability) initialization path.
+- Resolved a memory leak in the RAS (Reliability, Availability, Serviceability) initialization path.
