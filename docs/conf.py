@@ -7,11 +7,11 @@ if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "31.10.0"
-rocm_version = '7.11'
-rocm_directory_version = '7.11.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '31.10' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '31.10'
+version = "31.20.0"
+rocm_version = '7.12'
+rocm_directory_version = '7.12.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '31.20' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '31.20'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
@@ -43,7 +43,7 @@ html_context = {
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "amdgpu",
-    "announcement": f"AMD GPU Driver {version} is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>AMD ROCm 7.11.0 technology preview</a>.",
+    "announcement": f"AMD GPU Driver {version} is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.12.0-preview/index.html'>AMD ROCm 7.12.0 technology preview</a>.",
     "link_main_doc": True,
     # Add any additional theme options here
 }
