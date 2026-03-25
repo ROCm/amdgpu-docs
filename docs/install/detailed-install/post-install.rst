@@ -25,13 +25,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash 
 
-            amdgpu/6.16.13-2278356.24.04, 6.14.0-37-generic, x86_64: installed
+            amdgpu/6.16.13-2303411.24.04, 6.17.0-19-generic, x86_64: installed
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
+        - ``2303411``: amdgpu driver build number
         - ``24.04``: distro version
-        - ``6.14.0-37-generic``: kernel version of dkms build
+        - ``6.17.0-19-generic``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: Debian
@@ -44,12 +44,12 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/6.16.13-2278356.24.04, 6.12.57+deb13-amd64, x86_64: installed (Original modules exist)
+            amdgpu/6.16.13-2303411.24.04, 6.12.63+deb13-amd64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
-        - ``6.12.57+deb13-amd64``: kernel version of dkms build
+        - ``2303411``: amdgpu driver build number
+        - ``6.12.63+deb13-amd64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: RHEL
@@ -62,13 +62,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/6.16.13-2278356.el10, 6.12.0-124.8.1.el10_1.x86_64: installed (Original modules exist)
+            amdgpu/6.16.13-2303411.el10, 6.12.0-124.45.1.el10_1.x86_64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
+        - ``2303411``: amdgpu driver build number
         - ``el10``: distro version
-        - ``6.12.0-124.8.1.el10_1.x86_64``: kernel version of dkms build
+        - ``6.12.0-124.45.1.el10_1.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: OL
@@ -77,17 +77,17 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
             sudo dkms status
 
-        **Sample output for OL 10.0:**
+        **Sample output for OL 10.1:**
 
         .. code-block:: bash
 
-            amdgpu/6.16.13-2278356.el10, 6.12.0-106.55.4.2.el10uek.x86_64, x86_64: installed (Original modules exist)
+            amdgpu/6.16.13-2303411.el10, 6.12.0-109.67.6.el10uek.x86_64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
+        - ``2303411``: amdgpu driver build number
         - ``el10``: distro version
-        - ``6.12.0-106.55.4.2.el10uek.x86_64``: kernel version of dkms build
+        - ``6.12.0-109.67.6.el10uek.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: Rocky
@@ -96,17 +96,17 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
             sudo dkms status
 
-        **Sample output for Rocky 9.6:**
+        **Sample output for Rocky 9.7:**
 
         .. code-block:: bash
 
-            amdgpu/6.16.13-2278356.el9, 5.14.0-611.20.1.el9_7.x86_64, x86_64: installed
+            amdgpu/6.16.13-2303411.el9, 5.14.0-611.36.1.el9_7.x86_64, x86_64: installed
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
+        - ``2303411``: amdgpu driver build number
         - ``el9``: distro version
-        - ``5.14.0-611.20.1.el9_7.x86_64``: kernel version of dkms build
+        - ``5.14.0-611.36.1.el9_7.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: SLES
@@ -119,12 +119,12 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/6.16.13-2278356, 6.4.0-150700.53.25-default, x86_64: installed (original_module exists)
+            amdgpu/6.16.13-2303411, 6.4.0-150700.53.31-default, x86_64: installed (original_module exists)
 
         - ``amdgpu``: dkms module name 
         - ``6.16.13``: amdgpu driver version
-        - ``2278356``: amdgpu driver build number
-        - ``6.4.0-150700.53.25-default``: kernel version of dkms build
+        - ``2303411``: amdgpu driver build number
+        - ``6.4.0-150700.53.31-default``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
 .. _other_resources:
