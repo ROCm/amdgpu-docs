@@ -24,7 +24,7 @@ rhel_release_version_numbers = ['10', '9', '8']
 rhel_version_numbers = ['10.1', '10.0', '9.7', '9.6', '9.4', '8.10']
 sles_version_numbers = ['16.0', '15.7']
 ol_release_version_numbers = ['10', '9', '8']
-ol_version_numbers = ['10.1', '9.6', '8.10']
+ol_version_numbers = ['10.1', '9.7', '8.10']
 rl_version_numbers = ['9.7']
 
 html_context = {
