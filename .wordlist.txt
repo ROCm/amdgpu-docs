@@ -107,6 +107,7 @@ Deprecations
 DevCap
 Dockerfile
 Doxygen
+EEPROM
 ELMo
 ENDPGM
 EPYC
