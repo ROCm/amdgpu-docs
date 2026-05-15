@@ -42,11 +42,25 @@ html_context = {
 # Required settings
 html_theme = "rocm_docs_theme"
 html_theme_options = {
-    "flavor": "amdgpu",
     "announcement": f"AMD GPU Driver {version} is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.11.0-preview/index.html'>AMD ROCm 7.11.0 technology preview</a>.",
-    "link_main_doc": True,
-    # Add any additional theme options here
+    "flavor": "generic",
+    "header_title": f"AMD GPU Driver (amdgpu) {version}-preview",
+    "header_link": f"https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/",
+    "version_list_link": f"https://instinct.docs.amd.com/projects/amdgpu-docs/en/{version}-preview/release/versions.html",
+    "nav_secondary_items": {
+        "GitHub": "https://github.com/ROCm/amdgpu",
+        "Community": "https://github.com/ROCm/ROCm/discussions",
+        "Blogs": "https://rocm.blogs.amd.com/",
+        "ROCm&#8482; Docs": "https://rocm.docs.amd.com",
+        "ROCm Developer Hub": "https://www.amd.com/en/developer/resources/rocm-hub.html",
+        "Systems and Infra Docs": "https://instinct.docs.amd.com/",
+        "Infinity Hub": "https://www.amd.com/en/developer/resources/infinity-hub.html",
+        "Support": "https://github.com/ROCm/amdgpu/issues/new/choose",
+    },
+    "link_main_doc": False,
 }
+html_title = f"AMD GPU Driver (amdgpu)"
+
 extensions = [
     "rocm_docs",
     "sphinxcontrib.datatemplates",
