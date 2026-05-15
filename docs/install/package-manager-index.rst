@@ -39,4 +39,4 @@ Select the install instructions for your operating system
         * :ref:`Rocky Linux <rl-package-manager-uninstall-driver>`   
         * :ref:`SUSE Linux Enterprise Server <sles-package-manager-uninstall-driver>`    
 
-See `System requirements <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html>`_ for a full list of supported operating systems.
+See `System requirements <https://rocm.docs.amd.com/en/docs-7.13.0/compatibility/compatibility-matrix.html#system-requirements>`_ for a full list of supported operating systems.
