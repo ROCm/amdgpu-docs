@@ -16,7 +16,7 @@ Before installing the driver, complete the following prerequisites.
 
           uname -m && cat /etc/*release
 
-   * Confirm that your Linux distribution matches a `supported distribution <https://rocm.docs.amd.com/en/docs-7.13.0/about/release-notes.html#operating-system-support>`_.
+   * Confirm that your Linux distribution matches a :ref:`supported distribution <supported_distributions>`.
 
      **Example:** Running the preceding command on an Ubuntu system produces the following output:
 
@@ -24,22 +24,9 @@ Before installing the driver, complete the following prerequisites.
 
             x86_64
             DISTRIB_ID=Ubuntu
-            DISTRIB_RELEASE=26.04
-            DISTRIB_CODENAME=resolute
-            DISTRIB_DESCRIPTION="Ubuntu 26.04 LTS"
-            PRETTY_NAME="Ubuntu 26.04 LTS"
-            NAME="Ubuntu"
-            VERSION_ID="26.04"
-            VERSION="26.04 (Resolute Raccoon)"
-            VERSION_CODENAME=resolute
-            ID=ubuntu
-            ID_LIKE=debian
-            HOME_URL="https://www.ubuntu.com/"
-            SUPPORT_URL="https://help.ubuntu.com/"
-            BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-            PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-            UBUNTU_CODENAME=resolute
-            LOGO=ubuntu-logo
+            DISTRIB_RELEASE=24.04
+            DISTRIB_CODENAME=noble
+            DISTRIB_DESCRIPTION="Ubuntu 24.04.3 LTS"
 
 .. _verify_kernel_version:
 
@@ -55,9 +42,9 @@ Before installing the driver, complete the following prerequisites.
 
      .. code-block:: shell
 
-            Linux 7.0.0-15-generic #15-Ubuntu SMP PREEMPT_DYNAMIC Wed Apr 22 16:06:43 UTC 2026 x86_64
+            Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024 x86_64
 
-   * Confirm that your kernel version matches the system requirements, as listed in `Operating system support <https://rocm.docs.amd.com/en/docs-7.13.0/about/release-notes.html#operating-system-support>`_
+   * Confirm that your kernel version matches the system requirements, as listed in :ref:`supported_distributions`.
 
 .. _register-enterprise-linux:
 
@@ -229,23 +216,9 @@ To install for the currently active kernel run the command corresponding to your
     .. tab-item:: Ubuntu
         :sync: ubuntu-tab
 
-        .. datatemplate:nodata::
+        .. code-block:: shell
 
-            .. tab-set::
-
-              {% for (os_version, os_release) in config.html_context['ubuntu_version_numbers'] %}
-                  .. tab-item:: {{ os_version }}
-                    :sync: {{ os_version }}
-
-                    .. code-block:: shell
-
-                        {% if os_version == '26.04' -%}
-                        sudo apt install "linux-headers-$(uname -r)"
-                        {%- else -%}
-                        sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
-                        {%- endif %}
-
-              {% endfor %}
+            sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 
     .. tab-item:: Debian
         :sync: debian-tab

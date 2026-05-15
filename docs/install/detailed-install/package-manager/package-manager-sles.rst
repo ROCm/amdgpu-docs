@@ -24,20 +24,13 @@ Additional package repositories
         {% set os_release, os_sp  = os_version.split('.') %}
 
         .. tab-item:: SLES {{ os_version }}
-            :sync: {{ os_version }}
 
-            {% if os_version == '16.0' -%}
-
-            There are no additional package repositories needed for SLES 16.0.
-
-            {%- else -%}
             .. code-block:: shell
 
                 sudo SUSEConnect -p sle-module-desktop-applications/{{ os_version }}/x86_64
                 sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
                 sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
                 sudo zypper install zypper
-            {%- endif %}
         
         {% endfor %}
 
@@ -57,7 +50,6 @@ Register kernel-mode driver
     .. tab-set::
         {% for os_version in config.html_context['sles_version_numbers'] %}
         .. tab-item:: SLES {{ os_version }}
-            :sync: {{ os_version }}
 
             .. code-block:: bash
                 :substitutions:
