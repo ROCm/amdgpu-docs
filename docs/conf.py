@@ -59,6 +59,7 @@ html_theme_options = {
     },
     "link_main_doc": False,
 }
+html_title = f"AMD GPU Driver (amdgpu)"
 
 extensions = [
     "rocm_docs",
