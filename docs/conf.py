@@ -53,7 +53,7 @@ html_theme_options = {
         "Blogs": "https://rocm.blogs.amd.com/",
         "ROCm&#8482; Docs": "https://rocm.docs.amd.com",
         "ROCm Developer Hub": "https://www.amd.com/en/developer/resources/rocm-hub.html",
-        "System and Infra Docs": "https://instinct.docs.amd.com/",
+        "Systems and Infra Docs": "https://instinct.docs.amd.com/",
         "Infinity Hub": "https://www.amd.com/en/developer/resources/infinity-hub.html",
         "Support": "https://github.com/ROCm/amdgpu/issues/new/choose",
     },
