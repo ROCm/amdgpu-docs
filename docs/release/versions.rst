@@ -4,9 +4,9 @@
    :description: Release versions for AMD GPU Driver (amdgpu)
    :keywords: AMD, GPU, Driver, amdgpu, versions
 
-****************************************
-AMD GPU Driver (amdgpu) release history
-****************************************
+***********************************************
+AMD GPU Driver (amdgpu) preview release history
+***********************************************
 
 .. csv-table::
    :header: "Version","Release date"
