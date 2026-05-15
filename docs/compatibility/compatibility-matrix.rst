@@ -19,4 +19,4 @@ See `Operating system support <https://rocm.docs.amd.com/en/7.13.0-preview/about
 GPU support
 ============
 
-See `Hardware support <https://rocm.docs.amd.com/en/7.13.0-preview/about/release-notes.html#hardware-support>`_ for the list of supported AMD Instinct™, Radeon™ PRO, Radeon, and Ryzen™ AI GPUs.
+See `Hardware support <https://rocm.docs.amd.com/en/7.13.0-preview/about/release-notes.html#amd-hardware-support>`_ for the list of supported AMD Instinct™, Radeon™ PRO, Radeon, and Ryzen™ AI GPUs.
