@@ -13,7 +13,7 @@ rocm_directory_version = '7.13.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
 amdgpu_version = '31.30' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
 amdgpu_url_version = '31.30'
 release = version
-html_title = f"AMD GPU Driver (amdgpu) {version} Preview"
+html_title = f"AMD GPU Driver (amdgpu) {version} preview"
 author = "Advanced Micro Devices, Inc."
 copyright = "Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved."
 
