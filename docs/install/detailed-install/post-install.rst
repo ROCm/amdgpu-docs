@@ -134,6 +134,6 @@ Additional software for user space
 
 The AMD ROCm platform provides a comprehensive set of user space software components for GPU-accelerated computing. See the following resources:
 
-- `ROCm components <https://rocm.docs.amd.com/en/docs-7.13.0/index.html>`_
-- `ROCm installation guide (Linux) <https://rocm.docs.amd.com/en/docs-7.13.0/install/rocm.html>`_
+- `ROCm components <https://rocm.docs.amd.com/en/7.13.0-preview/index.html>`_
+- `ROCm installation guide (Linux) <https://rocm.docs.amd.com/en/7.13.0-preview/install/rocm.html>`_
 - `HIP documentation <https://rocm.docs.amd.com/projects/HIP/en/latest/index.html>`_

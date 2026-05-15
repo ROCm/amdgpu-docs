@@ -16,7 +16,7 @@ Before installing the driver, complete the following prerequisites.
 
           uname -m && cat /etc/*release
 
-   * Confirm that your Linux distribution matches a `supported distribution <https://rocm.docs.amd.com/en/docs-7.13.0/about/release-notes.html#operating-system-support>`_.
+   * Confirm that your Linux distribution matches a `supported distribution <https://rocm.docs.amd.com/en/7.13.0-preview/about/release-notes.html#operating-system-support>`_.
 
      **Example:** Running the preceding command on an Ubuntu system produces the following output:
 
@@ -57,7 +57,7 @@ Before installing the driver, complete the following prerequisites.
 
             Linux 7.0.0-15-generic #15-Ubuntu SMP PREEMPT_DYNAMIC Wed Apr 22 16:06:43 UTC 2026 x86_64
 
-   * Confirm that your kernel version matches the system requirements, as listed in `Operating system support <https://rocm.docs.amd.com/en/docs-7.13.0/about/release-notes.html#operating-system-support>`_
+   * Confirm that your kernel version matches the system requirements, as listed in `Operating system support <https://rocm.docs.amd.com/en/7.13.0-preview/about/release-notes.html#operating-system-support>`_
 
 .. _register-enterprise-linux:
 
