@@ -114,6 +114,7 @@ EPYC
 ESXi
 EoS
 FBGEMM
+FCLK
 FFT
 FFTs
 FFmpeg
@@ -144,6 +145,7 @@ GIM
 GL
 GLXT
 Gloo
+GMC
 GMI
 GPG
 GPR
@@ -221,6 +223,7 @@ LLVM
 LM
 LSAN
 LSan
+LSDMA
 LTS
 LoRA
 MCP
@@ -235,6 +238,7 @@ MIOpen's
 MIVisionX
 MLM
 MMA
+MMHUB
 MMIO
 MMIOH
 MMU
@@ -306,6 +310,7 @@ OpenXLA
 Oversubscription
 PagedAttention
 Pallas
+PASID
 PCC
 PCI
 PCIe
@@ -317,6 +322,7 @@ PLDM
 POR
 PRNG
 PRs
+PSP
 PaLM
 Pageable
 PeerDirect
@@ -389,6 +395,7 @@ SLES
 SMEM
 SMI
 SMT
+SMU
 SPI
 SQs
 SRAM
@@ -571,6 +578,7 @@ detections
 dev
 devicelibs
 devsel
+dGPU
 dimensionality
 disambiguates
 distro
@@ -816,6 +824,7 @@ symlink
 symlinks
 sys
 td
+teardown
 tensorfloat
 th
 tokenization
@@ -918,4 +927,5 @@ addressability
 datacenter
 programmability
 uptime
+userq
 TPX
