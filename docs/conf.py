@@ -45,6 +45,7 @@ html_theme_options = {
     "flavor": "amdgpu",
         "announcement": f"AMD GPU Driver {version} is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.13.0-preview/index.html'>AMD ROCm 7.13.0 technology preview</a>.",
     "link_main_doc": True,
+    "version_list_link": f"https://instinct.docs.amd.com/projects/amdgpu-docs/en/{version}-preview/release/versions.html"
     # Add any additional theme options here
 }
 extensions = [
