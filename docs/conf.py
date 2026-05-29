@@ -7,11 +7,11 @@ if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "30.30.3"
-rocm_version = '7.2.3'
-rocm_directory_version = '7.2.3' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '30.30.3' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '30.30.3'
+version = "30.30.4"
+rocm_version = '7.2.4'
+rocm_directory_version = '7.2.4' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '30.30.4' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '30.30.4'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
@@ -43,7 +43,7 @@ html_context = {
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "amdgpu",
-    "announcement": f"<a id='rocm-banner' href='https://instinct.docs.amd.com/projects/amdgpu-docs/en/31.20.0-preview/'>AMD GPU Driver 31.20.0</a> is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.12.0-preview/index.html'>AMD ROCm 7.12.0 technology preview</a>. For production use, continue to use AMD GPU Driver {version} documentation.",
+    "announcement": f"<a id='rocm-banner' href='https://instinct.docs.amd.com/projects/amdgpu-docs/en/31.30.0-preview/'>AMD GPU Driver 31.30.0</a> is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.13.0-preview/index.html'>AMD ROCm 7.13.0 technology preview</a>. For production use, continue to use AMD GPU Driver {version} documentation.",
     "link_main_doc": True,
     # Add any additional theme options here
 }
