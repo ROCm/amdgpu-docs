@@ -1,4 +1,4 @@
-rocm-docs-core==1.32.0
+rocm-docs-core[api_reference] @ git+ssh://git@github.com/AMD-melliott/rocm-docs-core.git@feature/instinct-design-flavor
 sphinx-reredirects
 sphinxcontrib.datatemplates==0.11.0
 Sphinx-Substitution-Extensions==2026.1.12
