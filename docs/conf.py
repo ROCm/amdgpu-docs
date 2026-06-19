@@ -42,7 +42,7 @@ html_context = {
 # Required settings
 html_theme = "rocm_docs_theme"
 html_theme_options = {
-    "flavor": "amdgpu",
+    "flavor": "instinct-design",
     "announcement": f"<a id='rocm-banner' href='https://instinct.docs.amd.com/projects/amdgpu-docs/en/31.30.0-preview/'>AMD GPU Driver 31.30.0</a> is a technology preview intended for use only with <a id='rocm-banner' href='https://rocm.docs.amd.com/en/7.13.0-preview/index.html'>AMD ROCm 7.13.0 technology preview</a>. For production use, continue to use AMD GPU Driver {version} documentation.",
     "link_main_doc": True,
     # Add any additional theme options here
