@@ -28,7 +28,6 @@ The AMD GPU Driver documentation is organized into the following categories:
 :::{grid-item-card} How to
 :class-body: rocm-card-banner rocm-hue-12
 
-* [System optimization](./system-optimization/index.rst)
 * [GPU Partitioning](./gpu-partitioning/index.rst)
 
 :::
