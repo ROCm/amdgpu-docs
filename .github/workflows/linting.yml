@@ -2,15 +2,68 @@ name: Linting
 
 on:
   push:
-    branches: 
-    - develop
-    - main
+    branches:
+      - develop
+      - main
   pull_request:
-    branches: 
-    - develop
-    - main
+    branches:
+      - develop
+      - main
+
+permissions:
+  contents: read
 
 jobs:
-  call-workflow-passing-data:
-    name: Documentation
-    uses: ROCm/rocm-docs-core/.github/workflows/linting.yml@develop
+  markdown:
+    name: Documentation / Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Fetch config
+        shell: sh
+        run: |
+          test -f .markdownlint.yaml && echo "Using local config file" || curl --silent --show-error --fail --location https://raw.githubusercontent.com/ROCm/rocm-docs-core/develop/.markdownlint.yaml -O
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24
+      - name: Run markdownlint
+        run: npx --yes markdownlint-cli2 "**/*.md"
+
+  spelling:
+    name: Documentation / Spelling
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Fetch config
+        shell: sh
+        run: |
+          curl --silent --show-error --fail --location https://raw.githubusercontent.com/ROCm/rocm-docs-core/develop/.github/workflows/yaml_merger.py -o .github/workflows/yaml_merger.py
+          curl --silent --show-error --fail --location https://raw.githubusercontent.com/ROCm/rocm-docs-core/develop/.spellcheck.yaml -O
+          curl --silent --show-error --fail --location https://raw.githubusercontent.com/ROCm/rocm-docs-core/develop/.wordlist.txt >> .wordlist.txt
+      - name: Check local spelling file
+        id: check_local_spelling
+        run: |
+          if [ -f .spellcheck.local.yaml ]; then
+            echo "check_result=true" >> $GITHUB_OUTPUT
+          else
+            echo "check_result=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Merge local and main YAML files
+        if: steps.check_local_spelling.outputs.check_result == 'true'
+        shell: sh
+        run: |
+          python3 .github/workflows/yaml_merger.py .spellcheck.yaml .spellcheck.local.yaml .spellcheck.yaml
+      - name: Install spellcheck dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends aspell aspell-en
+          python3 -m pip install pyspelling==2.12.1
+      - name: Run spellcheck
+        run: python3 -m pyspelling --config .spellcheck.yaml
+      - name: On fail
+        if: failure()
+        run: |
+          echo "Please check for spelling mistakes or add them to '.wordlist.txt' in either the root of this project or in rocm-docs-core."

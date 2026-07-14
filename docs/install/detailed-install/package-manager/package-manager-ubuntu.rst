@@ -13,7 +13,7 @@ Ubuntu native installation
 
 .. _ubuntu-register-repo:
 
-Registering ROCm repositories
+Registering repositories
 =================================================
 
 .. _ubuntu-package-key:

@@ -13,7 +13,7 @@ Debian native installation
 
 .. _debian-register-repo:
 
-Registering ROCm repositories
+Registering repositories
 =================================================
 
 .. _debian-package-key:

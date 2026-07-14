@@ -29,18 +29,6 @@ subtrees:
         title: Post-install instructions
   - caption: How to
     entries:
-    - file: system-optimization/index.rst
-      title: System optimization
-      subtrees:
-      - entries:
-        - file: system-optimization/mi300x.rst
-          title: AMD Instinct MI300X
-        - file: system-optimization/mi300a.rst
-          title: AMD Instinct MI300A
-        - file: system-optimization/mi200.md
-          title: AMD Instinct MI200
-        - file: system-optimization/mi100.md
-          title: AMD Instinct MI100
     - file: gpu-partitioning/index.rst
       title: GPU Partitioning
       subtrees:

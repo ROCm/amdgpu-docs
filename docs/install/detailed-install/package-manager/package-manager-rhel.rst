@@ -13,7 +13,7 @@ Red Hat Enterprise Linux native installation
 
 .. _rhel-register-repo:
 
-Registering ROCm repositories
+Registering repositories
 =====================================================
 
 Register kernel-mode driver
@@ -33,11 +33,7 @@ Register kernel-mode driver
                 sudo tee /etc/yum.repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                {% if os_major == '9' -%}
-                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_version }}/main/x86_64/
-                {%- else -%}
                 baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/el/{{ os_major }}/main/x86_64/
-                {%- endif %}
                 enabled=1
                 priority=50
                 gpgcheck=1
