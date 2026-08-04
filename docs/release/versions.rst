@@ -12,7 +12,7 @@ AMD GPU Driver (amdgpu) release history
    :header: "Version","Release date"
    :widths: 10, 30
 
-   "`31.40.1 <https://instinct.docs.amd.com/projects/amdgpu-docs/en/docs-31.40.1/>`_", "July 30, 2026"
+   "`31.40.1 <https://instinct.docs.amd.com/projects/amdgpu-docs/en/docs-31.40.1/>`_", "August 5, 2026"
    "`31.40.0 <https://instinct.docs.amd.com/projects/amdgpu-docs/en/docs-31.40.0/>`_", "July 15, 2026"
    "`30.30.4 <https://instinct.docs.amd.com/projects/amdgpu-docs/en/docs-30.30.4/>`_", "May 29, 2026"
    "`30.30.3 <https://instinct.docs.amd.com/projects/amdgpu-docs/en/docs-30.30.3/>`_", "May 4, 2026"
