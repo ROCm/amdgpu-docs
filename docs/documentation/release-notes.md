@@ -4,6 +4,10 @@ The release notes provide release highlights since the previous AMD GPU Driver r
 
 ## Release highlights
 
+This release improves system recovery robustness for AMD Instinct MI350X and MI355X under Trusted OS.
+
+### System reliability and fault handling
+
 Improved system recovery robustness during Mode 1 fault-handling sequences by addressing a firmware issue that could prevent successful recovery completion under certain error conditions. Fixes under Trusted OS for AMD Instinct MI350X and MI355X.
 
 ## Operating system and hardware support changes
