@@ -6,6 +6,7 @@ ACS
 AccVGPR
 AccVGPRs
 AER
+AIS
 allreduce
 ALU
 AMD
@@ -20,6 +21,7 @@ APBDIS
 APIC
 APIs
 APU
+APUs
 ASIC
 ASICs
 ASan
@@ -114,6 +116,7 @@ EPYC
 ESXi
 EoS
 FBGEMM
+FCLK
 FFT
 FFTs
 FFmpeg
@@ -136,6 +139,7 @@ GDB
 GDDR
 GDR
 GDS
+GPUDirect
 GEMM
 GEMMs
 GFortran
@@ -144,6 +148,7 @@ GIM
 GL
 GLXT
 Gloo
+GMC
 GMI
 GPG
 GPR
@@ -157,6 +162,7 @@ GenZ
 GitHub
 Gitpod
 HBM
+HipFile
 HCA
 HGX
 HIPCC
@@ -221,6 +227,7 @@ LLVM
 LM
 LSAN
 LSan
+LSDMA
 LTS
 LoRA
 MCP
@@ -235,6 +242,7 @@ MIOpen's
 MIVisionX
 MLM
 MMA
+MMHUB
 MMIO
 MMIOH
 MMU
@@ -276,6 +284,10 @@ NVCC
 NVIDIA
 NVPTX
 NaN
+NFS
+NFSoRDMA
+NVMe
+NVMeoF
 Nano
 Navi
 Noncoherently
@@ -306,6 +318,7 @@ OpenXLA
 Oversubscription
 PagedAttention
 Pallas
+PASID
 PCC
 PCI
 PCIe
@@ -317,6 +330,7 @@ PLDM
 POR
 PRNG
 PRs
+PSP
 PaLM
 Pageable
 PeerDirect
@@ -359,6 +373,7 @@ ROCmValidationSuite
 ROCprofiler
 ROCr
 RPP
+RSL
 RST
 RW
 Radeon
@@ -389,6 +404,7 @@ SLES
 SMEM
 SMI
 SMT
+SMU
 SPI
 SQs
 SRAM
@@ -448,6 +464,7 @@ UTCL
 UTIL
 Uncached
 Unittests
+UniRAS
 Unhandled
 VALU
 VBIOS
@@ -571,6 +588,7 @@ detections
 dev
 devicelibs
 devsel
+dGPU
 dimensionality
 disambiguates
 distro
@@ -631,6 +649,7 @@ hlist
 hotspotting
 hpc
 hpp
+html
 hsa
 hsakmt
 hyperparameter
@@ -681,6 +700,7 @@ mkdir
 mlirmiopen
 mtypes
 mutex
+myst
 mvffr
 namespace
 namespaces
@@ -688,6 +708,7 @@ nanoGPT
 num
 numref
 ocl
+oF
 ol
 opencl
 opencv
@@ -811,11 +832,13 @@ subfolder
 subfolders
 submodule
 submodules
+suboptimal
 supercomputing
 symlink
 symlinks
 sys
 td
+teardown
 tensorfloat
 th
 tokenization
@@ -904,6 +927,7 @@ amd
 amdsmi
 celerator
 chiplets
+vLLM
 vllm
 misconfigurations
 integrators
@@ -918,4 +942,5 @@ addressability
 datacenter
 programmability
 uptime
+userq
 TPX
