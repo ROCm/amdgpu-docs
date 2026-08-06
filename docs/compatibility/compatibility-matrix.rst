@@ -6,7 +6,7 @@
 Compatibility matrix
 **************************************************************************************
 
-The AMD GPU Driver (amdgpu) 31.40.1 is compatible with ROCm 7.14.0 and Radeon™ Software for Linux (RSL) 26.13. For more information, see `ROCm 7.14.0 compatibility matrix
+The AMD GPU Driver (amdgpu) 31.40.1 is compatible with ROCm 7.14.0. For more information, see `ROCm 7.14.0 compatibility matrix
 <https://rocm.docs.amd.com/en/docs-7.14.0/compatibility/compatibility-matrix.html>`__.
 
 ====================================
