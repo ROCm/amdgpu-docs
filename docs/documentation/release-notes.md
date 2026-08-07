@@ -4,7 +4,7 @@ The release notes provide release highlights and resolved issues since the previ
 
 ## Release highlights
 
-The AMD GPU Driver 31.40.0 builds on 31.30.0 with a wide range of enhancements in compute performance, power management, and overall reliability. It is compatible with ROCm 7.14.0 and Radeon™ Software for Linux (RSL) 26.13.
+The AMD GPU Driver 31.40.0 builds on 31.30.0 with a wide range of enhancements in compute performance, power management, and overall reliability. It is compatible with ROCm 7.14.0.
 
 This release introduces more resilient handling of AI and compute workloads, expanded monitoring capabilities, and numerous stability improvements to reduce hangs, crashes, and memory-related issues. It also includes targeted improvements for Instinct MI300-series platforms and newer compute GPUs.
 
