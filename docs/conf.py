@@ -7,11 +7,11 @@ if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "31.40.1"
-rocm_version = '7.14'
-rocm_directory_version = '7.14.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '31.40.1' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '31.40.1'
+version = "31.50.0"
+rocm_version = '10.0'
+rocm_directory_version = '10.0.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '31.50' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '31.50'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
