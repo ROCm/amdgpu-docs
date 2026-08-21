@@ -1,6 +1,6 @@
 # AMD GPU Driver (amdgpu) 31.50.0 release notes
 
-The release notes provide release highlights and resolved issues since the previous AMD GPU Driver release (31.40.0).
+The release notes provide release highlights and resolved issues since the previous AMD GPU Driver release (31.40.1).
 
 ## Release highlights
 
