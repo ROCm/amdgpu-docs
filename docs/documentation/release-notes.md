@@ -14,23 +14,15 @@ The following are notable new features and improvements in AMD GPU Driver 31.50.
 
 ### Compute and Instinct improvements
 
-* **Reworked user-mode queue handling:** Adds accurate reset accounting, guilty-queue identification, and automatic GPU recovery when a hung queue fails to unmap, reducing the risk of stuck AI/ML jobs and resource leaks under heavy submission.
-
-* **Correct interrupt routing for compute queues:** Fixes end-of-pipe (EOP) and error-interrupt routing for both kernel and user queues on GFX11 and GFX12, improving submission robustness.
-
 * **New GFX 12.1 compute IP:** Enables 57-bit watch-address and queue-reset support for the newer compute engine used by upcoming products.
 
 * **Kernel Fusion Driver (KFD) queue and topology hardening:** Adds GFX12 queue-reset support in topology, bounds checking on system-topology (CRAT) parsing, and additional shared virtual memory (SVM) range validation for more stable compute sessions.
 
 ### Power, thermal, and telemetry
 
-* **SMU 15.0.x support:** Brings up the new SMU 15.0.0 / 15.0.5 / 15.0.8 power-management firmware interface for upcoming platforms.
-
-* **Richer SMU 15 metrics:** Adds GPU metrics including engine-busy reporting, NPM support, and thermal-alert reporting for improved data-center monitoring and diagnostics.
+* **SMU 15.0.x support:** Brings up the new SMU 15.0.0 / 15.0.8 power-management firmware interface for upcoming platforms.
 
 * **Mode2 reset enablement:** Enables mode2 reset paths for SMU IP 15.0.0 and 15.0.5, improving recovery behavior on new silicon.
-
-* **Cleaner driver unload on APU platforms:** Restores Memory Controller (MC) access after `PrepareMp1ForUnload` on SMU 15 APUs, improving power-management behavior when the driver is removed or the system shuts down.
 
 ### Broader hardware enablement
 
@@ -42,17 +34,9 @@ The following are notable new features and improvements in AMD GPU Driver 31.50.
 
 * **Unified RAS (UniRAS) enhancements:** Adds address sanity checks and a debug mask to suppress correctable-error log noise for easier service and diagnostics.
 
-* **System stability hardening:** Broad improvements to memory safety, bounds checking, and validation across device setup, GPU memory management, user queues, and error-reporting paths.
-
 ## Resolved issues
 
 The following previously known issues have been resolved in this release:
-
-### Driver security
-
-* Resolved multiple memory-safety issues (null-pointer access, out-of-bounds access, and missing bounds/length validation) across KFD topology, SVM, and RAS paths that could lead to instability under fault or stress conditions.
-
-* Resolved several user-mode queue create, wait, and reset paths that could hang or leak resources.
 
 ### Compute and power
 
@@ -60,11 +44,13 @@ The following previously known issues have been resolved in this release:
 
 * Resolved incorrect reset accounting for user queues so GPU resets triggered by user-mode queues are tracked and recovered reliably.
 
-* Resolved compute scheduling and reset paths on newer GPU generations, including Micro Engine Scheduler (MES) doorbell handling for queue suspension and end-of-pipe (EOP) interrupt routing for compute queues.
-
 * Resolved a memory leak of Dynamic Power Management (DPM) power policies on SMU 15 that could grow over repeated power-state changes.
 
 * Resolved a kernel deadlock in the KFD SVM path that could hang the system when multiple processes over-commit GPU VRAM while concurrently calling mmap under memory pressure.
+
+* Resolved user-mode queue handling issues by adding accurate reset accounting, guilty-queue identification, and automatic GPU recovery when a hung queue fails to unmap, reducing the risk of stuck AI/ML jobs and resource leaks under heavy submission.
+
+* Resolved end-of-pipe (EOP) and error-interrupt routing for both kernel and user queues on GFX11 and GFX12, improving submission robustness.
 
 ### Reliability and RAS
 
