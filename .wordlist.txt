@@ -50,6 +50,7 @@ CLion
 CMake
 CMakeLists
 CMakePackage
+CRAT
 CRIU
 CP
 CPC
@@ -230,8 +231,10 @@ LSan
 LSDMA
 LTS
 LoRA
+MC
 MCP
 MEM
+MES
 MERCHANTABILITY
 MFMA
 MiB
