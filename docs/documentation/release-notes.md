@@ -42,8 +42,6 @@ The following previously known issues have been resolved in this release:
 
 * Resolved an indefinite fence wait in user-queue submission during a GPU reset that could hang compute workloads.
 
-* Resolved incorrect reset accounting for user queues so GPU resets triggered by user-mode queues are tracked and recovered reliably.
-
 * Resolved a memory leak of Dynamic Power Management (DPM) power policies on SMU 15 that could grow over repeated power-state changes.
 
 * Resolved a kernel deadlock in the KFD SVM path that could hang the system when multiple processes over-commit GPU VRAM while concurrently calling mmap under memory pressure.
@@ -51,7 +49,3 @@ The following previously known issues have been resolved in this release:
 * Resolved user-mode queue handling issues by adding accurate reset accounting, guilty-queue identification, and automatic GPU recovery when a hung queue fails to unmap, reducing the risk of stuck AI/ML jobs and resource leaks under heavy submission.
 
 * Resolved end-of-pipe (EOP) and error-interrupt routing for both kernel and user queues on GFX11 and GFX12, improving submission robustness.
-
-### Reliability and RAS
-
-* Resolved UniRAS address and debug-mode handling, including address sanity checks and correctable-error log masking.
