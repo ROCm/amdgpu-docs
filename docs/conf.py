@@ -53,6 +53,10 @@ extensions = [
     "sphinx_substitution_extensions",
 ]
 
+# CSS settings
+html_static_path = ["sphinx/static/css"]
+html_css_files = ["rocm_custom.css"]
+
 # Table of contents
 external_toc_path = "./sphinx/_toc.yml"
 

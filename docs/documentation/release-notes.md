@@ -10,6 +10,11 @@ Compared with the previous release, AMD GPU Driver 31.50.0 delivers more resilie
 
 For compatibility between AMD GPU Driver, ROCm, GPUs, and operating systems, see the [Compatibility matrix](../compatibility/compatibility-matrix.rst).
 
+### Documentation updates
+
+Added the [AMD Instinct MI350P on VMware ESXi](../virtualization/esxi/mi350p/index.rst) guide, which documents GPU passthrough on ESXi 9.x with an Ubuntu 24.04 guest.
+
+## Operating system and hardware support changes
 The following are notable new features and improvements in AMD GPU Driver 31.50.0.
 
 ### Compute and Instinct improvements
