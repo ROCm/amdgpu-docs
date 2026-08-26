@@ -69,4 +69,9 @@ Device Documentation
 - :doc:`AMD Instinct MI300X GPU <mi300x/index>` — GPU-specific partitioning for AI inference and HPC workloads. Supports SPX + NPS1, DPX + NPS2, and CPX + NPS4.
 - :doc:`AMD Instinct MI300A APU <mi300a/index>` — APU-specific partitioning with integrated CPU and GPU. Supports SPX + NPS1 only.
 
-We recommend users start with this index page to assess compatibility, then follow device-specific documentation to implement and validate GPU partitioning configurations in their own clusters or platforms.
+GPU virtualization
+^^^^^^^^^^^^^^^^^^
+
+For GPU passthrough on VMware ESXi (as opposed to bare-metal partitioning), see :doc:`AMD Instinct MI350P on VMware ESXi <../virtualization/esxi/mi350p/index>`.
+
+Start with this index page to assess compatibility, then follow device-specific documentation to implement and validate GPU partitioning configurations in your cluster or platform.

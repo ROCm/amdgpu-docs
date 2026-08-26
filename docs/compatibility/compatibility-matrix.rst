@@ -20,3 +20,13 @@ GPU support
 ============
 
 See `Hardware support <https://rocm.docs.amd.com/en/latest/about/release-notes.html#amd-hardware-support>`_ for the list of supported AMD Instinct™, Radeon™ PRO, Radeon, and Ryzen™ AI GPUs.
+
+===============
+Virtualization
+===============
+
+GPU passthrough on VMware ESXi is documented for AMD Instinct MI350P GPUs. The validated stack includes VMware ESXi 9.x (validated on ESXi 9.1), an Ubuntu 24.04 guest, and the AMDGPU driver and ROCm software stack installed in the guest after passthrough.
+
+For setup instructions, see :doc:`AMD Instinct MI350P on VMware ESXi <../virtualization/esxi/mi350p/index>`.
+
+For bare-metal GPU partitioning, see :doc:`GPU Partitioning <../gpu-partitioning/index>`.
