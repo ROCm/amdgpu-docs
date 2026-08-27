@@ -25,7 +25,7 @@ rhel_version_numbers = ['10.2', '10.0', '9.8', '9.6', '9.4', '8.10']
 sles_version_numbers = ['16.0', '15.7']
 ol_release_version_numbers = ['10', '9', '8']
 ol_version_numbers = ['10.2', '9.8', '8.10']
-rl_version_numbers = ['9.7']
+rl_version_numbers = ['9.8']
 
 html_context = {
     "ubuntu_version_numbers" : ubuntu_version_numbers,
