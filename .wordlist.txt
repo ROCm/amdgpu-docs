@@ -50,6 +50,7 @@ CLion
 CMake
 CMakeLists
 CMakePackage
+CRAT
 CRIU
 CP
 CPC
@@ -112,6 +113,7 @@ Doxygen
 EEPROM
 ELMo
 ENDPGM
+EOP
 EPYC
 ESXi
 EoS
@@ -230,8 +232,10 @@ LSan
 LSDMA
 LTS
 LoRA
+MC
 MCP
 MEM
+MES
 MERCHANTABILITY
 MFMA
 MiB
@@ -697,6 +701,7 @@ miopengemm
 mivisionx
 mjx
 mkdir
+mmap
 mlirmiopen
 mtypes
 mutex
@@ -860,6 +865,7 @@ uncorrectable
 underoptimized
 unhandled
 uninstallation
+unmap
 unmapped
 unsqueeze
 unstacking

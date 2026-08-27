@@ -53,6 +53,24 @@ subtrees:
           - entries:
             - file: gpu-partitioning/mi300a/overview.rst
               title: GPU Partitioning Overview
+    - file: virtualization/index.rst
+      title: GPU virtualization
+      subtrees:
+      - entries:
+        - file: virtualization/esxi/mi350p/index.rst
+          title: AMD Instinct MI350P on VMware ESXi
+          subtrees:
+          - entries:
+            - file: virtualization/esxi/mi350p/overview.rst
+              title: Passthrough overview
+            - file: virtualization/esxi/mi350p/host-setup.rst
+              title: ESXi host setup
+            - file: virtualization/esxi/mi350p/ubuntu-guest-setup.rst
+              title: Ubuntu 24.04 guest setup
+            - file: virtualization/esxi/mi350p/install-rocm.rst
+              title: Install ROCm and the AMD GPU driver
+            - file: virtualization/esxi/mi350p/external-resources.rst
+              title: External resources
   - caption: Conceptual
     entries:
     - file: conceptual/iommu.rst
