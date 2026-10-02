@@ -71,8 +71,6 @@ subtrees:
               title: Install ROCm and the AMD GPU driver
             - file: virtualization/esxi/mi350p/external-resources.rst
               title: External resources
-            - file: virtualization/esxi/mi350p/known-issues.rst
-              title: Known issues
   - caption: Conceptual
     entries:
     - file: conceptual/iommu.rst

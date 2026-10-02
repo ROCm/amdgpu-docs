@@ -17,6 +17,5 @@ The documentation covers the complete lifecycle from hypervisor preparation thro
 - :doc:`Ubuntu 24.04 guest setup <ubuntu-guest-setup>`: Create the VM, size the MMIO aperture, assign GPUs, and pre-configure the guest.
 - :doc:`Install ROCm and the AMD GPU driver <install-rocm>`: Install ROCm and the AMDGPU driver in the guest, and resolve Secure Boot issues.
 - :doc:`External resources <external-resources>`: Related documentation and support sites cited in this guide.
-- :doc:`Known issues <known-issues>`: Kernel regression that can prevent PCIe AtomicOp detection in DirectPath I/O guests.
 
 Whether you are standing up a single-GPU development VM or assigning multiple MI350P devices to a multi-GPU compute guest, this guide is your reference for validated ESXi passthrough configuration on MI350P hardware.
