@@ -25,11 +25,11 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945.26.04, 7.0.0-30-generic, x86_64: installed (Original modules exist)
+            amdgpu/7.1.9-2407772.26.04, 7.0.0-30-generic, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
         - ``26.04``: distro version
         - ``7.0.0-30-generic``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
@@ -44,12 +44,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945.24.04, 6.12.94+deb13-amd64, x86_64: installed (Original modules exist)
+            amdgpu/7.1.9-2407772.24.04, 6.12.107+deb13-amd64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
-        - ``6.12.94+deb13-amd64``: kernel version of dkms build
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
+        - ``24.04``: distro version
+        - ``6.12.107+deb13-amd64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: RHEL
@@ -62,13 +63,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945.el10, 6.12.0-211.49.1.el10_2.x86_64, x86_64: installed (Original modules exist)
+            amdgpu/7.1.9-2407772.el10, 6.12.0-211.61.1.el10_2.x86_64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
         - ``el10``: distro version
-        - ``6.12.0-211.49.1.el10_2.x86_64``: kernel version of dkms build
+        - ``6.12.0-211.61.1.el10_2.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: OL
@@ -81,13 +82,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945.el10, 6.12.0-205.92.4.2.el10uek.x86_64, x86_64: installed (Original modules exist)
+            amdgpu/7.1.9-2407772.el10, 6.12.0-206.104.4.4.el10uek.x86_64, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
         - ``el10``: distro version
-        - ``6.12.0-205.92.4.2.el10uek.x86_64``: kernel version of dkms build
+        - ``6.12.0-206.104.4.4.el10uek.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: Rocky
@@ -100,13 +101,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945.el9, 5.14.0-687.41.1.el9_8.x86_64, x86_64: installed
+            amdgpu/7.1.9-2407772.el9, 5.14.0-687.52.1.el9_8.x86_64, x86_64: installed
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
         - ``el9``: distro version
-        - ``5.14.0-687.41.1.el9_8.x86_64``: kernel version of dkms build
+        - ``5.14.0-687.52.1.el9_8.x86_64``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
     .. tab-item:: SLES
@@ -119,12 +120,12 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
         .. code-block:: bash
 
-            amdgpu/7.1.3-2390945, 6.12.0-160000.36-default, x86_64: installed (Original modules exist)
+            amdgpu/7.1.9-2407772, 6.12.0-160000.37-default, x86_64: installed (Original modules exist)
 
         - ``amdgpu``: dkms module name
-        - ``7.1.3``: amdgpu driver version
-        - ``2390945``: amdgpu driver build number
-        - ``6.12.0-160000.36-default``: kernel version of dkms build
+        - ``7.1.9``: amdgpu driver version
+        - ``2407772``: amdgpu driver build number
+        - ``6.12.0-160000.37-default``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
 .. _other_resources:
@@ -136,3 +137,42 @@ The AMD ROCm platform provides a comprehensive set of user space software compon
 
 - `ROCm installation guide <https://rocm.docs.amd.com/en/latest/install/rocm.html>`_
 - `HIP documentation <https://rocm.docs.amd.com/projects/HIP/en/latest/index.html>`_
+
+.. _disable-ais:
+
+AIS (AMD Infinity Storage)
+==========================
+
+When the AMD GPU driver initializes `AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/en/latest/components/storage-libs.html>`_, it registers the GPU's VRAM with the P2PDMA kernel subsystem. This generates about 1GB of metadata for every 64GB of VRAM. This metadata is stored in the host's DRAM.
+
+If you don't need AIS, you can reclaim this memory by disabling AIS from being initialized by the GPU driver.
+
+To disable AIS until next reboot:
+
+.. code:: shell
+
+   sudo modprobe -r amdgpu
+   sudo modprobe amdgpu ais_disabled=1
+
+To disable AIS persistently across reboots:
+
+.. code:: shell
+
+   sudo bash -c 'echo "options amdgpu ais_disabled=1" > /etc/modprobe.d/amdgpu-ais.conf'
+   sudo update-initramfs -c -k all
+   sudo systemctl reboot
+
+To re-enable AIS until next reboot:
+
+.. code:: shell
+
+   sudo modprobe -r amdgpu
+   sudo modprobe amdgpu ais_disabled=0
+
+To re-enable AIS persistently across reboots:
+
+.. code:: shell
+
+   sudo rm /etc/modprobe.d/amdgpu-ais.conf
+   sudo update-initramfs -c -k all
+   sudo systemctl reboot
