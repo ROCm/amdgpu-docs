@@ -95,6 +95,7 @@ DNN
 DNNL
 DPC
 DPM
+DRAM
 DPX
 DRI
 DW
@@ -110,6 +111,7 @@ Deprecations
 DevCap
 Dockerfile
 Doxygen
+ECC
 EEPROM
 ELMo
 ENDPGM
@@ -144,6 +146,7 @@ GDS
 GPUDirect
 GEMM
 GEMMs
+GFX
 GFortran
 GiB
 GIM
@@ -194,6 +197,7 @@ IOMMU
 IOP
 IOPM
 IOV
+IP
 IRQ
 ISA
 ISV
@@ -321,6 +325,7 @@ OpenVX
 OpenXLA
 Oversubscription
 PagedAttention
+P2PDMA
 Pallas
 PASID
 PCC
@@ -351,6 +356,7 @@ PyTorch
 Qcycles
 Qwen
 RAII
+RAM
 RAS
 RCCL
 RDC
@@ -409,7 +415,9 @@ SMEM
 SMI
 SMT
 SMU
+SOC
 SPI
+SR
 SQs
 SRAM
 SRAMECC
