@@ -7,11 +7,11 @@ if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 project = "AMD GPU Driver (amdgpu)"
 
-version = "31.50.0"
-rocm_version = '10.0'
-rocm_directory_version = '10.0.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
-amdgpu_version = '31.50' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
-amdgpu_url_version = '31.50'
+version = "31.60.0"
+rocm_version = '10.1'
+rocm_directory_version = '10.1.0' # in 6.0 rocm was located in /opt/rocm-6.0.0
+amdgpu_version = '31.60' # directory in https://repo.radeon.com/rocm/apt/ and https://repo.radeon.com/amdgpu-install/
+amdgpu_url_version = '31.60'
 release = version
 html_title = f"AMD GPU Driver (amdgpu) {version}"
 author = "Advanced Micro Devices, Inc."
@@ -24,8 +24,8 @@ rhel_release_version_numbers = ['10', '9', '8']
 rhel_version_numbers = ['10.2', '10.0', '9.8', '9.6', '9.4', '8.10']
 sles_version_numbers = ['16.0', '15.7']
 ol_release_version_numbers = ['10', '9', '8']
-ol_version_numbers = ['10.2', '9.8', '8.10']
-rl_version_numbers = ['9.8']
+ol_version_numbers = ['10.1', '9.7', '8.10']
+rl_version_numbers = ['9.7']
 
 html_context = {
     "ubuntu_version_numbers" : ubuntu_version_numbers,
