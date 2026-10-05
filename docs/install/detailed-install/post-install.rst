@@ -78,7 +78,7 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
             sudo dkms status
 
-        **Sample output for OL 10.1:**
+        **Sample output for OL 10.2:**
 
         .. code-block:: bash
 
@@ -97,7 +97,7 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 
             sudo dkms status
 
-        **Sample output for Rocky 9.7:**
+        **Sample output for Rocky 9.8:**
 
         .. code-block:: bash
 

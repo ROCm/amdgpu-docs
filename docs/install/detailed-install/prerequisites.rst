@@ -166,7 +166,7 @@ This is a requirement for newer hardware on older versions of RHEL, SLES, OL, or
                    .. code-block:: bash
                        :substitutions:
 
-                        {% if os_version == '10.1' -%}
+                        {% if os_version == '10.2' -%}
                         sudo dnf update redhat-release
                         sudo dnf update --releasever={{ os_version }} --exclude=\*release\*
                         {%- else -%}
