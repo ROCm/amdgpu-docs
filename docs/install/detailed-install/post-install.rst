@@ -145,7 +145,7 @@ AIS (AMD Infinity Storage)
 
 When the AMD GPU driver initializes `AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/en/latest/components/storage-libs.html>`_, it registers the GPU's VRAM with the P2PDMA kernel subsystem. This generates about 1GB of metadata for every 64GB of VRAM. This metadata is stored in the host's DRAM.
 
-If you don't need AIS, you can reclaim this memory by disabling AIS from being initialized by the GPU driver.
+AIS is enabled by default. If you don’t need AIS, you can reclaim this memory by disabling AIS from being initialized by the GPU driver.
 
 To disable AIS until next reboot:
 
