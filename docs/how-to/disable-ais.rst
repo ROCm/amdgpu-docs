@@ -8,11 +8,8 @@
 Disable AIS
 ***********
 
-`AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/projects/hipFile/en/latest/conceptual/amd-infinity-storage.html>`_
-is an AMD storage technology that enables GPU-accelerated direct access to NVMe storage.
-When the AMD GPU driver initializes AIS, it registers the GPU's VRAM with the P2PDMA kernel
-subsystem. This generates approximately 1 GB of ``MEMORY_DEVICE_PCI_P2PDMA`` metadata pages
-per 64 GB of VRAM, stored in host DRAM.
+When the AMD GPU driver initializes `AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/projects/hipFile/en/latest/conceptual/amd-infinity-storage.html>`_, it registers the GPU's VRAM with the P2PDMA kernel
+subsystem. This generates about 1GB of metadata for every 64GB of VRAM. This metadata is stored in the host’s DRAM.
 
 AIS is enabled by default. If you don’t need AIS, you can reclaim this memory by disabling AIS from being initialized by the GPU driver.
 

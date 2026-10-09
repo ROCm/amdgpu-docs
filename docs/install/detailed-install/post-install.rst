@@ -142,8 +142,5 @@ AMD Infinity Storage (AIS)
 ==========================
 
 `AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/projects/hipFile/en/latest/conceptual/amd-infinity-storage.html>`_
-is enabled by default and allows direct GPU access to NVMe storage. AIS uses a portion of host
-DRAM for metadata (approximately 1 GB per 64 GB of VRAM).
-
-If your deployment does not use AIS, you can disable it to reclaim that host memory. For more information, see
+is enabled by default. If your deployment does not use AIS, you can disable it to reclaim that host memory. For more information, see
 :ref:`disable-ais`.
