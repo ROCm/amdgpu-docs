@@ -145,5 +145,5 @@ AMD Infinity Storage (AIS)
 is enabled by default and allows direct GPU access to NVMe storage. AIS uses a portion of host
 DRAM for metadata (approximately 1 GB per 64 GB of VRAM).
 
-If your deployment does not use AIS, you can disable it to reclaim that host memory. See
-:ref:`disable-ais` for instructions about how to disable AIS.
+If your deployment does not use AIS, you can disable it to reclaim that host memory. For more information, see
+:ref:`disable-ais`.
