@@ -133,7 +133,7 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
 AMD Infinity Storage (AIS)
 ==========================
 
-AMD Infinity Storage (AIS) transfers data directly between storage and GPU memory, skipping the copy through host memory. On systems that don't support it, transfers fall back to host memory and complete normally. For more information, see :ref:`disable-ais`.
+AMD Infinity Storage (AIS) allows for transfers of data directly between storage and GPU memory, skipping the copy through host memory. On systems that don't support it, transfers fall back to host memory and complete normally. For more information, see :ref:`disable-ais`.
 
 .. _other_resources:
 
