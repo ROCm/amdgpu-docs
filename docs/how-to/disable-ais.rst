@@ -1,12 +1,12 @@
 .. meta::
-  :description: Enable or disable AMD Infinity Storage (AIS)
-  :keywords: AIS, AMD Infinity Storage, ais_disabled, amdgpu, P2PDMA, VRAM
+  :description: Infinity Storage (AIS)
+  :keywords: AIS, AMD Infinity Storage, amdgpu, P2PDMA, VRAM
 
 .. _disable-ais:
 
-***********
-Disable AIS
-***********
+**************************
+AMD Infinity Storage (AIS)
+**************************
 
 When the AMD GPU driver initializes `AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/projects/hipFile/en/latest/conceptual/amd-infinity-storage.html>`_, it registers the GPU's VRAM with the P2PDMA kernel
 subsystem. This generates about 1GB of metadata for every 64GB of VRAM. This metadata is stored in the host’s DRAM.
@@ -31,17 +31,17 @@ To disable AIS persistently across reboots:
    sudo update-initramfs -c -k all
    sudo systemctl reboot
 
-Re-enable AIS
-=============
+Enable AIS
+==========
 
-To re-enable AIS until next reboot:
+To enable AIS until next reboot:
 
 .. code:: shell
 
    sudo modprobe -r amdgpu
    sudo modprobe amdgpu ais_disabled=0
 
-To re-enable AIS persistently across reboots:
+To enable AIS persistently across reboots:
 
 .. code:: shell
 

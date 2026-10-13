@@ -128,6 +128,13 @@ Use the following command to check the installation of the AMD GPU Driver (amdgp
         - ``6.12.0-160000.37-default``: kernel version of dkms build
         - ``installed``: dkms status; ``installed`` indicates successful installation of the amdgpu driver
 
+.. _ais:
+
+AMD Infinity Storage (AIS)
+==========================
+
+AMD Infinity Storage (AIS) transfers data directly between storage and GPU memory, skipping the copy through host memory. On systems that don't support it, transfers fall back to host memory and complete normally. For more information, see :ref:`disable-ais`.
+
 .. _other_resources:
 
 Additional software for user space
@@ -137,10 +144,3 @@ The AMD ROCm platform provides a comprehensive set of user space software compon
 
 - `ROCm installation guide <https://rocm.docs.amd.com/en/latest/install/rocm.html>`_
 - `HIP documentation <https://rocm.docs.amd.com/projects/HIP/en/latest/index.html>`_
-
-AMD Infinity Storage (AIS)
-==========================
-
-`AIS (AMD Infinity Storage) <https://rocm.docs.amd.com/projects/hipFile/en/latest/conceptual/amd-infinity-storage.html>`_
-is enabled by default. If your deployment does not use AIS, you can disable it to reclaim that host memory. For more information, see
-:ref:`disable-ais`.
