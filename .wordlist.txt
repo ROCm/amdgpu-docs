@@ -1,7 +1,9 @@
 AAC
 ABI
+ACA
 ACE
 ACEs
+ACPI
 ACS
 AccVGPR
 AccVGPRs
@@ -90,6 +92,7 @@ DGEMM
 DIMM
 DKMS
 DL
+DCC
 DMA
 DNN
 DNNL
@@ -135,12 +138,14 @@ Flang
 Fortran
 Fuyu
 GALB
+GC
 GCC
 GCD
 GCDs
 GCN
 GDB
 GDDR
+GDDR7
 GDR
 GDS
 GPUDirect
@@ -189,6 +194,7 @@ Hyperparameters
 Huggingface
 ICD
 ICV
+IH
 IDE
 IDEs
 IFWI
@@ -243,6 +249,8 @@ MES
 MERCHANTABILITY
 MFMA
 MiB
+MI300A
+MI325X
 MIGraphX
 MIOpen
 MIOpenGEMM
@@ -255,6 +263,8 @@ MMIO
 MMIOH
 MMU
 MNIST
+MP1
+MP5
 MPI
 MSVC
 MVAPICH
@@ -275,6 +285,7 @@ Multicore
 Multithreaded
 MyEnvironment
 MyST
+NBIF
 NBIO
 NBIOs
 NCCL
@@ -337,7 +348,9 @@ PEQT
 PIL
 PILImage
 PLDM
+PMFW
 POR
+PPT
 PRNG
 PRs
 PSP
@@ -366,6 +379,7 @@ RDMA
 RDNA
 README
 RHEL
+RMA
 RMW
 RNN
 RNNs
@@ -417,6 +431,7 @@ SMI
 SMT
 SMU
 SOC
+SOC24
 SPI
 SR
 SQs
@@ -465,6 +480,7 @@ TorchVision
 TransferBench
 TrapStatus
 UAC
+UALink
 UC
 UCC
 UCX
@@ -484,6 +500,7 @@ VBIOS
 VCN
 VGPR
 VGPRs
+VPE
 VM
 VMEM
 VMWare
@@ -504,6 +521,7 @@ XCDs
 XGBoost
 XGBoost's
 XGMI
+XNACK
 XT
 XTX
 Xeon
@@ -591,6 +609,7 @@ dbgapi
 de
 deallocation
 debuggability
+debugfs
 debian
 denoise
 denoised

@@ -26,17 +26,17 @@ Additional package repositories
         .. tab-item:: SLES {{ os_version }}
             :sync: {{ os_version }}
 
-            {% if os_version == '16.0' -%}
-
-            There are no additional package repositories needed for SLES 16.0.
-
-            {%- else -%}
+            {% if os_version == '15.7' -%}
             .. code-block:: shell
 
                 sudo SUSEConnect -p sle-module-desktop-applications/{{ os_version }}/x86_64
                 sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
                 sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
                 sudo zypper install zypper
+
+            {%- else -%}
+            There are no additional package repositories needed for SLES {{ os_version }}.
+
             {%- endif %}
         
         {% endfor %}
