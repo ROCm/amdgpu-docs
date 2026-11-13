@@ -29,6 +29,8 @@ subtrees:
         title: Post-install instructions
   - caption: How to
     entries:
+    - file: how-to/disable-ais
+      title: AMD Infinity Storage (AIS)
     - file: gpu-partitioning/index.rst
       title: GPU Partitioning
       subtrees:
