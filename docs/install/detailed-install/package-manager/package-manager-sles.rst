@@ -26,17 +26,17 @@ Additional package repositories
         .. tab-item:: SLES {{ os_version }}
             :sync: {{ os_version }}
 
-            {% if os_version == '16.0' -%}
-
-            There are no additional package repositories needed for SLES 16.0.
-
-            {%- else -%}
+            {% if os_version == '15.7' -%}
             .. code-block:: shell
 
                 sudo SUSEConnect -p sle-module-desktop-applications/{{ os_version }}/x86_64
                 sudo SUSEConnect -p sle-module-development-tools/{{ os_version }}/x86_64
                 sudo SUSEConnect -p PackageHub/{{ os_version }}/x86_64
                 sudo zypper install zypper
+
+            {%- else -%}
+            There are no additional package repositories needed for SLES {{ os_version }}.
+
             {%- endif %}
         
         {% endfor %}
@@ -65,7 +65,7 @@ Register kernel-mode driver
                 sudo tee /etc/zypp/repos.d/amdgpu.repo <<EOF
                 [amdgpu]
                 name=amdgpu
-                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/sle/{{ os_version }}/main/x86_64/
+                baseurl=https://repo.radeon.com/amdgpu/|amdgpu_url_version|/sle/{{ os_version.split('.')[0] }}/main/x86_64/
                 enabled=1
                 gpgcheck=1
                 gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
