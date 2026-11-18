@@ -26,10 +26,18 @@ The following issues have been resolved in this release:
 - Resolved user-mode queue issues, including reading the write pointer at a non-zero buffer offset, waiting on fences outside the signaling section, and hang-detect timeout conversion mistakes that could mis-detect hung queues.
 - Resolved KFD correctness bugs: VRAM accounting, device-mapping use-after-free, TCP XNACK scoreboard races, integer underflows in EOP ring-size calculations, and NULL restore callbacks during CRIU-style queue restore.
 - Resolved SDMA engine reset so kernel queues are always included, and applied a workaround for SDMA DCC corruption on affected configurations.
-- Resolved RAS/CPER retrieval and logging edge cases, including incomplete CPER query progress reporting and scrubber bank logging, so error harvest and UniRAS unload/query paths behave more predictably for service workflows and report how far an error harvest progressed, not only that it failed.
-- Resolved incomplete per-pipe and user-queue reset recovery that could leave a stuck AI/HPC job requiring a full GPU reset, with kernel rings preserved where possible, hung queues are detected more accurately, and related Micro Engine Scheduler (MES) paths are hardened.
+- Resolved RAS/CPER retrieval and logging edge cases, including incomplete CPER query progress reporting and scrubber bank logging, so error harvest and UniRAS unload/query paths behave more predictably for service workflows and report how far an error harvest progressed, not just whether it failed.
+- Resolved incomplete per-pipe and user-queue reset recovery that could leave a stuck AI/HPC job requiring a full GPU reset, with kernel rings preserved where possible; hung queues are detected more accurately, and related Micro Engine Scheduler (MES) paths are hardened.
 - Resolved AMD Infinity Storage (AIS) transfers that could hang when targeting storage without peer-to-peer DMA support, and improved AIS block-stack discovery so unsupported storage-direct GPU I/O fails cleanly instead of hanging.
 - Resolved incorrect power-context allocation on SMU 14 paths, and separated AC/DC PPT limit restore from other power notifications that could cause flaky power-policy behavior after power-source or reset events.
 - Resolved inconsistent energy-accumulator reporting on supported SMU generations so monitoring tools see more reliable energy data over time.
 - Resolved incomplete IP-discovery table validation that could cause incorrect or fragile bring-up on newer platforms.
 - Resolved gaps in PMFW-managed EEPROM and ACA debug-mode handling on supported MP1 generations that could weaken long-term bad-page and health-data tracking on Instinct nodes.
+
+## Known issues
+
+The following issues are known in this release:
+
+- **MI300A Mode 2 GPU reset**: On AMD Instinct MI300A (gfx942), a Mode 2 GPU reset may fail with error -62. The System Management Unit (SMU) on the affected device may stop responding, and later reset or health-management requests can time out until the host is rebooted. This issue has been observed under repeated GPU reset stress on multi-GPU systems. It will be resolved in AMD GPU Driver 31.70.1.
+
+- **Device memory allocation**: Compute workloads may fail when device memory cannot be allocated (`NO_FREE_RESOURCE`). The failure may affect only one GPU in the system. This issue will be resolved in AMD GPU Driver 31.70.1.
