@@ -49,6 +49,7 @@ Key architectural components include:
 
 - **Partitioning Modes:**
   - **SPX (Single Partition):** All 6 XCDs are grouped into one partition
+  - **TPX (Triple Partition):** The device is divided into 3 partitions, each comprising two XCDs
   - **CPX (Core Partitioned):** Each XCD is treated as a separate partition, yielding 6 partitions per socket
 
 - **NUMA Mode:** Memory partitioning modes that define how HBM is allocated and accessed by logical devices
@@ -66,14 +67,15 @@ This architectural design provides the foundation for software-defined partition
 
 .. _mi300a_compute-partitioning:
 
-a. Compute Partitioning (SPX, CPX)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+a. Compute Partitioning (SPX, TPX, CPX)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Compute partitioning on the MI300A APU enables fine-grained resource management by dividing GPU compute resources into multiple logical devices, allowing users to optimize for workload isolation, parallel execution, and resource efficiency. Unlike discrete GPU solutions, the MI300A architecture unifies CPU, GPU, and memory into a single coherent address space backed by high-bandwidth HBM3. This allows partitioned workloads to share memory more seamlessly while benefiting from high interconnect bandwidth and cache coherence.
 
 MI300A supports the following compute partitioning modes:
 
 - **SPX (Single Partition X-celerator):** All GPU XCDs are grouped as a single monolithic device.
+- **TPX (Triple Partition X-celerator):** Exposes the GPU as three logical devices, each with two XCDs.
 - **CPX (Core Partitioned X-celerator):** Each of the six XCDs is treated as a separate logical device.
 
 All partitioning is managed at the driver level and can be reconfigured dynamically using utilities such as ``amd-smi``. These modes enable flexible workload orchestration strategies ranging from unified execution (SPX) to strict isolation (CPX).
@@ -98,18 +100,29 @@ All partitioning is managed at the driver level and can be reconfigured dynamica
     * - Mode
       - Logical Devices
       - CUs per Device
-      - Memory per Device
+      - Memory per Device (`by default <#hbm-alloc-limit>`__)
       - Best For
     * - **SPX**
       - 1
       - 228
-      - 128GB
+      - 96GB
       - Unified workloads, large models
+    * - **TPX**
+      - 3
+      - 76
+      - 32GB
+      - Balanced multi-tenancy
     * - **CPX**
       - 6
       - 38
       - 16GB
       - Isolation, multi-user setups, fine-grained scheduling
+
+.. _hbm-alloc-limit:
+
+.. note::
+   By default, only 96 GB of the 128 GB HBM per APU is allocatable via HIP device allocations.
+   This limit is configurable; see the `MI300A system acceptance guide <https://instinct.docs.amd.com/projects/system-acceptance/en/latest/gpus/mi300a.html#increase-allocatable-gpu-memory-amdttm>`_ for details.
 
 i. SPX (Single Partition X-celerator)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -131,7 +144,7 @@ ii. TPX (Triple Partition X-celerator)
 
 - Divides the GPU into **three partitions**, each comprising **two XCDs**.
 - Exposes three logical GPU devices per socket.
-- Each TPX partition gets access to 76 CUs and approximately 32GB of interleaved HBM memory.
+- Each TPX partition gets access to 76 CUs and approximately 32GB of interleaved HBM memory `by default <#hbm-alloc-limit>`__.
 
 **Use Case:**
 
@@ -150,7 +163,7 @@ iii. CPX (Core Partitioned X-celerator)
 
 - Most granular mode of operation.
 - Each XCD is exposed as a distinct logical GPU device (6 devices per socket).
-- Each CPX partition includes 38 CUs and 16GB of interleaved HBM memory.
+- Each CPX partition includes 38 CUs and 16GB of interleaved HBM memory `by default <#hbm-alloc-limit>`__.
 - Excellent for scenarios requiring workload isolation or running multiple lightweight jobs concurrently.
 
 **Use Case:**
@@ -187,7 +200,7 @@ The MI300A platform operates exclusively in **NPS1** mode — or **NUMA Per Sock
 
 **Key Features of NPS1 Mode:**
 
-- The entire 128GB of HBM is accessible across all partitions, regardless of compute mode (SPX, CPX).
+- The entire 128GB of HBM is accessible across all partitions, regardless of compute mode (SPX, TPX, CPX), see `note <#hbm-alloc-limit>`__.
 - Memory is interleaved across the eight HBM stacks to ensure maximum bandwidth and minimal latency.
 - No memory locality enforcement across partitions — partitions can transparently access the shared memory fabric.
 
@@ -198,24 +211,24 @@ The MI300A platform operates exclusively in **NPS1** mode — or **NUMA Per Sock
       - Description
       - Compatible Compute Modes
     * - **NPS1**
-      - Interleaved HBM3 pool (128GB) accessible by all partitions
-      - SPX, CPX
+      - Interleaved HBM3 pool (128GB) accessible by all partitions (`note <#hbm-alloc-limit>`__)
+      - SPX, TPX, CPX
 
 - The tight integration of CPU and GPU with a unified cache-coherent memory fabric eliminates the complexity of NUMA-aware memory allocation typically required in multi-socket, discrete systems.
 
 .. image:: ../images/mi300a_NPS1.png
    :alt: MI300A NPS1 Unified Memory Layout
 
-- **Diagram Note:** All GPU partitions in SPX, and CPX share the same physical memory pool via the NPS1 model.
+- **Diagram Note:** All GPU partitions in SPX, TPX and CPX share the same physical memory pool via the NPS1 model.
 
 4. Benefits of Partitioning (MI300A APU)
 ----------------------------------------
 
-Partitioning in the MI300A APU—enabled via SPX, and CPX modes—offers a flexible architecture that balances unified memory access with compute isolation. These modes allow system architects to tune performance, resource efficiency, and workload isolation on heterogeneous CPU+GPU platforms.
+Partitioning in the MI300A APU—enabled via SPX, TPX, and CPX modes—offers a flexible architecture that balances unified memory access with compute isolation. These modes allow system architects to tune performance, resource efficiency, and workload isolation on heterogeneous CPU+GPU platforms.
 
 - **CPX mode in MI300A** enables fine-grained control over the GPU compute fabric by exposing each XCD as a distinct logical GPU. When paired with memory locality-aware execution, CPX mode enhances *parallelism*, *isolation*, and *throughput* for multi-user or multi-tenant systems, particularly in **high-performance computing (HPC)** and **cloud-native inference** environments.
 
-- **TPX mode** serves as a *balanced hybrid mode*, exposing 4 partitions with 2 XCDs each. This is especially beneficial for mid-sized models or workloads that demand more compute capacity and memory than a single XCD can provide, while still requiring workload separation. TPX enables *optimal use of shared CPU and GPU resources*, and aligns well with the shared-memory design of the MI300A APU.
+- **TPX mode** serves as a *balanced hybrid mode*, exposing 3 partitions with 2 XCDs each. This is especially beneficial for mid-sized models or workloads that demand more compute capacity and memory than a single XCD can provide, while still requiring workload separation. TPX enables *optimal use of shared CPU and GPU resources*, and aligns well with the shared-memory design of the MI300A APU.
 
 - Partitioning at the compute level enables **dynamic workload management**, where different applications or user sessions can be mapped to different GPU partitions, without interference or scheduling conflicts. This is a key enabler for *simultaneous AI, HPC, and mixed-precision scientific workloads*.
 
@@ -223,7 +236,7 @@ Partitioning in the MI300A APU—enabled via SPX, and CPX modes—offers a flexi
 
 - Partitioning also plays a crucial role in **fault containment and serviceability**. In the event of a GPU partition failure, workloads in other partitions can continue unaffected, enhancing system uptime and reducing recovery overheads.
 
-- **Driver-level flexibility** allows runtime switching between SPX, and CPX modes (subject to reboot in some configurations), enabling operators to adapt the system to workload needs without hardware reconfiguration.
+- **Driver-level flexibility** allows runtime switching between SPX, TPX, and CPX modes (subject to reboot in some configurations), enabling operators to adapt the system to workload needs without hardware reconfiguration.
 
 - On MI300A, GPU partitioning also interacts closely with **HMM (Heterogeneous Memory Management)** and **Shared Virtual Memory (SVM)**, enabling user applications to seamlessly share pointers and memory structures across CPU and GPU partitions. This allows for a *unified programming model* that reduces developer complexity and increases code portability.
 
